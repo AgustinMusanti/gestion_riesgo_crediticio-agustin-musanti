@@ -1,6 +1,5 @@
-Este proyecto realizado en el curso de SQL de Coderhouse consiste en la creación de una base de datos SQL para la gestión del riesgo crediticio en una institución financiera.
+Este proyecto, realizado en el curso de SQL de Coderhouse, consiste en la creación de una base de datos SQL para la gestión del riesgo crediticio en una institución financiera.
 La base de datos incluye tablas para almacenar información sobre clientes, cuentas, préstamos, transacciones y más.
-Este proyecto fue creado en MySQL.
 
 ## Estructura del Proyecto
 
@@ -15,5 +14,8 @@ El proyecto está estructurado de la siguiente manera:
 2. **Cuentas**: Contiene detalles de las cuentas de los clientes, incluyendo saldo, tipo de cuenta, etc.
 3. **Préstamos**: Registra los préstamos concedidos a los clientes, con información sobre monto, tasa de interés, plazo, etc.
 4. **Transacciones**: Guarda registros de las transacciones realizadas en las cuentas, como depósitos, retiros, etc.
+
+
+Este proyecto aún esta en proceso, por lo que durante las próximas semanas puede estar sujeto a cambios.
 
 
