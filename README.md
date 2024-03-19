@@ -5,7 +5,7 @@ La base de datos incluye tablas para almacenar información sobre clientes, cuen
 
 El proyecto está estructurado de la siguiente manera:
 
-- **scripts_sql/**: Contiene scripts SQL para la creación de la base de datos y la inserción de datos de prueba.
+- **script_sql/**: Contiene el script SQL para la creación de la base de datos.
 - **documentación/**: Contiene toda la documentación relacionada con este proyecto, incluyendo la creación de tablas, el diagrama entidad-relación (ER), entre otros.
 
 ## Tablas Principales
