@@ -38,7 +38,7 @@
     ,Monto              DECIMAL(10,2)  DEFAULT 0.00 CHECK (Monto > 0)
     ,Fecha              DATE          
     )
-	COMMENT "En esta tabla se registran todas las transacciones que realiza el cliente con la institución financiera"
+	COMMENT "En esta tabla se registran todas las transacciones que realiza el cliente con la institucion financiera"
     ;
     
      
@@ -51,7 +51,7 @@
     ,Plazo              INT            DEFAULT 180 CHECK (Plazo >= 180)
     ,Estado             VARCHAR(50)    DEFAULT 'Activo'
     )
-	COMMENT "Esta tabla registra los préstamos que puedan llegar a realizar los clientes con la institución financiera"
+	COMMENT "Esta tabla registra los prestamos que puedan llegar a realizar los clientes con la institucion financiera"
     ;
     
      
@@ -62,7 +62,7 @@
     ,Monto              DECIMAL(10,2)  DEFAULT 0.00 CHECK (Monto > 0)
     ,Fecha              DATE          
     )
-	COMMENT "En esta tabla se registran los pagos de los préstamos por parte de los clientes"
+	COMMENT "En esta tabla se registran los pagos de los prestamos por parte de los clientes"
     ;
      
      
@@ -84,7 +84,7 @@
     ,Descripcion        TEXT
     ,Coeficientes       TEXT
     )
-	COMMENT "Esta tabla es independiente de las demás, su finalidad es almacenar información sobre los modelos de riesgo que pueden ser utilizados"
+	COMMENT "Esta tabla es independiente de las demas, su finalidad es almacenar informacion sobre los modelos de riesgo que pueden ser utilizados"
     ;
      
    
@@ -94,7 +94,7 @@
     ,Descripcion        TEXT
     ,Fecha              DATE          
     )
-	COMMENT "Esta tabla es independiente de las demás, su finalidad es almacenar información sobre los eventos de riesgo"
+	COMMENT "Esta tabla es independiente de las demas, su finalidad es almacenar informacion sobre los eventos de riesgo"
     ;
    
    
