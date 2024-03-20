@@ -1,8 +1,8 @@
-    DROP   DATABASE IF EXISTS gestión_riesgo_crediticio;
+    DROP   DATABASE IF EXISTS gestion_riesgo_crediticio;
 
-    CREATE DATABASE gestión_riesgo_crediticio;
+    CREATE DATABASE gestion_riesgo_crediticio;
 
-    USE gestión_riesgo_crediticio;
+    USE gestion_riesgo_crediticio;
 
     CREATE TABLE        Clientes 
     (
@@ -11,9 +11,9 @@
     ,Apellido           VARCHAR(100)   NOT NULL
     ,Telefono           VARCHAR(20)    NOT NULL  
     ,Correo             VARCHAR(100)   UNIQUE 
-    ,Direccion          VARCHAR(255)   DEFAULT  'Sin información'
+    ,Direccion          VARCHAR(255)   DEFAULT  'Sin informacion'
     )
-	COMMENT "Esta tabla contiene toda la información personal relacionada a los clientes"
+	COMMENT "Esta tabla contiene toda la informacion personal relacionada a los clientes"
     ;
 
     
