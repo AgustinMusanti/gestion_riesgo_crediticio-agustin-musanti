@@ -71,7 +71,7 @@
      Hist_Credito_ID    INT            NOT NULL AUTO_INCREMENT PRIMARY KEY
     ,Cliente_ID         INT
     ,Puntaje            INT            DEFAULT 0 CHECK (Puntaje >= 0)
-    ,Observaciones      TEXT           
+    ,Observaciones      TEXT           DEFAULT 'Sin observaciones'
     )
 	COMMENT "Esta tabla registra el historial crediticio que posee cada cliente"
     ;
