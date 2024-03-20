@@ -24,7 +24,7 @@
     ,Numero             VARCHAR(20)
     ,Tipo               VARCHAR(50)
     ,Saldo              DECIMAL(10,2)
-    ,FechaApertura      DATE          
+    ,FechaApertura      DATE           DEFAULT (CURDATE())
     )
 	COMMENT "Esta tabla registra datos relacionados a las cuentas que poseen los clientes"
     ;
@@ -36,7 +36,7 @@
     ,Cuentas_ID         INT
     ,Tipo               VARCHAR(50)    DEFAULT 'Desconocido' 
     ,Monto              DECIMAL(10,2)  DEFAULT 0.00 CHECK (Monto > 0)
-    ,Fecha              DATE          
+    ,Fecha              DATE           DEFAULT (CURDATE())
     )
 	COMMENT "En esta tabla se registran todas las transacciones que realiza el cliente con la institucion financiera"
     ;
@@ -60,7 +60,7 @@
      Pagos_Prest_ID     INT            NOT NULL AUTO_INCREMENT PRIMARY KEY
     ,Prestamos_ID       INT
     ,Monto              DECIMAL(10,2)  DEFAULT 0.00 CHECK (Monto > 0)
-    ,Fecha              DATE          
+    ,Fecha              DATE           DEFAULT (CURDATE())
     )
 	COMMENT "En esta tabla se registran los pagos de los prestamos por parte de los clientes"
     ;
@@ -92,7 +92,7 @@
     (
      Even_Riesgo_ID     INT            NOT NULL AUTO_INCREMENT PRIMARY KEY
     ,Descripcion        TEXT
-    ,Fecha              DATE          
+    ,Fecha              DATE           DEFAULT (CURDATE())
     )
 	COMMENT "Esta tabla es independiente de las demas, su finalidad es almacenar informacion sobre los eventos de riesgo"
     ;
