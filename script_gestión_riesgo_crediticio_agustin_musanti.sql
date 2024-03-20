@@ -48,7 +48,7 @@
     ,Cliente_ID         INT
     ,Monto              DECIMAL(10,2)  DEFAULT 0.00 CHECK (Monto > 0)
     ,TasaInteres        DECIMAL(5,2)
-    ,Plazo              INT            DEFAULT 180 CHECK (Plazo >= 180)
+    ,Plazo              INT            DEFAULT 180  CHECK (Plazo >= 180)
     ,Estado             VARCHAR(50)    DEFAULT 'Activo'
     )
 	COMMENT "Esta tabla registra los prestamos que puedan llegar a realizar los clientes con la institucion financiera"
