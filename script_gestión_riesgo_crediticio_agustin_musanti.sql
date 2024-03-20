@@ -58,7 +58,7 @@
     CREATE TABLE        Pagos_Prestamos 
     (
      Pagos_Prest_ID     INT            NOT NULL AUTO_INCREMENT PRIMARY KEY
-    ,Prestamos_ID        INT
+    ,Prestamos_ID       INT
     ,Monto              DECIMAL(10,2)  DEFAULT 0.00 CHECK (Monto > 0)
     ,Fecha              DATE          
     )
