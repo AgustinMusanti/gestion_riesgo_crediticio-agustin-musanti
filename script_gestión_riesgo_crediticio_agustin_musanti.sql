@@ -1,8 +1,8 @@
-    DROP   DATABASE IF EXISTS gestion_riesgo_crediticio;
+    DROP   DATABASE IF EXISTS Gestion_Riesgo_Crediticio;
 
-    CREATE DATABASE gestion_riesgo_crediticio;
+    CREATE DATABASE Gestion_Riesgo_Crediticio;
 
-    USE gestion_riesgo_crediticio;
+    USE Gestion_Riesgo_Crediticio;
 
     CREATE TABLE        Clientes 
     (
