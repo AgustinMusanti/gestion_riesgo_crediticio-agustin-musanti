@@ -200,3 +200,31 @@
            ,(9, 1284.00, '2024-03-19')
            ,(11, 1284.00, DEFAULT)
            ,(13, 2066.25, '2024-03-21');
+
+    INSERT INTO Historial_Credito (Cliente_ID, Puntaje, Observaciones) 
+    VALUES
+            (1, 750, 'Excelente')
+           ,(2, 680, 'Malo')
+           ,(3, 800, 'Excelente')
+           ,(4, 620, 'Malo')
+           ,(5, 720, 'Regular')
+           ,(6, 690, 'Regular')
+           ,(7, 760, 'Excelente')
+           ,(8, 780, 'Excelente')
+           ,(9, 710, 'Regular')
+           ,(10, 690, 'Regular')
+           ,(11, 730, 'Regular')
+           ,(12, 800, 'Excelente')
+           ,(13, 680, 'Malo')
+           ,(14, 720, 'Regular')
+           ,(15, 740, 'Regular');
+
+    INSERT INTO Modelos_Riesgo (Nombre, Descripcion, Coeficientes) 
+    VALUES
+            ('Modelo A', 'Descripción del Modelo A', 'Coeficientes del Modelo A')
+           ,('Modelo B', 'Descripción del Modelo B', 'Coeficientes del Modelo B');
+
+    INSERT INTO Eventos_Riesgo (Descripcion, Fecha) 
+    VALUES
+            ('Desastre natural - Inundación', '2024-03-28')
+           ,('Emergencia médica en el lugar de trabajo', '2024-03-30');
