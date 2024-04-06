@@ -149,7 +149,10 @@
            ,(12, '369258147', 'Ahorro', 3400.00, DEFAULT)
            ,(13, '987654321', 'Corriente', 2500.00, '2023-12-12')
            ,(14, '123456789', 'Ahorro', 3700.00, '2023-06-06')
-           ,(15, '567890123', 'Corriente', 2000.00, '2024-01-21');
+           ,(15, '567890123', 'Corriente', 2000.00, '2024-01-21')
+	   ,(16, '123456789', 'Corriente', -500.00, '2024-01-15')
+           ,(17, '987654321', 'Ahorro', -1000.00, '2023-11-01')
+           ,(18, '555555555', 'Corriente', -750.00, '2024-03-02');
 
     INSERT INTO Transacciones (Cuentas_ID, Tipo, Monto, Fecha) 
     VALUES
@@ -228,3 +231,11 @@
     VALUES
             ('Desastre natural - Inundación', '2024-03-28')
            ,('Emergencia médica en el lugar de trabajo', '2024-03-30');
+
+
+    CREATE VIEW VistaClientesSaldoNegativo 
+    AS
+    SELECT c.Nombre, c.Apellido, cu.Saldo
+    FROM Clientes c
+    JOIN Cuentas cu ON c.Cliente_ID = cu.Cliente_ID
+    WHERE cu.Saldo < 0;
