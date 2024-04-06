@@ -112,3 +112,21 @@
    
     ALTER TABLE Historial_Credito      ADD CONSTRAINT fk_hist_clientes
     FOREIGN KEY (Cliente_ID)           REFERENCES Clientes(Cliente_ID);
+
+    INSERT INTO Clientes (Nombre, Apellido, Telefono, Correo, Direccion) 
+    VALUES 
+	    ,('Juan', 'Garcia', '123456789', 'juan@example.com', 'Calle 123')
+            ,('Maria', 'Lopez', '987654321', 'maria@example.com', 'Avenida 456')
+            ,('Pedro', 'Martinez', '55555555', 'pedro@example.com', Default)
+            ,('Laura', 'Rodriguez', '33333333', 'laura@example.com', 'Calle Principal')
+            ,('Carlos', 'Gomez', '66666666', 'carlos@example.com', 'Avenida Central')
+            ,('Ana', 'Perez', '44444444', 'ana@example.com', 'Calle Secundaria')
+            ,('Luis', 'Sanchez', '77777777', 'luis@example.com', Default)
+            ,('Sofia', 'Diaz', '99999999', 'sofia@example.com', 'Calle Sur')
+            ,('Diego', 'Hernandez', '22222222', 'diego@example.com', 'Avenida Este')
+            ,('Fernanda', 'Torres', '88888888', 'fernanda@example.com', 'Calle Oeste')
+            ,('Roberto', 'Alvarez', '12121212', 'roberto@example.com', 'Avenida Central')
+            ,('Julia', 'Gutierrez', '34343434', 'julia@example.com', Default)
+            ,('Miguel', 'Flores', '56565656', 'miguel@example.com', 'Calle Secundaria')
+            ,('Valeria', 'Romero', '78787878', 'valeria@example.com', 'Avenida Norte')
+            ,('Elena', 'Nunez', '90909090', 'elena@example.com', 'Calle Sur');
