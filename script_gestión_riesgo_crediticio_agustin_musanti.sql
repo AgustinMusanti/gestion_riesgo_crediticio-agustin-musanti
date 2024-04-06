@@ -130,3 +130,23 @@
             ,('Miguel', 'Flores', '56565656', 'miguel@example.com', 'Calle Secundaria')
             ,('Valeria', 'Romero', '78787878', 'valeria@example.com', 'Avenida Norte')
             ,('Elena', 'Nunez', '90909090', 'elena@example.com', 'Calle Sur');
+
+    INSERT INTO Cuentas (Cliente_ID, Numero, Tipo, Saldo, FechaApertura) 
+    VALUES
+            (1, '123456789', 'Corriente', 1500.00, default)
+           ,(1, '123423229', 'Ahorro', 15890.00, '2024-01-02')
+	   ,(2, '987654321', 'Ahorro', 2500.00, default)
+           ,(3, '567890123', 'Corriente', 1800.00, '2023-08-16')
+           ,(4, '135792468', 'Ahorro', 3000.00, '2022-03-06')
+           ,(5, '246813579', 'Corriente', 2000.00, default)
+           ,(6, '369258147', 'Ahorro', 2800.00, '2021-09-18')
+           ,(7, '987654321', 'Corriente', 2300.00, default)
+           ,(7, '987652821', 'Ahorro', 7700.00, '2024-01-01')
+           ,(8, '123456789', 'Ahorro', 3200.00, '2024-02-05')
+           ,(9, '567890123', 'Corriente', 1800.00, default)
+           ,(10, '135792468', 'Ahorro', 4000.00, '2024-01-03')
+           ,(11, '246813579', 'Corriente', 2200.00, '2024-01-07')
+           ,(12, '369258147', 'Ahorro', 3400.00, default)
+           ,(13, '987654321', 'Corriente', 2500.00, '2023-12-12')
+           ,(14, '123456789', 'Ahorro', 3700.00, '2023-06-06')
+           ,(15, '567890123', 'Corriente', 2000.00, '2024-01-21');
