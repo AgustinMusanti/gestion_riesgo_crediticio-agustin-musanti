@@ -129,7 +129,10 @@
             ,('Julia', 'Gutierrez', '34343434', 'julia@example.com', DEFAULT)
             ,('Miguel', 'Flores', '56565656', 'miguel@example.com', 'Calle Secundaria')
             ,('Valeria', 'Romero', '78787878', 'valeria@example.com', 'Avenida Norte')
-            ,('Elena', 'Nunez', '90909090', 'elena@example.com', 'Calle Sur');
+            ,('Elena', 'Nunez', '90909090', 'elena@example.com', 'Calle Sur')
+	    ,('John', 'Doe', '555-1234', 'john@example.com', '123 Main St')
+            ,('Emily', 'Smith', '555-5678', 'emily@example.com', '456 Elm St')
+            ,('Michael', 'Johnson', '555-9876', 'michael@example.com', '789 Oak St');
 
     INSERT INTO Cuentas (Cliente_ID, Numero, Tipo, Saldo, FechaApertura) 
     VALUES
