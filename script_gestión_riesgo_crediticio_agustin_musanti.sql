@@ -163,7 +163,7 @@
            ,(1, 'Retiro', 250.00, '2024-03-03')
            ,(2, 'Retiro', 200.00, DEFAULT)
            ,(3, 'Transferencia', 150.00, '2024-03-03')
-           ,(4, 'Depósito', 1000.00, '2024-03-04')
+           ,(4, 'Depósito', 1100.00, '2024-03-04')
            ,(5, 'Retiro', 300.00, '2024-03-05')
            ,(6, 'Transferencia', 200.00, '2024-03-06')
            ,(7, 'Depósito', 700.00, DEFAULT)
@@ -242,3 +242,27 @@
     FROM Clientes c
     JOIN Cuentas cu ON c.Cliente_ID = cu.Cliente_ID
     WHERE cu.Saldo < 0;
+
+
+   CREATE VIEW VistaTransaccionesRecientes 
+   AS
+   SELECT Cuentas_ID, Tipo, Monto, Fecha
+   FROM Transacciones
+   WHERE Fecha >= DATE_SUB(CURDATE(), INTERVAL 30 DAY);
+
+
+   CREATE VIEW VistaTransaccionesMontosAltos 
+   AS
+   SELECT Cuentas_ID, Tipo, Monto, Fecha
+   FROM Transacciones
+   WHERE Monto > 1000;
+
+
+   CREATE VIEW VistaClientesHistorialCrediticioMalo 
+   AS
+   SELECT c.Cliente_ID, c.Nombre, c.Apellido, hc.Puntaje
+   FROM Clientes c
+   JOIN Historial_Credito hc ON c.Cliente_ID = hc.Cliente_ID
+   WHERE hc.Puntaje < 690;
+
+   
