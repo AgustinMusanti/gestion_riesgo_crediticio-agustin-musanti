@@ -239,7 +239,7 @@
 
     CREATE VIEW VistaClientesSaldoNegativo 
     AS
-    SELECT c.Nombre, c.Apellido, cu.Saldo
+    SELECT c.Cliente_ID, c.Nombre, c.Apellido, cu.Saldo
     FROM Clientes c
     JOIN Cuentas cu ON c.Cliente_ID = cu.Cliente_ID
     WHERE cu.Saldo < 0;
