@@ -293,7 +293,7 @@
 
     RETURN montoTotal;
     END //
-
+    COMMENT 'Esta función calcula el monto total de los pagos asociados a un préstamo específico'
     DELIMITER ;
 
 --  Funcion 2
@@ -311,7 +311,7 @@
 
     RETURN saldoPromedio;
     END //
-
+    COMMENT 'Esta función calcula el saldo promedio de todas las cuentas asociadas a un cliente específico'
     DELIMITER ;
 
 --  Función 3
