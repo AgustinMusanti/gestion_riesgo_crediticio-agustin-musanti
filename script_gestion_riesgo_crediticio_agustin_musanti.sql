@@ -273,3 +273,61 @@
     FROM Clientes c
     JOIN Cuentas cu ON c.Cliente_ID = cu.Cliente_ID
     GROUP BY c.Cliente_ID;
+
+--  Funciones
+   
+    DELIMITER //
+
+    CREATE FUNCTION CalcularMontoTotalPagos(prestamoID INT) RETURNS DECIMAL(10, 2)
+    READS SQL DATA
+    BEGIN
+    DECLARE montoTotal DECIMAL(10, 2);
+
+    SELECT COALESCE(SUM(Monto), 0) INTO montoTotal
+    FROM Pagos_Prestamos
+    WHERE Prestamos_ID = prestamoID;
+
+    IF montoTotal IS NULL THEN
+    SET montoTotal = 0;
+    END IF;
+
+    RETURN montoTotal;
+    END //
+
+    DELIMITER ;
+
+--  Funcion 2
+
+    DELIMITER //
+
+    CREATE FUNCTION CalcularSaldoPromedioCliente(clienteID INT) RETURNS DECIMAL(10, 2)
+    READS SQL DATA
+    BEGIN
+    DECLARE saldoPromedio DECIMAL(10, 2);
+
+    SELECT COALESCE(AVG(Saldo), 0) INTO saldoPromedio
+    FROM Cuentas
+    WHERE Cliente_ID = clienteID;
+
+    RETURN saldoPromedio;
+    END //
+
+    DELIMITER ;
+
+--  Función 3
+
+    DELIMITER //
+
+    CREATE FUNCTION CalcularSaldoTotalPrestamos(clienteID INT) RETURNS DECIMAL(10, 2)
+    READS SQL DATA
+    BEGIN
+    DECLARE saldoTotal DECIMAL(10, 2);
+
+    SELECT COALESCE(SUM(Monto), 0) INTO saldoTotal
+    FROM Prestamos
+    WHERE Cliente_ID = clienteID AND Estado = 'Activo';
+
+    RETURN saldoTotal;
+    END //
+    COMMENT 'Esta función calcula el saldo total de todos los préstamos activos asociados a un cliente específico'
+    DELIMITER ;
