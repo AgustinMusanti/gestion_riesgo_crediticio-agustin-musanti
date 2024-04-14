@@ -357,3 +357,5 @@
     END //
     COMMENT 'Este procedimiento almacenado actualiza el estado de un préstamo basado en su saldo pendiente'
     DELIMITER ;
+
+
