@@ -267,12 +267,11 @@
     WHERE hc.Puntaje < 690;
 
 
-    CREATE VIEW VistaClientesSaldoPromedio
+    CREATE VIEW VistaDetallePrestamos 
     AS
-    SELECT c.Cliente_ID, c.Nombre, c.Apellido, ROUND(AVG(cu.Saldo), 2) AS SaldoPromedio
-    FROM Clientes c
-    JOIN Cuentas cu ON c.Cliente_ID = cu.Cliente_ID
-    GROUP BY c.Cliente_ID;
+    SELECT p.Prestamos_ID, c.Nombre AS Cliente, p.Monto, p.TasaInteres, p.Plazo, p.Estado
+    FROM Prestamos p
+    JOIN Clientes c ON p.Cliente_ID = c.Cliente_ID;
 
 --  Funciones
    
