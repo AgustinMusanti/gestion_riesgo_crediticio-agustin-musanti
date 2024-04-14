@@ -296,7 +296,6 @@
     COMMENT 'Esta función calcula el monto total de los pagos asociados a un préstamo específico'
     DELIMITER ;
 
---  Funcion 2
 
     DELIMITER //
 
@@ -314,7 +313,7 @@
     COMMENT 'Esta función calcula el saldo promedio de todas las cuentas asociadas a un cliente específico'
     DELIMITER ;
 
---  Función 3
+
 
     DELIMITER //
 
@@ -330,4 +329,32 @@
     RETURN saldoTotal;
     END //
     COMMENT 'Esta función calcula el saldo total de todos los préstamos activos asociados a un cliente específico'
+    DELIMITER ;
+
+
+    -- Stored Procedures
+
+    DELIMITER //
+
+    CREATE PROCEDURE ActualizarEstadoPrestamo(IN prestamoID INT)
+    BEGIN
+    DECLARE saldoPendiente DECIMAL(10, 2);
+    DECLARE estadoNuevo VARCHAR(50);
+
+    -- Calcular el saldo pendiente del prestamo
+    SELECT Monto - IFNULL((SELECT SUM(Monto) FROM Pagos_Prestamos WHERE Prestamos_ID = prestamoID), 0)
+    INTO saldoPendiente
+    FROM Prestamos
+    WHERE Prestamos_ID = prestamoID;
+
+    -- Actualizar el estado del prestamo
+    IF saldoPendiente <= 0 THEN
+    SET estadoNuevo = 'Pagado';
+    ELSE
+    SET estadoNuevo = 'Activo';
+    END IF;
+
+    UPDATE Prestamos SET Estado = estadoNuevo WHERE Prestamos_ID = prestamoID;
+    END //
+    COMMENT 'Este procedimiento almacenado actualiza el estado de un préstamo basado en su saldo pendiente'
     DELIMITER ;
