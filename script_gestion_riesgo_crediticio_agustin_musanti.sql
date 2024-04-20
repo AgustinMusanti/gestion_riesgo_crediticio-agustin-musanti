@@ -385,4 +385,4 @@
 
     DELIMITER ;
 
-    CALL RegistrarPagoPrestamo(3, 1646.25, '2024-04-15');
+    CALL RegistrarPagoPrestamo(3, 1646.25, CURDATE());
