@@ -365,3 +365,24 @@
     DELIMITER ;
 
 
+   -- SP 2
+
+    DELIMITER //
+
+    CREATE PROCEDURE RegistrarPagoPrestamo(
+    IN prestamoID INT,
+    IN monto DECIMAL(10, 2),
+    IN fecha DATE
+    )
+    BEGIN
+    -- Insertar el nuevo pago de préstamo en la tabla Pagos_Prestamos
+    INSERT INTO Pagos_Prestamos (Prestamos_ID, Monto, Fecha)
+    VALUES (prestamoID, monto, fecha);
+
+    -- Actualizar el estado del préstamo si corresponde
+    CALL ActualizarEstadoPrestamo(prestamoID);
+    END //
+
+    DELIMITER ;
+
+    CALL RegistrarPagoPrestamo(3, 1646.25, '2024-04-15');
