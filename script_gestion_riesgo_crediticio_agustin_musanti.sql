@@ -185,21 +185,24 @@
 
     INSERT INTO Prestamos (Cliente_ID, Monto, TasaInteres, Plazo, Estado) 
     VALUES
-            (1, 1000.00, 10.5, 360, DEFAULT)
-           ,(2, 2000.00, 8.25, 240, 'Activo')
+	    (1, 850.00, 5.5, 180, DEFAULT)
+           ,(1, 1000.00, 10.5, 360, 'Inactivo')
+           ,(2, 2000.00, 8.25, 240, 'Inactivo')
+	   ,(2, 760.00, 6.0, 180, DEFAULT)
+	   ,(2, 1000, 7.5, 240, DEFAULT)
            ,(3, 1500.00, 9.75, 300, 'Activo')
            ,(4, 2500.00, 7.85, 180, 'Activo')
            ,(5, 1800.00, 8.0, 240, DEFAULT)
            ,(5, 1000.00, 10.5, 360, 'Inactivo')
            ,(6, 2200.00, 9.25, 360, 'Activo')
-           ,(7, 1300.00, 6.75, 300, 'Activo')
+           ,(7, 1300.00, 6.75, 300, 'Inactivo')
            ,(8, 3000.00, 7.5, 180, 'Activo')
            ,(9, 1700.00, 8.65, 240, DEFAULT)
            ,(9, 1200.00, 7.0, 300, 'Inactivo')
            ,(10, 2800.00, 9.0, 360, 'Activo')
-           ,(11, 1200.00, 7.0, 300, 'Activo')
+           ,(11, 1200.00, 7.0, 300, 'Inactivo')
            ,(12, 2600.00, 8.35, 180, 'Activo')
-           ,(13, 1900.00, 8.75, 240, DEFAULT)
+           ,(13, 1900.00, 8.75, 240, 'Inactivo')
            ,(14, 2300.00, 9.15, 360, 'Activo')
            ,(15, 1400.00, 6.5, 300, 'Activo');
 
@@ -216,18 +219,18 @@
     INSERT INTO Historial_Credito (Cliente_ID, Puntaje, Observaciones) 
     VALUES
             (1, 750, 'Excelente')
-           ,(2, 680, 'Malo')
-           ,(3, 800, 'Excelente')
+           ,(2, 700, 'Regular')
+           ,(3, 620, 'Malo')
            ,(4, 620, 'Malo')
            ,(5, 720, 'Regular')
            ,(6, 690, 'Regular')
            ,(7, 760, 'Excelente')
-           ,(8, 780, 'Excelente')
-           ,(9, 710, 'Regular')
+           ,(8, 720, 'Regular')
+           ,(9, 750, 'Excelente')
            ,(10, 690, 'Regular')
-           ,(11, 730, 'Regular')
-           ,(12, 800, 'Excelente')
-           ,(13, 680, 'Malo')
+           ,(11, 770, 'Excelente')
+           ,(12, 710, 'Regular')
+           ,(13, 800, 'Excelente')
            ,(14, 720, 'Regular')
            ,(15, 740, 'Regular');
 
@@ -384,8 +387,6 @@
     END //
     COMMENT 'Este procedimiento almacenado registra un pago para un prestamo especifico.'
     DELIMITER ;
-
-
 
 
 
