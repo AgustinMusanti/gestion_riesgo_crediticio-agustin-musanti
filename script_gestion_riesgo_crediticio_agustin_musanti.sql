@@ -102,13 +102,19 @@
     FOREIGN KEY (Cliente_ID)           REFERENCES Clientes(Cliente_ID);
      
     ALTER TABLE Transacciones          ADD CONSTRAINT fk_trans_cuentas
-    FOREIGN KEY (Cuentas_ID)           REFERENCES Cuentas(Cuentas_ID);
+    FOREIGN KEY (Cuentas_ID)           REFERENCES Cuentas(Cuentas_ID)
+    ON DELETE                          CASCADE
+    ON UPDATE                          CASCADE;
    
     ALTER TABLE Prestamos              ADD CONSTRAINT fk_pres_clientes
-    FOREIGN KEY (Cliente_ID)           REFERENCES Clientes(Cliente_ID);
+    FOREIGN KEY (Cliente_ID)           REFERENCES Clientes(Cliente_ID)
+    ON DELETE                          CASCADE
+    ON UPDATE                          CASCADE;
      
     ALTER TABLE Pagos_Prestamos        ADD CONSTRAINT fk_pago_prestamos
-    FOREIGN KEY (Prestamos_ID)         REFERENCES Prestamos(Prestamos_ID); 
+    FOREIGN KEY (Prestamos_ID)         REFERENCES Prestamos(Prestamos_ID)
+    ON DELETE                          CASCADE
+    ON UPDATE                          CASCADE;
    
     ALTER TABLE Historial_Credito      ADD CONSTRAINT fk_hist_clientes
     FOREIGN KEY (Cliente_ID)           REFERENCES Clientes(Cliente_ID);
