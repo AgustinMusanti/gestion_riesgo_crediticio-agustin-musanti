@@ -361,7 +361,7 @@
 
     UPDATE Prestamos SET Estado = estadoNuevo WHERE Prestamos_ID = prestamoID;
     END //
-    COMMENT 'Este procedimiento almacenado actualiza el estado de un préstamo basado en su saldo pendiente'
+    COMMENT 'Este procedimiento almacenado actualiza el estado de un prestamo basado en su saldo pendiente'
     DELIMITER ;
 
 
@@ -375,14 +375,19 @@
     IN fecha DATE
     )
     BEGIN
-    -- Insertar el nuevo pago de préstamo en la tabla Pagos_Prestamos
+    -- Insertar el nuevo pago de prestamo en la tabla Pagos_Prestamos
     INSERT INTO Pagos_Prestamos (Prestamos_ID, Monto, Fecha)
     VALUES (prestamoID, monto, fecha);
 
-    -- Actualizar el estado del préstamo si corresponde
+    -- Actualizar el estado del prestamo si corresponde
     CALL ActualizarEstadoPrestamo(prestamoID);
     END //
-
+    COMMENT 'Este procedimiento almacenado registra un pago para un prestamo especifico.'
     DELIMITER ;
 
-    CALL RegistrarPagoPrestamo(3, 1646.25, CURDATE());
+
+
+
+
+
+
