@@ -233,13 +233,13 @@
 
     INSERT INTO Modelos_Riesgo (Nombre, Descripcion, Coeficientes) 
     VALUES
-            ('Modelo A', 'Descripción del Modelo A', 'Coeficientes del Modelo A')
-           ,('Modelo B', 'Descripción del Modelo B', 'Coeficientes del Modelo B');
+            ('Modelo A', 'Descripcion del Modelo A', 'Coeficientes del Modelo A')
+           ,('Modelo B', 'Descripcion del Modelo B', 'Coeficientes del Modelo B');
 
     INSERT INTO Eventos_Riesgo (Descripcion, Fecha) 
     VALUES
             ('Desastre natural - Inundación', '2024-03-28')
-           ,('Emergencia médica en el lugar de trabajo', '2024-03-30');
+           ,('Emergencia medica en el lugar de trabajo', '2024-03-30');
 
    -- Creación de Vistas
 
@@ -283,7 +283,7 @@
    
     DELIMITER //
 
-    CREATE FUNCTION CalcularMontoTotalPagos(prestamoID INT) RETURNS DECIMAL(10, 2)
+    CREATE FUNCTION FN_CalcularMontoTotalPagos(prestamoID INT) RETURNS DECIMAL(10, 2)
     READS SQL DATA
     BEGIN
     DECLARE montoTotal DECIMAL(10, 2);
@@ -298,13 +298,13 @@
 
     RETURN montoTotal;
     END //
-    COMMENT 'Esta función calcula el monto total de los pagos asociados a un préstamo específico'
+    COMMENT 'Esta funcion calcula el monto total de los pagos asociados a un préstamo específico'
     DELIMITER ;
 
 
     DELIMITER //
 
-    CREATE FUNCTION CalcularSaldoPromedioCliente(clienteID INT) RETURNS DECIMAL(10, 2)
+    CREATE FUNCTION FN_CalcularSaldoPromedioCliente(clienteID INT) RETURNS DECIMAL(10, 2)
     READS SQL DATA
     BEGIN
     DECLARE saldoPromedio DECIMAL(10, 2);
@@ -315,14 +315,14 @@
 
     RETURN saldoPromedio;
     END //
-    COMMENT 'Esta función calcula el saldo promedio de todas las cuentas asociadas a un cliente específico'
+    COMMENT 'Esta funcion calcula el saldo promedio de todas las cuentas asociadas a un cliente especifico'
     DELIMITER ;
 
 
 
     DELIMITER //
 
-    CREATE FUNCTION CalcularSaldoTotalPrestamos(clienteID INT) RETURNS DECIMAL(10, 2)
+    CREATE FUNCTION FN_CalcularSaldoTotalPrestamos(clienteID INT) RETURNS DECIMAL(10, 2)
     READS SQL DATA
     BEGIN
     DECLARE saldoTotal DECIMAL(10, 2);
@@ -333,7 +333,7 @@
 
     RETURN saldoTotal;
     END //
-    COMMENT 'Esta función calcula el saldo total de todos los préstamos activos asociados a un cliente específico'
+    COMMENT 'Esta funcion calcula el saldo total de todos los prestamos activos asociados a un cliente especifico'
     DELIMITER ;
 
 
@@ -341,7 +341,7 @@
 
     DELIMITER //
 
-    CREATE PROCEDURE ActualizarEstadoPrestamo(IN prestamoID INT)
+    CREATE PROCEDURE SP_ActualizarEstadoPrestamo(IN prestamoID INT)
     BEGIN
     DECLARE saldoPendiente DECIMAL(10, 2);
     DECLARE estadoNuevo VARCHAR(50);
@@ -369,7 +369,7 @@
 
     DELIMITER //
 
-    CREATE PROCEDURE RegistrarPagoPrestamo(
+    CREATE PROCEDURE SP_RegistrarPagoPrestamo(
     IN prestamoID INT,
     IN monto DECIMAL(10, 2),
     IN fecha DATE
@@ -380,7 +380,7 @@
     VALUES (prestamoID, monto, fecha);
 
     -- Actualizar el estado del prestamo si corresponde
-    CALL ActualizarEstadoPrestamo(prestamoID);
+    CALL SP_ActualizarEstadoPrestamo(prestamoID);
     END //
     COMMENT 'Este procedimiento almacenado registra un pago para un prestamo especifico.'
     DELIMITER ;
