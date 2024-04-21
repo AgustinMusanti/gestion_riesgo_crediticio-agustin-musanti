@@ -388,10 +388,3 @@
     COMMENT 'Este procedimiento almacenado registra un pago para un prestamo especifico.'
     DELIMITER ;
 
-
-
-CALL SP_ActualizarEstadoPrestamo(1);
-
-
-CALL SP_RegistrarPagoPrestamo(3, 1646.25, CURDATE());
-
