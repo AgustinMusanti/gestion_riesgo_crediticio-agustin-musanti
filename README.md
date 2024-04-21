@@ -1,21 +1,43 @@
-Este proyecto, realizado en el curso de SQL de Coderhouse, consiste en la creación de una base de datos SQL para la gestión del riesgo crediticio en una institución financiera.
-La base de datos incluye tablas para almacenar información sobre clientes, cuentas, préstamos, transacciones y más.
+Proyecto de Gestión del Riesgo Crediticio
+Este proyecto fue desarrollado como parte del curso de SQL de Coderhouse. Se implementó una base de datos para la gestión del riesgo crediticio, que incluye tablas para clientes, cuentas, préstamos, transacciones, historial de crédito, modelos de riesgo y eventos de riesgo. Además de las tablas principales, se crearon vistas, funciones, stored procedures y triggers para mejorar la funcionalidad y la automatización del sistema.
 
-## Estructura del Proyecto
+Contenido
+Estructura de la Base de Datos
+Vistas
+Funciones
+Stored Procedures
+Triggers
+Estructura de la Base de Datos
+La base de datos está diseñada para gestionar la información relacionada con clientes, cuentas bancarias, préstamos, transacciones financieras, historial crediticio, modelos y eventos de riesgo. A continuación se detallan las principales tablas:
 
-El proyecto está estructurado de la siguiente manera:
+Clientes: Contiene información personal de los clientes.
+Cuentas: Registra datos de las cuentas asociadas a los clientes.
+Prestamos: Almacena información sobre los préstamos otorgados a los clientes.
+Transacciones: Registra todas las transacciones financieras realizadas por los clientes.
+Historial_Credito: Guarda el historial crediticio de los clientes.
+Modelos_Riesgo: Contiene información sobre los modelos de riesgo utilizados.
+Eventos_Riesgo: Registra eventos de riesgo relevantes.
+Vistas
+Se crearon vistas para proporcionar acceso simplificado a la información de la base de datos. Algunas vistas útiles incluyen:
 
-- **script_sql/**: Contiene el script SQL para la creación de la base de datos.
-- **documentación/**: Contiene toda la documentación relacionada con este proyecto, incluyendo la creación de tablas, el diagrama entidad-relación (ER), entre otros.
+VistaClientesSaldoPromedio: Muestra el saldo promedio de las cuentas de cada cliente.
+VistaTransaccionesRecientes: Muestra las transacciones realizadas en los últimos 30 días.
+VistaPrestamosActivos: Muestra los préstamos activos para cada cliente.
+Funciones
+Se implementaron funciones para realizar cálculos y operaciones específicas en los datos de la base de datos. Algunas funciones importantes son:
 
-## Tablas Principales
+CalcularSaldoTotalCuenta: Calcula el saldo total de una cuenta.
+CalcularMontoTotalPagos: Calcula el monto total de los pagos asociados a un préstamo.
+CalcularSaldoPromedioCliente: Calcula el saldo promedio de todas las cuentas de un cliente.
+Stored Procedures
+Se desarrollaron stored procedures para automatizar tareas recurrentes o complejas. Algunos ejemplos de stored procedures son:
 
-1. **Clientes**: Almacena información sobre los clientes, como nombre, dirección, correo electrónico, etc.
-2. **Cuentas**: Contiene detalles de las cuentas de los clientes, incluyendo saldo, tipo de cuenta, etc.
-3. **Préstamos**: Registra los préstamos concedidos a los clientes, con información sobre monto, tasa de interés, plazo, etc.
-4. **Transacciones**: Guarda registros de las transacciones realizadas en las cuentas, como depósitos, retiros, etc.
+RegistrarPagoPrestamo: Registra un pago para un préstamo específico.
+ActualizarEstadoPrestamo: Actualiza el estado de un préstamo según su saldo pendiente.
+Triggers
+Se utilizaron triggers para realizar acciones automáticamente cuando se modifican datos en la base de datos. Por ejemplo:
 
-
-Este proyecto aún esta en proceso, por lo que durante las próximas semanas puede estar sujeto a cambios.
+Trigger_ActualizarSaldoCuenta: Actualiza el saldo total de una cuenta después de cada transacción.
+Este README proporciona una visión general del proyecto y sus componentes principales. Para obtener más detalles sobre la implementación y el funcionamiento de cada elemento, consulte el código fuente en el repositorio.
 
 
