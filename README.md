@@ -9,6 +9,7 @@ Este proyecto fue desarrollado como parte del curso de SQL de Coderhouse. Se imp
 - [Funciones](#funciones)
 - [Stored Procedures](#stored-procedures)
 - [Triggers](#triggers)
+- [Documentación](#documentacion-gestiondelriesgocrediticioconsql-agustinmusanti.pdf)
 
 ## Estructura de la Base de Datos
 
