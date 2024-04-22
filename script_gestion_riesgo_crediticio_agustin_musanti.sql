@@ -142,22 +142,22 @@
 
     INSERT INTO Cuentas (Cliente_ID, Numero, Tipo, Saldo, FechaApertura) 
     VALUES
-            (1, '123456789', 'Corriente', 1500.00, DEFAULT)
+            (1, '123456789', 'Corriente', 750.00, DEFAULT)
            ,(1, '123423229', 'Ahorro', 15890.00, '2024-01-02')
 	   ,(2, '987654321', 'Ahorro', 2500.00, DEFAULT)
-           ,(3, '567890123', 'Corriente', 1800.00, '2023-08-16')
-           ,(4, '135792468', 'Ahorro', 3000.00, '2022-03-06')
+           ,(3, '567890123', 'Corriente', 150.00, '2023-08-16')
+           ,(4, '135792468', 'Ahorro', 1100.00, '2022-03-06')
            ,(5, '246813579', 'Corriente', 2000.00, DEFAULT)
            ,(6, '369258147', 'Ahorro', 2800.00, '2021-09-18')
            ,(7, '987654321', 'Corriente', 2300.00, DEFAULT)
            ,(7, '987652821', 'Ahorro', 7700.00, '2024-01-01')
-           ,(8, '123456789', 'Ahorro', 3200.00, '2024-02-05')
+           ,(8, '123456789', 'Ahorro', 3400.00, '2024-02-05')
            ,(9, '567890123', 'Corriente', 1800.00, DEFAULT)
            ,(10, '135792468', 'Ahorro', 4000.00, '2024-01-03')
            ,(11, '246813579', 'Corriente', 2200.00, '2024-01-07')
            ,(12, '369258147', 'Ahorro', 3400.00, DEFAULT)
            ,(13, '987654321', 'Corriente', 2500.00, '2023-12-12')
-           ,(14, '123456789', 'Ahorro', 3700.00, '2023-06-06')
+           ,(14, '123456789', 'Ahorro', 4000.00, '2023-06-06')
            ,(15, '567890123', 'Corriente', 2000.00, '2024-01-21')
 	   ,(16, '123456789', 'Corriente', -500.00, '2024-01-15')
            ,(17, '987654321', 'Ahorro', -1000.00, '2023-11-01')
@@ -165,23 +165,34 @@
 
     INSERT INTO Transacciones (Cuentas_ID, Tipo, Monto, Fecha) 
     VALUES
-            (1, 'Depósito', 500.00, '2024-03-01')
+            (1, 'Deposito', 500.00, '2024-03-01')
            ,(1, 'Retiro', 250.00, '2024-03-03')
-           ,(2, 'Retiro', 200.00, DEFAULT)
+           ,(2, 'Deposito', 2500.00, DEFAULT)
            ,(3, 'Transferencia', 150.00, '2024-03-03')
-           ,(4, 'Depósito', 1100.00, '2024-03-04')
+           ,(4, 'Deposito', 1100.00, '2024-03-04')
+	   ,(5, 'Deposito' 2300.00, '2024-03-02')
            ,(5, 'Retiro', 300.00, '2024-03-05')
-           ,(6, 'Transferencia', 200.00, '2024-03-06')
-           ,(7, 'Depósito', 700.00, DEFAULT)
+           ,(6, 'Transferencia', 2800.00, '2024-03-06')
+           ,(7, 'Deposito', 7700.00, DEFAULT)
+	   ,(8, 'Deposito', 3800.00, '2024-03-05')
            ,(8, 'Retiro', 400.00, '2024-03-08')
-           ,(9, 'Transferencia', 250.00, '2024-03-09')
-           ,(10, 'Depósito', 1200.00, '2024-01-02')
+           ,(9, 'Transferencia', 1800.00, '2024-03-09')
+           ,(10, 'Deposito', 4100.00, '2024-01-02')
            ,(10, 'Retiro', 100.00, '2024-01-05')
+	   ,(11, 'Deposito', 2700.00, '2024-04-28')
            ,(11, 'Retiro', 500.00, DEFAULT)
-           ,(12, 'Transferencia', 300.00, '2024-03-12')
-           ,(13, 'Depósito', 800.00, '2024-03-13')
+           ,(12, 'Transferencia', 3400.00, '2024-03-12')
+           ,(13, 'Deposito', 2500.00, '2024-03-13')
+	   ,(14, 'Deposito', 4600.00, '2024-04-02')
            ,(14, 'Retiro', 600.00, DEFAULT)
-           ,(15, 'Transferencia', 350.00, '2024-03-15');
+           ,(15, 'Transferencia', 2000.00, '2024-03-15')
+           ,(16, 'Deposito', 1000.00, '2024-04-26')
+           ,(16, 'Transferencia Sobregiro', 1500.00, DEFAULT)
+	   ,(17, 'Deposito', 2100.00, '2024-04-22')
+	   ,(17, 'Transferencia Sobregiro', 3100.00, '2024-04-23')
+	   ,(18, 'Deposito', 250.00, '2024-04-03')
+	   ,(18, 'Transferencia Sobregiro', 1000.00, '2024-04-10');
+		   
 
     INSERT INTO Prestamos (Cliente_ID, Monto, TasaInteres, Plazo, Estado) 
     VALUES
@@ -387,4 +398,6 @@
     END //
     COMMENT 'Este procedimiento almacenado registra un pago para un prestamo especifico.'
     DELIMITER ;
+
+
 
