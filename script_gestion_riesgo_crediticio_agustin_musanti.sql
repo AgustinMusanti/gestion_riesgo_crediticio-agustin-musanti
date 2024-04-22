@@ -400,4 +400,25 @@
     DELIMITER ;
 
 
+-- Triggers
 
+   DELIMITER //
+
+CREATE TRIGGER ActualizarSaldoCuenta
+AFTER INSERT ON Transacciones
+FOR EACH ROW
+BEGIN
+    DECLARE saldoActual DECIMAL(10, 2);
+    
+    -- Obtener el saldo actual de la cuenta
+    SELECT Saldo INTO saldoActual
+    FROM Cuentas
+    WHERE Cuentas_ID = NEW.Cuentas_ID;
+    
+    -- Actualizar el saldo de la cuenta
+    UPDATE Cuentas
+    SET Saldo = saldoActual + NEW.Monto
+    WHERE Cuentas_ID = NEW.Cuentas_ID;
+END //
+
+DELIMITER ;
