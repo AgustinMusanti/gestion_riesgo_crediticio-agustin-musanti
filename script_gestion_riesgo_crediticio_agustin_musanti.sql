@@ -142,9 +142,9 @@
 
     INSERT INTO Cuentas (Cliente_ID, Numero, Tipo, Saldo, FechaApertura) 
     VALUES
-            (1, '123456789', 'Corriente', 750.00, DEFAULT)
-           ,(1, '123423229', 'Ahorro', 15890.00, '2024-01-02')
+            (1, '123456789', 'Corriente', 250.00, DEFAULT)
 	   ,(2, '987654321', 'Ahorro', 2500.00, DEFAULT)
+	   ,(2, '987654321', 'Corriente', 200.00, '2024-02-06')
            ,(3, '567890123', 'Corriente', 150.00, '2023-08-16')
            ,(4, '135792468', 'Ahorro', 1100.00, '2022-03-06')
            ,(5, '246813579', 'Corriente', 2000.00, DEFAULT)
