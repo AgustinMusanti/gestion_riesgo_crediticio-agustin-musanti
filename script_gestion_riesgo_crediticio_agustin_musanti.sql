@@ -46,7 +46,7 @@
     (
      Prestamos_ID       INT            NOT NULL AUTO_INCREMENT PRIMARY KEY
     ,Cliente_ID         INT
-    ,Monto              DECIMAL(10,2)  DEFAULT 0.00 CHECK (Monto > 0)
+    ,Monto              DECIMAL(10,2)  
     ,TasaInteres        DECIMAL(5,2)
     ,Plazo              INT            DEFAULT 180  CHECK (Plazo >= 180)
     ,Estado             VARCHAR(50)    DEFAULT 'Activo'
