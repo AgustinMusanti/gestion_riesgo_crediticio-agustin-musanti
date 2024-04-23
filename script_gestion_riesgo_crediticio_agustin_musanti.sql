@@ -423,3 +423,22 @@ BEGIN
 END //
 
 DELIMITER ;
+
+-- trigger 2
+
+DELIMITER //
+
+CREATE TRIGGER ValidarDatosPrestamo
+BEFORE INSERT ON Prestamos
+FOR EACH ROW
+BEGIN
+    IF NEW.Monto <= 0 THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El monto del préstamo debe ser mayor que cero';
+    END IF;
+
+    IF NEW.TasaInteres < 0 OR NEW.TasaInteres > 100 THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'La tasa de interés debe estar entre 0 y 100';
+    END IF;
+END//
+
+DELIMITER ;
