@@ -121,178 +121,182 @@
 
     INSERT INTO Clientes (Nombre, Apellido, Telefono, Correo, Direccion) 
     VALUES 
-	     ('Juan', 'Garcia', '123456789', 'juan@example.com', 'Calle 123')
-            ,('Maria', 'Lopez', '987654321', 'maria@example.com', 'Avenida 456')
-            ,('Pedro', 'Martinez', '55555555', 'pedro@example.com', DEFAULT)
-            ,('Laura', 'Rodriguez', '33333333', 'laura@example.com', 'Calle Principal')
-            ,('Carlos', 'Gomez', '66666666', 'carlos@example.com', 'Avenida Central')
-            ,('Ana', 'Perez', '44444444', 'ana@example.com', 'Calle Secundaria')
-            ,('Luis', 'Sanchez', '77777777', 'luis@example.com', DEFAULT)
-            ,('Sofia', 'Diaz', '99999999', 'sofia@example.com', 'Calle Sur')
-            ,('Diego', 'Hernandez', '22222222', 'diego@example.com', 'Avenida Este')
-            ,('Fernanda', 'Torres', '88888888', 'fernanda@example.com', 'Calle Oeste')
-            ,('Roberto', 'Alvarez', '12121212', 'roberto@example.com', 'Avenida Central')
-            ,('Julia', 'Gutierrez', '34343434', 'julia@example.com', DEFAULT)
-            ,('Miguel', 'Flores', '56565656', 'miguel@example.com', 'Calle Secundaria')
-            ,('Valeria', 'Romero', '78787878', 'valeria@example.com', 'Avenida Norte')
-            ,('Elena', 'Nunez', '90909090', 'elena@example.com', 'Calle Sur')
-	    ,('John', 'Doe', '555-1234', 'john@example.com', '123 Main St')
-            ,('Emily', 'Smith', '555-5678', 'emily@example.com', '456 Elm St')
-            ,('Michael', 'Johnson', '555-9876', 'michael@example.com', '789 Oak St');
+     ('Juan', 'Garcia', '123456789', 'juan@example.com', 'Calle 123')
+    ,('Maria', 'Lopez', '987654321', 'maria@example.com', 'Avenida 456')
+    ,('Pedro', 'Martinez', '55555555', 'pedro@example.com', DEFAULT)
+    ,('Laura', 'Rodriguez', '33333333', 'laura@example.com', 'Calle Principal')
+    ,('Carlos', 'Gomez', '66666666', 'carlos@example.com', 'Avenida Central')
+    ,('Ana', 'Perez', '44444444', 'ana@example.com', 'Calle Secundaria')
+    ,('Luis', 'Sanchez', '77777777', 'luis@example.com', DEFAULT)
+    ,('Sofia', 'Diaz', '99999999', 'sofia@example.com', 'Calle Sur')
+    ,('Diego', 'Hernandez', '22222222', 'diego@example.com', 'Avenida Este')
+    ,('Fernanda', 'Torres', '88888888', 'fernanda@example.com', 'Calle Oeste')
+    ,('Roberto', 'Alvarez', '12121212', 'roberto@example.com', 'Avenida Central')
+    ,('Julia', 'Gutierrez', '34343434', 'julia@example.com', DEFAULT)
+    ,('Miguel', 'Flores', '56565656', 'miguel@example.com', 'Calle Secundaria')
+    ,('Valeria', 'Romero', '78787878', 'valeria@example.com', 'Avenida Norte')
+    ,('Elena', 'Nunez', '90909090', 'elena@example.com', 'Calle Sur')
+    ,('John', 'Doe', '555-1234', 'john@example.com', '123 Main St')
+    ,('Emily', 'Smith', '555-5678', 'emily@example.com', '456 Elm St')
+    ,('Michael', 'Johnson', '555-9876', 'michael@example.com', '789 Oak St');
 
     INSERT INTO Cuentas (Cliente_ID, Numero, Tipo, Saldo, FechaApertura) 
     VALUES
-            (1, '123456789', 'Corriente', 250.00, DEFAULT)
-	   ,(2, '987654321', 'Ahorro', 2500.00, DEFAULT)
-	   ,(2, '987654321', 'Corriente', 200.00, '2024-02-06')
-           ,(3, '567890123', 'Corriente', 150.00, '2023-08-16')
-           ,(4, '135792468', 'Ahorro', 1100.00, '2022-03-06')
-           ,(5, '246813579', 'Corriente', 2000.00, DEFAULT)
-           ,(6, '369258147', 'Ahorro', 2800.00, '2021-09-18')
-           ,(7, '987654321', 'Corriente', 2300.00, DEFAULT)
-           ,(7, '987652821', 'Ahorro', 7700.00, '2024-01-01')
-           ,(8, '123456789', 'Ahorro', 3400.00, '2024-02-05')
-           ,(9, '567890123', 'Corriente', 1800.00, DEFAULT)
-           ,(10, '135792468', 'Ahorro', 4000.00, '2024-01-03')
-	   ,(11, '246813579', 'Ahorro', 2200.00, '2024-01-07')
-           ,(11, '246813579', 'Corriente', 1200.00, '2024-04-07')
-           ,(12, '369258147', 'Ahorro', 3400.00, DEFAULT)
-           ,(13, '987654321', 'Corriente', 2500.00, '2023-12-12')
-           ,(14, '123456789', 'Ahorro', 4200.00, '2023-06-06')
-           ,(15, '567890123', 'Corriente', 2000.00, '2024-01-21')
-	   ,(16, '123456789', 'Corriente', -500.00, '2024-01-15')
-           ,(17, '987654321', 'Ahorro', -1000.00, '2023-11-01')
-           ,(18, '555555555', 'Corriente', -750.00, '2024-03-02');
+     (1, '123456789', 'Corriente', 250.00, DEFAULT)
+    ,(2, '987654321', 'Ahorro', 2500.00, DEFAULT)
+    ,(2, '987654321', 'Corriente', 200.00, '2024-02-06')
+    ,(3, '567890123', 'Corriente', 150.00, '2023-08-16')
+    ,(4, '135792468', 'Ahorro', 1100.00, '2022-03-06')
+    ,(5, '246813579', 'Corriente', 2000.00, DEFAULT)
+    ,(6, '369258147', 'Ahorro', 2800.00, '2021-09-18')
+    ,(7, '987654321', 'Corriente', 2300.00, DEFAULT)
+    ,(7, '987652821', 'Ahorro', 7700.00, '2024-01-01')
+    ,(8, '123456789', 'Ahorro', 3400.00, '2024-02-05')
+    ,(9, '567890123', 'Corriente', 1800.00, DEFAULT)
+    ,(10, '135792468', 'Ahorro', 4000.00, '2024-01-03')
+    ,(11, '246813579', 'Ahorro', 2200.00, '2024-01-07')
+    ,(11, '246813579', 'Corriente', 1200.00, '2024-04-07')
+    ,(12, '369258147', 'Ahorro', 3400.00, DEFAULT)
+    ,(13, '987654321', 'Corriente', 2500.00, '2023-12-12')
+    ,(14, '123456789', 'Ahorro', 4200.00, '2023-06-06')
+    ,(15, '567890123', 'Corriente', 2000.00, '2024-01-21')
+    ,(16, '123456789', 'Corriente', -500.00, '2024-01-15')
+    ,(17, '987654321', 'Ahorro', -1000.00, '2023-11-01')
+    ,(18, '555555555', 'Corriente', -750.00, '2024-03-02');
 
     INSERT INTO Transacciones (Cuentas_ID, Tipo, Monto, Fecha) 
     VALUES
-            (1, 'Deposito', 500.00, '2024-03-01')
-           ,(1, 'Retiro', -250.00, '2024-03-03')
-           ,(2, 'Deposito', 2500.00, DEFAULT)
-           ,(3, 'Transferencia', 150.00, '2024-03-03')
-           ,(4, 'Deposito', 1100.00, '2024-03-04')
-	   ,(5, 'Deposito', 2300.00, '2024-03-02')
-           ,(5, 'Retiro', -300.00, '2024-03-05')
-           ,(6, 'Transferencia', 2800.00, '2024-03-06')
-           ,(7, 'Deposito', 7700.00, DEFAULT)
-	   ,(8, 'Deposito', 3800.00, '2024-03-05')
-           ,(8, 'Retiro', -400.00, '2024-03-08')
-           ,(9, 'Transferencia', 1800.00, '2024-03-09')
-           ,(10, 'Deposito', 4100.00, '2024-01-02')
-           ,(10, 'Retiro', -100.00, '2024-01-05')
-	   ,(11, 'Deposito', 2700.00, '2024-04-28')
-           ,(11, 'Retiro', -500.00, DEFAULT)
-           ,(12, 'Transferencia', 3400.00, '2024-03-12')
-           ,(13, 'Deposito', 2500.00, '2024-03-13')
-	   ,(14, 'Deposito', 4600.00, '2024-04-02')
-           ,(14, 'Retiro', -400.00, DEFAULT)
-           ,(15, 'Transferencia', 2000.00, '2024-03-15')
-           ,(16, 'Deposito', 1000.00, '2024-04-26')
-           ,(16, 'Transferencia Sobregiro', 1500.00, DEFAULT)
-	   ,(17, 'Deposito', 2100.00, '2024-04-22')
-	   ,(17, 'Transferencia Sobregiro', 3100.00, '2024-04-23')
-	   ,(18, 'Deposito', 250.00, '2024-04-03')
-	   ,(18, 'Transferencia Sobregiro', 1000.00, '2024-04-10');
+     (1, 'Deposito', 500.00, '2024-03-01')
+    ,(1, 'Retiro', -250.00, '2024-03-03')
+    ,(2, 'Deposito', 2500.00, DEFAULT)
+    ,(3, 'Transferencia', 150.00, '2024-03-03')
+    ,(4, 'Deposito', 1100.00, '2024-03-04')
+    ,(5, 'Deposito', 2300.00, '2024-03-02')
+    ,(5, 'Retiro', -300.00, '2024-03-05')
+    ,(6, 'Transferencia', 2800.00, '2024-03-06')
+    ,(7, 'Deposito', 7700.00, DEFAULT)
+    ,(8, 'Deposito', 3800.00, '2024-03-05')
+    ,(8, 'Retiro', -400.00, '2024-03-08')
+    ,(9, 'Transferencia', 1800.00, '2024-03-09')
+    ,(10, 'Deposito', 4100.00, '2024-01-02')
+    ,(10, 'Retiro', -100.00, '2024-01-05')
+    ,(11, 'Deposito', 2700.00, '2024-04-28')
+    ,(11, 'Retiro', -500.00, DEFAULT)
+    ,(12, 'Transferencia', 3400.00, '2024-03-12')
+    ,(13, 'Deposito', 2500.00, '2024-03-13')
+    ,(14, 'Deposito', 4600.00, '2024-04-02')
+    ,(14, 'Retiro', -400.00, DEFAULT)
+    ,(15, 'Transferencia', 2000.00, '2024-03-15')
+    ,(16, 'Deposito', 1000.00, '2024-04-26')
+    ,(16, 'Transferencia Sobregiro', 1500.00, DEFAULT)
+    ,(17, 'Deposito', 2100.00, '2024-04-22')
+    ,(17, 'Transferencia Sobregiro', 3100.00, '2024-04-23')
+    ,(18, 'Deposito', 250.00, '2024-04-03')
+    ,(18, 'Transferencia Sobregiro', 1000.00, '2024-04-10');
 		   
 
     INSERT INTO Prestamos (Cliente_ID, Monto, TasaInteres, Plazo, Estado) 
     VALUES
-	    (1, 850.00, 5.5, 180, DEFAULT)
-           ,(1, 1000.00, 10.5, 360, 'Inactivo')
-           ,(2, 2000.00, 8.25, 240, 'Inactivo')
-	   ,(2, 760.00, 6.0, 180, DEFAULT)
-	   ,(2, 1000, 7.5, 240, DEFAULT)
-           ,(3, 1500.00, 9.75, 300, 'Activo')
-           ,(4, 2500.00, 7.85, 180, 'Activo')
-           ,(5, 1800.00, 8.0, 240, DEFAULT)
-           ,(5, 1000.00, 10.5, 360, 'Inactivo')
-           ,(6, 2200.00, 9.25, 360, 'Activo')
-           ,(7, 1300.00, 6.75, 300, 'Inactivo')
-           ,(8, 3000.00, 7.5, 180, 'Activo')
-           ,(9, 1700.00, 8.65, 240, DEFAULT)
-           ,(9, 1200.00, 7.0, 300, 'Inactivo')
-           ,(10, 2800.00, 9.0, 360, 'Activo')
-           ,(11, 1200.00, 7.0, 300, 'Inactivo')
-           ,(12, 2600.00, 8.35, 180, 'Activo')
-           ,(13, 1900.00, 8.75, 240, 'Inactivo')
-           ,(14, 2300.00, 9.15, 360, 'Activo')
-           ,(15, 1400.00, 6.5, 300, 'Activo');
+     (1, 850.00, 5.5, 180, DEFAULT)
+    ,(1, 1000.00, 10.5, 360, 'Inactivo')
+    ,(2, 2000.00, 8.25, 240, 'Inactivo')
+    ,(2, 760.00, 6.0, 180, DEFAULT)
+    ,(2, 1000, 7.5, 240, DEFAULT)
+    ,(3, 1500.00, 9.75, 300, 'Activo')
+    ,(4, 2500.00, 7.85, 180, 'Activo')
+    ,(5, 1800.00, 8.0, 240, DEFAULT)
+    ,(5, 1000.00, 10.5, 360, 'Inactivo')
+    ,(6, 2200.00, 9.25, 360, 'Activo')
+    ,(7, 1300.00, 6.75, 300, 'Inactivo')
+    ,(8, 3000.00, 7.5, 180, 'Activo')
+    ,(9, 1700.00, 8.65, 240, DEFAULT)
+    ,(9, 1200.00, 7.0, 300, 'Inactivo')
+    ,(10, 2800.00, 9.0, 360, 'Activo')
+    ,(11, 1200.00, 7.0, 300, 'Inactivo')
+    ,(12, 2600.00, 8.35, 180, 'Activo')
+    ,(13, 1900.00, 8.75, 240, 'Inactivo')
+    ,(14, 2300.00, 9.15, 360, 'Activo')
+    ,(15, 1400.00, 6.5, 300, 'Activo');
 
     INSERT INTO Pagos_Prestamos (Prestamos_ID, Monto, Fecha) 
     VALUES
-            (1, 1105.00, '2024-03-15')
-           ,(2, 2165.00, DEFAULT)
-           ,(5, 1105.00, '2024-03-17')
-           ,(7, 1387.75, '2024-03-18')
-           ,(9, 1284.00, '2024-03-19')
-           ,(11, 1284.00, DEFAULT)
-           ,(13, 2066.25, '2024-03-21');
+     (1, 1105.00, '2024-03-15')
+    ,(2, 2165.00, DEFAULT)
+    ,(5, 1105.00, '2024-03-17')
+    ,(7, 1387.75, '2024-03-18')
+    ,(9, 1284.00, '2024-03-19')
+    ,(11, 1284.00, DEFAULT)
+    ,(13, 2066.25, '2024-03-21');
 
     INSERT INTO Historial_Credito (Cliente_ID, Puntaje, Observaciones) 
     VALUES
-            (1, 750, 'Excelente')
-           ,(2, 700, 'Regular')
-           ,(3, 620, 'Malo')
-           ,(4, 620, 'Malo')
-           ,(5, 720, 'Regular')
-           ,(6, 690, 'Regular')
-           ,(7, 760, 'Excelente')
-           ,(8, 720, 'Regular')
-           ,(9, 750, 'Excelente')
-           ,(10, 690, 'Regular')
-           ,(11, 770, 'Excelente')
-           ,(12, 710, 'Regular')
-           ,(13, 800, 'Excelente')
-           ,(14, 720, 'Regular')
-           ,(15, 740, 'Regular');
+     (1, 750, 'Excelente')
+    ,(2, 700, 'Regular')
+    ,(3, 620, 'Malo')
+    ,(4, 620, 'Malo')
+    ,(5, 720, 'Regular')
+    ,(6, 690, 'Regular')
+    ,(7, 760, 'Excelente')
+    ,(8, 720, 'Regular')
+    ,(9, 750, 'Excelente')
+    ,(10, 690, 'Regular')
+    ,(11, 770, 'Excelente')
+    ,(12, 710, 'Regular')
+    ,(13, 800, 'Excelente')
+    ,(14, 720, 'Regular')
+    ,(15, 740, 'Regular');
 
     INSERT INTO Modelos_Riesgo (Nombre, Descripcion, Coeficientes) 
     VALUES
-            ('Modelo A', 'Descripcion del Modelo A', 'Coeficientes del Modelo A')
-           ,('Modelo B', 'Descripcion del Modelo B', 'Coeficientes del Modelo B');
+     ('Modelo A', 'Descripcion del Modelo A', 'Coeficientes del Modelo A')
+    ,('Modelo B', 'Descripcion del Modelo B', 'Coeficientes del Modelo B');
 
     INSERT INTO Eventos_Riesgo (Descripcion, Fecha) 
     VALUES
-            ('Desastre natural - Inundación', '2024-03-28')
-           ,('Emergencia medica en el lugar de trabajo', '2024-03-30');
+     ('Actividad sospechosa de la cuenta', '2024-03-28')
+    ,('Fraude con tarjetas de credito', '2024-02-14')
+    ,('Incumplimiento de pagos de prestamos', '2024-04-02')
+    ,('Cambios en el comportamiento de pago', '2024-03-30')
+    ,('Cambios en el historial crediticio', '2024-04-14');
+	    
 
    -- Creación de Vistas
 
     CREATE VIEW VistaClientesSaldoNegativo 
     AS
-    SELECT c.Cliente_ID, c.Nombre, c.Apellido, cu.Saldo
-    FROM Clientes c
-    JOIN Cuentas cu ON c.Cliente_ID = cu.Cliente_ID
-    WHERE cu.Saldo < 0;
+    SELECT      c.Cliente_ID, c.Nombre, c.Apellido, cu.Saldo
+    FROM        Clientes c
+    JOIN        Cuentas cu ON c.Cliente_ID = cu.Cliente_ID
+    WHERE       cu.Saldo < 0;
 
 
     CREATE VIEW VistaTransaccionesRecientes 
     AS
-    SELECT Cuentas_ID, Tipo, Monto, Fecha
-    FROM Transacciones
-    WHERE Fecha >= DATE_SUB(CURDATE(), INTERVAL 30 DAY);
+    SELECT      Cuentas_ID, Tipo, Monto, Fecha
+    FROM        Transacciones
+    WHERE       Fecha >= DATE_SUB(CURDATE(), INTERVAL 30 DAY);
 
 
     CREATE VIEW VistaTransaccionesMontosAltos 
     AS
-    SELECT Cuentas_ID, Tipo, Monto, Fecha
-    FROM Transacciones
-    WHERE Monto > 1000;
+    SELECT      Cuentas_ID, Tipo, Monto, Fecha
+    FROM        Transacciones
+    WHERE       Monto > 1000;
 
 
     CREATE VIEW VistaClientesHistorialCrediticioMalo 
     AS
-    SELECT c.Cliente_ID, c.Nombre, c.Apellido, hc.Puntaje
-    FROM Clientes c
-    JOIN Historial_Credito hc ON c.Cliente_ID = hc.Cliente_ID
-    WHERE hc.Puntaje < 690;
+    SELECT      c.Cliente_ID, c.Nombre, c.Apellido, hc.Puntaje
+    FROM        Clientes c
+    JOIN        Historial_Credito hc ON c.Cliente_ID = hc.Cliente_ID
+    WHERE       hc.Puntaje < 690;
 
 
     CREATE VIEW VistaDetallePrestamos 
     AS
-    SELECT p.Prestamos_ID, c.Nombre AS Cliente, p.Monto, p.TasaInteres, p.Plazo, p.Estado
-    FROM Prestamos p
-    JOIN Clientes c ON p.Cliente_ID = c.Cliente_ID;
+    SELECT      p.Prestamos_ID, c.Nombre AS Cliente, p.Monto, p.TasaInteres, p.Plazo, p.Estado
+    FROM        Prestamos p
+    JOIN        Clientes c ON p.Cliente_ID = c.Cliente_ID;
 
 --  Funciones
    
@@ -301,19 +305,19 @@
     CREATE FUNCTION FN_CalcularMontoTotalPagos(prestamoID INT) RETURNS DECIMAL(10, 2)
     READS SQL DATA
     BEGIN
-    DECLARE montoTotal DECIMAL(10, 2);
+    DECLARE         montoTotal DECIMAL(10, 2);
 
-    SELECT COALESCE(SUM(Monto), 0) INTO montoTotal
-    FROM Pagos_Prestamos
-    WHERE Prestamos_ID = prestamoID;
+    SELECT          COALESCE(SUM(Monto), 0) INTO montoTotal
+    FROM            Pagos_Prestamos
+    WHERE           Prestamos_ID = prestamoID;
 
-    IF montoTotal IS NULL THEN
-    SET montoTotal = 0;
+    IF              montoTotal IS NULL THEN
+    SET             montoTotal = 0;
     END IF;
 
-    RETURN montoTotal;
+    RETURN          montoTotal;
     END //
-    COMMENT 'Esta funcion calcula el monto total de los pagos asociados a un préstamo específico'
+    COMMENT         'Esta funcion calcula el monto total de los pagos asociados a un préstamo específico'
     DELIMITER ;
 
 
@@ -322,15 +326,15 @@
     CREATE FUNCTION FN_CalcularSaldoPromedioCliente(clienteID INT) RETURNS DECIMAL(10, 2)
     READS SQL DATA
     BEGIN
-    DECLARE saldoPromedio DECIMAL(10, 2);
+    DECLARE         saldoPromedio DECIMAL(10, 2);
 
-    SELECT COALESCE(AVG(Saldo), 0) INTO saldoPromedio
-    FROM Cuentas
-    WHERE Cliente_ID = clienteID;
+    SELECT          COALESCE(AVG(Saldo), 0) INTO saldoPromedio
+    FROM            Cuentas
+    WHERE           Cliente_ID = clienteID;
 
-    RETURN saldoPromedio;
+    RETURN          saldoPromedio;
     END //
-    COMMENT 'Esta funcion calcula el saldo promedio de todas las cuentas asociadas a un cliente especifico'
+    COMMENT         'Esta funcion calcula el saldo promedio de todas las cuentas asociadas a un cliente especifico'
     DELIMITER ;
 
 
@@ -340,15 +344,15 @@
     CREATE FUNCTION FN_CalcularSaldoTotalPrestamos(clienteID INT) RETURNS DECIMAL(10, 2)
     READS SQL DATA
     BEGIN
-    DECLARE saldoTotal DECIMAL(10, 2);
+    DECLARE         saldoTotal DECIMAL(10, 2);
 
-    SELECT COALESCE(SUM(Monto), 0) INTO saldoTotal
-    FROM Prestamos
-    WHERE Cliente_ID = clienteID AND Estado = 'Activo';
+    SELECT          COALESCE(SUM(Monto), 0) INTO saldoTotal
+    FROM            Prestamos
+    WHERE           Cliente_ID = clienteID AND Estado = 'Activo';
 
-    RETURN saldoTotal;
+    RETURN          saldoTotal;
     END //
-    COMMENT 'Esta funcion calcula el saldo total de todos los prestamos activos asociados a un cliente especifico'
+    COMMENT         'Esta funcion calcula el saldo total de todos los prestamos activos asociados a un cliente especifico'
     DELIMITER ;
 
 
@@ -358,25 +362,25 @@
 
     CREATE PROCEDURE SP_ActualizarEstadoPrestamo(IN prestamoID INT)
     BEGIN
-    DECLARE saldoPendiente DECIMAL(10, 2);
-    DECLARE estadoNuevo VARCHAR(50);
+    DECLARE          saldoPendiente DECIMAL(10, 2);
+    DECLARE          estadoNuevo    VARCHAR(50);
 
     -- Calcular el saldo pendiente del prestamo
-    SELECT Monto - IFNULL((SELECT SUM(Monto) FROM Pagos_Prestamos WHERE Prestamos_ID = prestamoID), 0)
-    INTO saldoPendiente
-    FROM Prestamos
-    WHERE Prestamos_ID = prestamoID;
+    SELECT           Monto - IFNULL((SELECT SUM(Monto) FROM Pagos_Prestamos WHERE Prestamos_ID = prestamoID), 0)
+    INTO             saldoPendiente
+    FROM             Prestamos
+    WHERE            Prestamos_ID = prestamoID;
 
     -- Actualizar el estado del prestamo
-    IF saldoPendiente <= 0 THEN
-    SET estadoNuevo = 'Pagado';
+    IF               saldoPendiente <= 0 THEN
+    SET              estadoNuevo = 'Pagado';
     ELSE
-    SET estadoNuevo = 'Activo';
+    SET              estadoNuevo = 'Activo';
     END IF;
 
-    UPDATE Prestamos SET Estado = estadoNuevo WHERE Prestamos_ID = prestamoID;
+    UPDATE           Prestamos SET Estado = estadoNuevo WHERE Prestamos_ID = prestamoID;
     END //
-    COMMENT 'Este procedimiento almacenado actualiza el estado de un prestamo basado en su saldo pendiente'
+    COMMENT          'Este procedimiento almacenado actualiza el estado de un prestamo basado en su saldo pendiente'
     DELIMITER ;
 
 
@@ -385,60 +389,60 @@
     DELIMITER //
 
     CREATE PROCEDURE SP_RegistrarPagoPrestamo(
-    IN prestamoID INT,
-    IN monto DECIMAL(10, 2),
-    IN fecha DATE
+    IN               prestamoID INT,
+    IN               monto DECIMAL(10, 2),
+    IN               fecha DATE
     )
     BEGIN
     -- Insertar el nuevo pago de prestamo en la tabla Pagos_Prestamos
-    INSERT INTO Pagos_Prestamos (Prestamos_ID, Monto, Fecha)
-    VALUES (prestamoID, monto, fecha);
+    INSERT INTO      Pagos_Prestamos (Prestamos_ID, Monto, Fecha)
+    VALUES           (prestamoID, monto, fecha);
 
     -- Actualizar el estado del prestamo si corresponde
-    CALL SP_ActualizarEstadoPrestamo(prestamoID);
+    CALL             SP_ActualizarEstadoPrestamo(prestamoID);
     END //
-    COMMENT 'Este procedimiento almacenado registra un pago para un prestamo especifico.'
+    COMMENT          'Este procedimiento almacenado registra un pago para un prestamo especifico.'
     DELIMITER ;
 
 
 -- Triggers
 
-   DELIMITER //
+    DELIMITER //
 
-CREATE TRIGGER ActualizarSaldoCuenta
-AFTER INSERT ON Transacciones
-FOR EACH ROW
-BEGIN
-    DECLARE saldoActual DECIMAL(10, 2);
+    CREATE TRIGGER   ActualizarSaldoCuenta
+    AFTER INSERT ON  Transacciones
+    FOR EACH ROW
+    BEGIN
+    DECLARE          saldoActual DECIMAL(10, 2);
     
     -- Obtener el saldo actual de la cuenta
-    SELECT Saldo INTO saldoActual
-    FROM Cuentas
-    WHERE Cuentas_ID = NEW.Cuentas_ID;
+    SELECT           Saldo INTO saldoActual
+    FROM             Cuentas
+    WHERE            Cuentas_ID = NEW.Cuentas_ID;
     
     -- Actualizar el saldo de la cuenta
-    UPDATE Cuentas
-    SET Saldo = saldoActual + NEW.Monto
-    WHERE Cuentas_ID = NEW.Cuentas_ID;
-END //
+    UPDATE           Cuentas
+    SET              Saldo = saldoActual + NEW.Monto
+    WHERE            Cuentas_ID = NEW.Cuentas_ID;
+    END //
 
-DELIMITER ;
+    DELIMITER ;
 
 -- trigger 2
 
-DELIMITER //
+    DELIMITER //
 
-CREATE TRIGGER ValidarDatosPrestamo
-BEFORE INSERT ON Prestamos
-FOR EACH ROW
-BEGIN
-    IF NEW.Monto <= 0 THEN
-        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El monto del préstamo debe ser mayor que cero';
+    CREATE TRIGGER   ValidarDatosPrestamo
+    BEFORE INSERT ON Prestamos
+    FOR EACH ROW
+    BEGIN
+    IF               NEW.Monto <= 0 THEN
+    SIGNAL SQLSTATE  '45000' SET MESSAGE_TEXT = 'El monto del préstamo debe ser mayor que cero';
     END IF;
 
-    IF NEW.TasaInteres < 0 OR NEW.TasaInteres > 100 THEN
-        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'La tasa de interés debe estar entre 0 y 100';
+    IF               NEW.TasaInteres < 0 OR NEW.TasaInteres > 100 THEN
+    SIGNAL SQLSTATE  '45000' SET MESSAGE_TEXT = 'La tasa de interés debe estar entre 0 y 100';
     END IF;
-END//
+    END//
 
-DELIMITER ;
+    DELIMITER ;
