@@ -373,7 +373,7 @@
 
     -- Actualizar el estado del prestamo
     IF               saldoPendiente <= 0 THEN
-    SET              estadoNuevo = 'Pagado';
+    SET              estadoNuevo = 'Inactivo';
     ELSE
     SET              estadoNuevo = 'Activo';
     END IF;
