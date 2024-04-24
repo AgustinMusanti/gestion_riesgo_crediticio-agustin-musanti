@@ -1,6 +1,7 @@
 # Proyecto de Gestión del Riesgo Crediticio
 
-Este proyecto fue desarrollado como parte del curso de SQL de Coderhouse. Se implementó una base de datos para la gestión del riesgo crediticio, que incluye tablas para clientes, cuentas, préstamos, transacciones, historial de crédito, modelos de riesgo y eventos de riesgo. Además de las tablas principales, se crearon vistas, funciones, stored procedures y triggers para mejorar la funcionalidad y la automatización del sistema.
+En este proyecto desarrollé una base de datos para la gestión del riesgo crediticio, que incluye tablas para clientes, cuentas, préstamos, transacciones, historial de crédito, modelos de riesgo y eventos de riesgo. Además de las tablas principales, se crearon vistas, funciones, stored procedures y triggers para mejorar la funcionalidad y la automatización del sistema.
+Este proyecto fue desarrollado para la entrega final del curso de SQL de Coderhouse.
 
 ## Contenido
 
