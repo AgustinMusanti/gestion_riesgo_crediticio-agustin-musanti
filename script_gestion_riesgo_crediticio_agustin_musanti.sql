@@ -408,7 +408,7 @@
    -- Triggers
     DELIMITER //
 
-    CREATE TRIGGER   ActualizarSaldoCuenta
+    CREATE TRIGGER   TR_ActualizarSaldoCuenta
     AFTER INSERT ON  Transacciones
     FOR EACH ROW
     BEGIN
@@ -439,7 +439,7 @@
 
     DELIMITER //
 
-    CREATE TRIGGER   ValidarDatosPrestamo
+    CREATE TRIGGER   TR_ValidarDatosPrestamo
     BEFORE INSERT ON Prestamos
     FOR EACH ROW
     BEGIN
