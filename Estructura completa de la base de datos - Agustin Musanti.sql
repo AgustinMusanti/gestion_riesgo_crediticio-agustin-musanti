@@ -100,24 +100,32 @@
    
     ALTER TABLE Cuentas                ADD CONSTRAINT fk_cuen_clientes
     FOREIGN KEY (Cliente_ID)           REFERENCES Clientes(Cliente_ID);
+
      
     ALTER TABLE Transacciones          ADD CONSTRAINT fk_trans_cuentas
     FOREIGN KEY (Cuentas_ID)           REFERENCES Cuentas(Cuentas_ID)
     ON DELETE                          CASCADE
     ON UPDATE                          CASCADE;
-   
+
+
     ALTER TABLE Prestamos              ADD CONSTRAINT fk_pres_clientes
     FOREIGN KEY (Cliente_ID)           REFERENCES Clientes(Cliente_ID)
     ON DELETE                          CASCADE
     ON UPDATE                          CASCADE;
-     
+
+
     ALTER TABLE Pagos_Prestamos        ADD CONSTRAINT fk_pago_prestamos
     FOREIGN KEY (Prestamos_ID)         REFERENCES Prestamos(Prestamos_ID)
     ON DELETE                          CASCADE
     ON UPDATE                          CASCADE;
-   
+
+
     ALTER TABLE Historial_Credito      ADD CONSTRAINT fk_hist_clientes
     FOREIGN KEY (Cliente_ID)           REFERENCES Clientes(Cliente_ID);
+
+
+    -- Inserción de datos
+
 
     INSERT INTO Clientes (Nombre, Apellido, Telefono, Correo, Direccion) 
     VALUES 
@@ -139,6 +147,7 @@
     ,('John', 'Doe', '555-1234', 'john@example.com', '123 Main St')
     ,('Emily', 'Smith', '555-5678', 'emily@example.com', '456 Elm St')
     ,('Michael', 'Johnson', '555-9876', 'michael@example.com', '789 Oak St');
+
 
     INSERT INTO Cuentas (Cliente_ID, Numero, Tipo, Saldo, FechaApertura) 
     VALUES
@@ -163,6 +172,7 @@
     ,(16, '1115', 'Corriente', -500.00, '2024-01-15')
     ,(17, '1116', 'Ahorro', -1000.00, '2023-11-01')
     ,(18, '1117', 'Corriente', -750.00, '2024-03-02');
+
 
     INSERT INTO Transacciones (Cuentas_ID, Tipo, Monto, Fecha) 
     VALUES
@@ -218,6 +228,7 @@
     ,(14, 2300.00, 9.15, 360, 'Activo')
     ,(15, 1400.00, 6.5, 300, 'Activo');
 
+
     INSERT INTO Pagos_Prestamos (Prestamos_ID, Monto, Fecha) 
     VALUES
      (1, 1105.00, '2024-03-15')
@@ -227,6 +238,7 @@
     ,(9, 1284.00, '2024-03-19')
     ,(11, 1284.00, DEFAULT)
     ,(13, 2066.25, '2024-03-21');
+
 
     INSERT INTO Historial_Credito (Cliente_ID, Puntaje, Observaciones) 
     VALUES
@@ -246,10 +258,12 @@
     ,(14, 720, 'Regular')
     ,(15, 740, 'Regular');
 
+
     INSERT INTO Modelos_Riesgo (Nombre, Descripcion, Coeficientes) 
     VALUES
      ('Modelo A', 'Descripcion del Modelo A', 'Coeficientes del Modelo A')
     ,('Modelo B', 'Descripcion del Modelo B', 'Coeficientes del Modelo B');
+
 
     INSERT INTO Eventos_Riesgo (Descripcion, Fecha) 
     VALUES
@@ -260,7 +274,8 @@
     ,('Cambios en el historial crediticio', '2024-04-14');
 	    
 
-   -- Creación de Vistas
+   -- Vistas
+
 
     CREATE VIEW VistaClientesSaldoNegativo 
     AS
@@ -298,8 +313,10 @@
     FROM        Prestamos p
     JOIN        Clientes c ON p.Cliente_ID = c.Cliente_ID;
 
---  Funciones
-   
+
+    --  Funciones
+
+
     DELIMITER //
 
     CREATE FUNCTION FN_CalcularMontoTotalPagos(prestamoID INT) RETURNS DECIMAL(10, 2)
@@ -321,6 +338,7 @@
     DELIMITER ;
 
 
+    
     DELIMITER //
 
     CREATE FUNCTION FN_CalcularSaldoPromedioCliente(clienteID INT) RETURNS DECIMAL(10, 2)
@@ -358,6 +376,7 @@
 
     -- Stored Procedures
 
+
     DELIMITER //
 
     CREATE PROCEDURE SP_ActualizarEstadoPrestamo(IN prestamoID INT)
@@ -384,7 +403,6 @@
     DELIMITER ;
 
 
-   -- SP 2
 
     DELIMITER //
 
@@ -406,6 +424,8 @@
 
 
    -- Triggers
+
+
     DELIMITER //
 
     CREATE TRIGGER   TR_ActualizarSaldoCuenta
@@ -435,7 +455,7 @@
 
     DELIMITER ;
 
--- trigger 2
+    
 
     DELIMITER //
 
@@ -454,7 +474,7 @@
 
     DELIMITER ;
 
-    -- tr 3
+    
 
     DELIMITER //
 
@@ -469,7 +489,6 @@
     DELIMITER ;
 
 
-    -- tr 4
 
     DELIMITER //
 
