@@ -5,7 +5,7 @@ Este proyecto fue desarrollado para la entrega final del curso de SQL de Coderho
 
 ## Contenido
 
-- [Estructura de la Base de Datos](#estructura-de-la-base-de-datos)
+- [Estructura completa de la base de datos](script_gestion_riesgo_crediticio_agustin_musanti.sql)
 - [Vistas](#vistas)
 - [Funciones](#funciones)
 - [Stored Procedures](#stored-procedures)
