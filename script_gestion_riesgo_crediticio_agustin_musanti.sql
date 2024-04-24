@@ -458,12 +458,12 @@
 
     DELIMITER //
 
-    CREATE TRIGGER TR_EliminarCliente
+    CREATE TRIGGER   TR_EliminarCliente
     BEFORE DELETE ON Clientes
     FOR EACH ROW
     BEGIN
     -- Generar un error personalizado
-    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'No se permite eliminar clientes.';
+    SIGNAL SQLSTATE  '45000' SET MESSAGE_TEXT = 'No se permite eliminar clientes.';
     END //
 
     DELIMITER ;
@@ -471,31 +471,31 @@
 
     -- tr 4
 
-DELIMITER //
+    DELIMITER //
 
-CREATE TRIGGER TR_CrearCuentaClienteNuevo
-AFTER INSERT ON Clientes
-FOR EACH ROW
-BEGIN
-    DECLARE cuenta_existente INT;
-    DECLARE nuevo_numero INT;
+    CREATE TRIGGER   TR_CrearCuentaClienteNuevo
+    AFTER INSERT ON  Clientes
+    FOR EACH ROW
+    BEGIN
+    DECLARE          cuenta_existente INT;
+    DECLARE          nuevo_numero INT;
     
     -- Verificar si hay cuentas existentes para el cliente recién insertado
-    SELECT COUNT(*) INTO cuenta_existente
-    FROM Cuentas
-    WHERE Cliente_ID = NEW.Cliente_ID;
+    SELECT COUNT(*)  INTO cuenta_existente
+    FROM             Cuentas
+    WHERE            Cliente_ID = NEW.Cliente_ID;
     
     -- Si no hay cuentas existentes para el cliente, insertar una nueva cuenta
-    IF cuenta_existente = 0 THEN
-        -- Generar un nuevo número de cuenta de 4 dígitos único
-        REPEAT
-            SET nuevo_numero = FLOOR(RAND() * 9000) + 1000;
-        UNTIL NOT EXISTS (SELECT 1 FROM Cuentas WHERE Numero = nuevo_numero) END REPEAT;
+    IF               cuenta_existente = 0 THEN
+    -- Generar un nuevo número de cuenta de 4 dígitos único
+    REPEAT
+    SET              nuevo_numero = FLOOR(RAND() * 9000) + 1000;
+    UNTIL NOT EXISTS (SELECT 1 FROM Cuentas WHERE Numero = nuevo_numero) END REPEAT;
         
-        -- Insertar la nueva cuenta con el número generado
-        INSERT INTO Cuentas (Cliente_ID, Numero, Tipo, Saldo, FechaApertura)
-        VALUES (NEW.Cliente_ID, nuevo_numero, 'Ahorro', 0, NOW());
+    -- Insertar la nueva cuenta con el número generado
+    INSERT INTO      Cuentas (Cliente_ID, Numero, Tipo, Saldo, FechaApertura)
+    VALUES           (NEW.Cliente_ID, nuevo_numero, 'Ahorro', 0, NOW());
     END IF;
-END //
+    END //
 
-DELIMITER ;
+    DELIMITER ;
