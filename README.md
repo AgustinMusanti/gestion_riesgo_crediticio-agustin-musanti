@@ -52,7 +52,10 @@ Se desarrollaron stored procedures para automatizar tareas recurrentes o complej
 
 Se utilizaron triggers para realizar acciones automáticamente cuando se modifican datos en la base de datos. Por ejemplo:
 
-- **Trigger_ActualizarSaldoCuenta**: Actualiza el saldo total de una cuenta después de cada transacción.
+- **TR_ActualizarSaldoCuenta**: Actualiza el saldo total de una cuenta después de cada transacción.
+- **TR_ValidarDatosPrestamo**: Valida que los valores insertados cumplan con las condiciones propuestas en la tabla.
+- **TR_EliminarCliente**: Prohibie la eliminación de clientes de la base de datos.
+- **TR_CrearCuentaClienteNuevo**: Cada vez que se registra un nuevo cliente, se registra una cuenta de "Ahorro" a su nombre.
 
 Este README proporciona una visión general del proyecto y sus componentes principales. 
 Para obtener más detalles sobre la implementación y el funcionamiento de cada elemento, consulte el código fuente en el repositorio.
