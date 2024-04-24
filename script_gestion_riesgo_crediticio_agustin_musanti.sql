@@ -419,14 +419,14 @@
     FROM             Cuentas
     WHERE            Cuentas_ID = NEW.Cuentas_ID;
     
-    -- Verificar el tipo de transacción
+    -- Verificar el tipo de transaccion
     IF               NEW.Tipo = 'Retiro' THEN
-    -- Restar el monto de la transacción al saldo de la cuenta
+    -- Restar el monto de la transaccion al saldo de la cuenta
     UPDATE           Cuentas
     SET              Saldo = saldoActual - NEW.Monto
     WHERE            Cuentas_ID = NEW.Cuentas_ID;
     ELSE
-    -- Sumar el monto de la transacción al saldo de la cuenta
+    -- Sumar el monto de la transaccion al saldo de la cuenta
     UPDATE           Cuentas
     SET              Saldo = saldoActual + NEW.Monto
     WHERE            Cuentas_ID = NEW.Cuentas_ID;
@@ -444,12 +444,26 @@
     FOR EACH ROW
     BEGIN
     IF               NEW.Monto <= 0 THEN
-    SIGNAL SQLSTATE  '45000' SET MESSAGE_TEXT = 'El monto del préstamo debe ser mayor que cero';
+    SIGNAL SQLSTATE  '45000' SET MESSAGE_TEXT = 'El monto del prestamo debe ser mayor que cero';
     END IF;
 
     IF               NEW.TasaInteres < 0 OR NEW.TasaInteres > 100 THEN
-    SIGNAL SQLSTATE  '45000' SET MESSAGE_TEXT = 'La tasa de interés debe estar entre 0 y 100';
+    SIGNAL SQLSTATE  '45000' SET MESSAGE_TEXT = 'La tasa de interes debe estar entre 0 y 100';
     END IF;
     END//
+
+    DELIMITER ;
+
+    -- tr 3
+
+    DELIMITER //
+
+    CREATE TRIGGER TR_EliminarCliente
+    BEFORE DELETE ON Clientes
+    FOR EACH ROW
+    BEGIN
+    -- Generar un error personalizado
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'No se permite eliminar clientes.';
+    END //
 
     DELIMITER ;
