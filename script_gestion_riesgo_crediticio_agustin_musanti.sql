@@ -405,8 +405,7 @@
     DELIMITER ;
 
 
--- Triggers
-
+   -- Triggers
     DELIMITER //
 
     CREATE TRIGGER   ActualizarSaldoCuenta
@@ -420,10 +419,18 @@
     FROM             Cuentas
     WHERE            Cuentas_ID = NEW.Cuentas_ID;
     
-    -- Actualizar el saldo de la cuenta
+    -- Verificar el tipo de transacción
+    IF               NEW.Tipo = 'Retiro' THEN
+    -- Restar el monto de la transacción al saldo de la cuenta
+    UPDATE           Cuentas
+    SET              Saldo = saldoActual - NEW.Monto
+    WHERE            Cuentas_ID = NEW.Cuentas_ID;
+    ELSE
+    -- Sumar el monto de la transacción al saldo de la cuenta
     UPDATE           Cuentas
     SET              Saldo = saldoActual + NEW.Monto
     WHERE            Cuentas_ID = NEW.Cuentas_ID;
+    END IF;
     END //
 
     DELIMITER ;
