@@ -480,19 +480,19 @@
     DECLARE          cuenta_existente INT;
     DECLARE          nuevo_numero INT;
     
-    -- Verificar si hay cuentas existentes para el cliente recién insertado
+    -- Verifico si hay cuentas existentes para el cliente recien insertado
     SELECT COUNT(*)  INTO cuenta_existente
     FROM             Cuentas
     WHERE            Cliente_ID = NEW.Cliente_ID;
     
-    -- Si no hay cuentas existentes para el cliente, insertar una nueva cuenta
+    -- Si no hay cuentas existentes para el cliente, insertamos una nueva cuenta 
     IF               cuenta_existente = 0 THEN
-    -- Generar un nuevo número de cuenta de 4 dígitos único
+    -- Genero un numero de cuenta de 4 digitos, que sea unico
     REPEAT
     SET              nuevo_numero = FLOOR(RAND() * 9000) + 1000;
     UNTIL NOT EXISTS (SELECT 1 FROM Cuentas WHERE Numero = nuevo_numero) END REPEAT;
         
-    -- Insertar la nueva cuenta con el número generado
+    -- Inserto la nueva cuenta con el numero de cuenta generado
     INSERT INTO      Cuentas (Cliente_ID, Numero, Tipo, Saldo, FechaApertura)
     VALUES           (NEW.Cliente_ID, nuevo_numero, 'Ahorro', 0, NOW());
     END IF;
