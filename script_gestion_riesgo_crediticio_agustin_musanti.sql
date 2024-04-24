@@ -317,7 +317,7 @@
 
     RETURN          montoTotal;
     END //
-    COMMENT         'Esta funcion calcula el monto total de los pagos asociados a un préstamo específico'
+    COMMENT         'Esta funcion calcula el monto total de los pagos asociados a un prestamo específico'
     DELIMITER ;
 
 
