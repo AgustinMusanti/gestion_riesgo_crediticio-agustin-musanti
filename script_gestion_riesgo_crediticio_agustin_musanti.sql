@@ -467,3 +467,28 @@
     END //
 
     DELIMITER ;
+
+
+    -- tr 4 (falta desarrollar la parte de que cree el numero de cuenta)
+
+  DELIMITER //
+
+CREATE TRIGGER TR_CrearCuentaClienteNuevo
+AFTER INSERT ON Clientes
+FOR EACH ROW
+BEGIN
+    DECLARE cuenta_existente INT;
+    
+    -- Verificar si hay cuentas existentes para el cliente recién insertado
+    SELECT COUNT(*) INTO cuenta_existente
+    FROM Cuentas
+    WHERE Cliente_ID = NEW.Cliente_ID;
+    
+    -- Si no hay cuentas existentes para el cliente, insertar una nueva cuenta
+    IF cuenta_existente = 0 THEN
+        INSERT INTO Cuentas (Cliente_ID, Numero, Tipo, Saldo, Fecha)
+        VALUES (NEW.Cliente_ID, CONCAT('AH', NEW.Cliente_ID), 'Ahorro', 0, NOW());
+    END IF;
+END //
+
+DELIMITER ;
