@@ -37,3 +37,5 @@
     SELECT        p.Prestamos_ID, c.Nombre AS Cliente, p.Monto, p.TasaInteres, p.Plazo, p.Estado
     FROM          Prestamos p
     JOIN          Clientes c ON p.Cliente_ID = c.Cliente_ID;
+
+
