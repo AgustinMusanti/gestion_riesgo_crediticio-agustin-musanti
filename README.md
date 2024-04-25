@@ -10,7 +10,7 @@ Este proyecto fue desarrollado para la entrega final del curso de SQL de Coderho
 - [Vistas](Vistas.sql)
 - [Funciones](Funciones.sql)
 - [Stored Procedures](Stored%20Procedures.sql)
-- [Triggers](Triggers)
+- [Triggers](Triggers.sql)
 - [Documentación](#documentacion-gestiondelriesgocrediticioconsql-agustinmusanti.pdf)
 
 ## Estructura de la Base de Datos
