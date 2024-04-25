@@ -11,7 +11,7 @@ Este proyecto fue desarrollado para la entrega final del curso de SQL de Coderho
 - [Funciones](Funciones.sql)
 - [Stored Procedures](Stored%20Procedures.sql)
 - [Triggers](Triggers.sql)
-- [Documentación](#documentacion-gestiondelriesgocrediticioconsql-agustinmusanti.pdf)
+- [Documentación](Documentación%20-%20Gestión%20del%20riesgo%20crediticio%20con%20SQL%20-%20Agustin%20Musanti.pdf)
 
 ## Estructura de la Base de Datos
 
