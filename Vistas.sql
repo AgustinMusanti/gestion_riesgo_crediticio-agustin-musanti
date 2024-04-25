@@ -19,7 +19,7 @@
     AS
     SELECT         Cuentas_ID, Tipo, Monto, Fecha
     FROM           Transacciones
-    WHERE          Monto > 1000;
+    WHERE          Monto > 2500;
 
 
 
