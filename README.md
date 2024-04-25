@@ -9,8 +9,8 @@ Este proyecto fue desarrollado para la entrega final del curso de SQL de Coderho
 - [Estructura completa de la base de datos](Estructura%20completa%20de%20la%20base%20de%20datos%20-%20Agustin%20Musanti.sql)
 - [Vistas](Vistas.sql)
 - [Funciones](Funciones.sql)
-- [Stored Procedures](#stored-procedures)
-- [Triggers](#triggers)
+- [Stored Procedures](Stored%20Procedures.sql)
+- [Triggers](Triggers)
 - [Documentación](#documentacion-gestiondelriesgocrediticioconsql-agustinmusanti.pdf)
 
 ## Estructura de la Base de Datos
