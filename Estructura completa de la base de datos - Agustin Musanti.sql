@@ -296,7 +296,7 @@
     AS
     SELECT          Cuentas_ID, Tipo, Monto, Fecha
     FROM            Transacciones
-    WHERE           Monto > 2500;
+    WHERE           Monto > 3000;
 
 
     CREATE VIEW     VistaClientesHistorialCrediticioMalo 
