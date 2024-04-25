@@ -242,21 +242,21 @@
 
     INSERT INTO Historial_Credito (Cliente_ID, Puntaje, Observaciones) 
     VALUES
-     (1, 750, 'Excelente')
-    ,(2, 700, 'Regular')
-    ,(3, 620, 'Malo')
-    ,(4, 620, 'Malo')
-    ,(5, 720, 'Regular')
-    ,(6, 690, 'Regular')
-    ,(7, 760, 'Excelente')
-    ,(8, 720, 'Regular')
-    ,(9, 750, 'Excelente')
-    ,(10, 690, 'Regular')
-    ,(11, 770, 'Excelente')
-    ,(12, 710, 'Regular')
-    ,(13, 800, 'Excelente')
-    ,(14, 720, 'Regular')
-    ,(15, 740, 'Regular');
+     (1, 8, 'Excelente')
+    ,(2, 6, 'Regular')
+    ,(3, 4, 'Malo')
+    ,(4, 3, 'Malo')
+    ,(5, 7, 'Regular')
+    ,(6, 5, 'Regular')
+    ,(7, 9, 'Excelente')
+    ,(8, 6, 'Regular')
+    ,(9, 8, 'Excelente')
+    ,(10, 5, 'Regular')
+    ,(11, 8, 'Excelente')
+    ,(12, 6, 'Regular')
+    ,(13, 9, 'Excelente')
+    ,(14, 6, 'Regular')
+    ,(15, 3, 'Malo');
 
 
     INSERT INTO Modelos_Riesgo (Nombre, Descripcion, Coeficientes) 
@@ -304,7 +304,7 @@
     SELECT      c.Cliente_ID, c.Nombre, c.Apellido, hc.Puntaje
     FROM        Clientes c
     JOIN        Historial_Credito hc ON c.Cliente_ID = hc.Cliente_ID
-    WHERE       hc.Puntaje < 690;
+    WHERE       hc.Puntaje < 5;
 
 
     CREATE VIEW VistaDetallePrestamos 
