@@ -28,7 +28,7 @@
     SELECT         c.Cliente_ID, c.Nombre, c.Apellido, hc.Puntaje
     FROM           Clientes c
     JOIN           Historial_Credito hc ON c.Cliente_ID = hc.Cliente_ID
-    WHERE          hc.Puntaje < 690;
+    WHERE          hc.Puntaje < 5;
 
 
 
