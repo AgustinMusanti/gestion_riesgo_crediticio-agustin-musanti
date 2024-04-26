@@ -368,7 +368,7 @@
 
     SELECT          COALESCE(SUM(Monto), 0) INTO saldoTotal
     FROM            Prestamos
-    WHERE           Cliente_ID = clienteID AND Estado = 'Activo';
+    WHERE           Cliente_ID = clienteID  AND Estado = 'Activo';
 
     RETURN          saldoTotal;
     END //
@@ -410,8 +410,8 @@
 
     CREATE PROCEDURE SP_RegistrarPagoPrestamo(
     IN               prestamoID INT,
-    IN               monto DECIMAL(10, 2),
-    IN               fecha DATE
+    IN               monto      DECIMAL(10, 2),
+    IN               fecha      DATE
     )
     BEGIN
     -- Inserto el nuevo pago de prestamo en la tabla Pagos_Prestamos
