@@ -1,4 +1,4 @@
-INSERT INTO Clientes (Nombre, Apellido, Telefono, Correo, Direccion) 
+    INSERT INTO Clientes (Nombre, Apellido, Telefono, Correo, Direccion) 
     VALUES 
      ('Juan', 'Garcia', '123456789', 'juan@example.com', 'Calle 123')
     ,('Maria', 'Lopez', '987654321', 'maria@example.com', 'Avenida 456')
