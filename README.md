@@ -7,10 +7,12 @@ Este proyecto fue desarrollado para la entrega final del curso de SQL de Coderho
 ## Contenido
 
 - [Estructura completa de la base de datos](Estructura%20completa%20de%20la%20base%20de%20datos%20-%20Agustin%20Musanti.sql)
+- [Inserción de datos](Inserción%20de%20datos.sql)
 - [Vistas](Vistas.sql)
 - [Funciones](Funciones.sql)
 - [Stored Procedures](Stored%20Procedures.sql)
 - [Triggers](Triggers.sql)
+- [Glosario](Glosario.pdf)
 - [Documentación](Documentación%20-%20Gestión%20del%20riesgo%20crediticio%20con%20SQL%20-%20Agustin%20Musanti.pdf)
 
 ## Estructura de la Base de Datos
