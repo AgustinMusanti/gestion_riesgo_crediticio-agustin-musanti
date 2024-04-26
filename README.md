@@ -31,10 +31,10 @@ La base de datos está diseñada para gestionar la información relacionada con 
 
 Se crearon vistas para proporcionar acceso simplificado a la información de la base de datos. Algunas vistas útiles incluyen:
 
-- **VistaDetallePrestamos**: Muestra un resumen de los detalles de los prestamos.
+- **VistaDetallePrestamosActivos**: Muestra un resumen de los detalles de los prestamos que se encuentran activos.
 - **VistaClientesSaldoNegativo**: Muestra a los clientes con saldos negativos.
 - **VistaTransaccionesRecientes**: Muestra las transacciones realizadas en los últimos 30 días.
-- **VistaTransaccionesMontosAltos**: Muestra las transacciones con montos superiores a $1000.
+- **VistaTransaccionesMontosAltos**: Muestra las transacciones con montos superiores a $3.000.
 - **VistaClientesHistorialCrediticioMalo**: Muestra a los clientes con un historial crediticio considerado malo.
 
 ## Funciones
@@ -62,4 +62,4 @@ Se utilizaron triggers para realizar acciones automáticamente cuando se modific
 - **TR_CrearCuentaClienteNuevo**: Cada vez que se registra un nuevo cliente, se registra una cuenta de "Ahorro" a su nombre.
 
 Este README proporciona una visión general del proyecto y sus componentes principales. 
-Para obtener más detalles sobre la implementación y el funcionamiento de cada elemento, consulte el código fuente en el repositorio.
+Para obtener más detalles sobre la implementación y el funcionamiento de cada elemento, consulte el código fuente y/o la documentación en el repositorio.
