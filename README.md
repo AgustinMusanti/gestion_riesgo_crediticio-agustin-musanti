@@ -3,13 +3,13 @@
 # Entrega final - Curso SQL Coderhouse
 
 
-@Alumno: Agustin Musanti
+@Alumno:   Agustin Musanti
 
 @Comision: 53180
 
 @Profesor: Anderson Michel Ocaña Torres
 
-@Tutora: Carla Palermo
+@Tutora:   Carla Palermo
 
 
 ## Introducción
@@ -29,8 +29,10 @@ Para la entrega final del curso en cuestión se desarrolló una base de datos pa
 - [Documentación](Documentación%20-%20Gestión%20del%20riesgo%20crediticio%20con%20SQL%20-%20Agustin%20Musanti.pdf)
 
 
+
 Este README proporciona una visión general del proyecto y sus componentes principales. 
 Para obtener más detalles sobre la implementación y el funcionamiento de cada elemento, consulte el código fuente, la documentación y/o el glosario en el repositorio.
+
 
 ## Estructura de la Base de Datos
 
