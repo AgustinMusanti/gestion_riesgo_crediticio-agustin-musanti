@@ -21,10 +21,10 @@ Para la entrega final del curso en cuestión se desarrolló una base de datos pa
 
 - [Estructura completa de la base de datos](Estructura%20completa%20de%20la%20base%20de%20datos%20-%20Agustin%20Musanti.sql)
 - [Inserción de datos](Inserción%20de%20datos.sql)
-- [Vistas](Vistas.sql)
+- [Vistas](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Objects/Views.sql)
 - [Funciones](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Objects/Functions.sql)
-- [Stored Procedures](Stored%20Procedures.sql)
-- [Triggers](Triggers.sql)
+- [Stored Procedures](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Objects/Stored%20Procedures.sql)
+- [Triggers](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Objects/Triggers.sql)
 - [Glosario](Glosario.pdf)
 - [Documentación](Documentación%20-%20Gestión%20del%20riesgo%20crediticio%20con%20SQL%20-%20Agustin%20Musanti.pdf)
 
