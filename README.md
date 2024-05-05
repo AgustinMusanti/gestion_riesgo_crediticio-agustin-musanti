@@ -11,7 +11,10 @@
 
 @Tutora: Carla Palermo
 
-En este proyecto se desarrolló una base de datos para la gestión del riesgo crediticio, que incluye tablas para clientes, cuentas, préstamos, transacciones, historial de crédito, modelos de riesgo y eventos de riesgo. Además de las tablas principales, se crearon vistas, funciones, stored procedures y triggers para mejorar la funcionalidad y la automatización del sistema.
+
+## Introducción
+
+Para la entrega final del curso en cuestión se desarrolló una base de datos para la gestión del riesgo crediticio, la cual incluye tablas para clientes, cuentas, préstamos, transacciones, historial de crédito, modelos de riesgo y eventos de riesgo. Además de las tablas principales, se crearon vistas, funciones, stored procedures y triggers para mejorar la funcionalidad y la automatización del sistema.
 
 
 ## Contenido
@@ -28,7 +31,8 @@ En este proyecto se desarrolló una base de datos para la gestión del riesgo cr
 
 ## Visión general
 
-A continuación se dará una visión general del proyecto. Para obtener más información del mismo por favor consultar la documentación, glosario y/o los scripts por separado.
+Este README proporciona una visión general del proyecto y sus componentes principales. 
+Para obtener más detalles sobre la implementación y el funcionamiento de cada elemento, consulte el código fuente, la documentación y/o el glosario en el repositorio.
 
 ## Estructura de la Base de Datos
 
