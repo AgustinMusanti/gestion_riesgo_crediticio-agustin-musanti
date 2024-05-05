@@ -98,36 +98,36 @@
     ;
    
    
-    ALTER TABLE Cuentas                ADD CONSTRAINT fk_cuen_clientes
-    FOREIGN KEY (Cliente_ID)           REFERENCES Clientes(Cliente_ID);
+    ALTER TABLE   Cuentas                ADD CONSTRAINT fk_cuen_clientes
+    FOREIGN KEY   (Cliente_ID)           REFERENCES Clientes(Cliente_ID);
 
      
-    ALTER TABLE Transacciones          ADD CONSTRAINT fk_trans_cuentas
-    FOREIGN KEY (Cuentas_ID)           REFERENCES Cuentas(Cuentas_ID)
-    ON DELETE                          CASCADE
-    ON UPDATE                          CASCADE;
+    ALTER TABLE   Transacciones          ADD CONSTRAINT fk_trans_cuentas
+    FOREIGN KEY   (Cuentas_ID)           REFERENCES Cuentas(Cuentas_ID)
+    ON DELETE                            CASCADE
+    ON UPDATE                            CASCADE;
 
 
-    ALTER TABLE Prestamos              ADD CONSTRAINT fk_pres_clientes
-    FOREIGN KEY (Cliente_ID)           REFERENCES Clientes(Cliente_ID)
-    ON DELETE                          CASCADE
-    ON UPDATE                          CASCADE;
+    ALTER TABLE   Prestamos              ADD CONSTRAINT fk_pres_clientes
+    FOREIGN KEY   (Cliente_ID)           REFERENCES Clientes(Cliente_ID)
+    ON DELETE                            CASCADE
+    ON UPDATE                            CASCADE;
 
 
-    ALTER TABLE Pagos_Prestamos        ADD CONSTRAINT fk_pago_prestamos
-    FOREIGN KEY (Prestamos_ID)         REFERENCES Prestamos(Prestamos_ID)
-    ON DELETE                          CASCADE
-    ON UPDATE                          CASCADE;
+    ALTER TABLE   Pagos_Prestamos          ADD CONSTRAINT fk_pago_prestamos
+    FOREIGN KEY   (Prestamos_ID)         REFERENCES Prestamos(Prestamos_ID)
+    ON DELETE                            CASCADE
+    ON UPDATE                            CASCADE;
 
 
-    ALTER TABLE Historial_Credito      ADD CONSTRAINT fk_hist_clientes
-    FOREIGN KEY (Cliente_ID)           REFERENCES Clientes(Cliente_ID);
+    ALTER TABLE   Historial_Credito      ADD CONSTRAINT fk_hist_clientes
+    FOREIGN KEY   (Cliente_ID)           REFERENCES Clientes(Cliente_ID);
 
 
     -- Inserción de datos
 
 
-    INSERT INTO Clientes (Nombre, Apellido, Telefono, Correo, Direccion) 
+    INSERT INTO   Clientes (Nombre, Apellido, Telefono, Correo, Direccion) 
     VALUES 
      ('Juan', 'Garcia', '123456789', 'juan@example.com', 'Calle 123')
     ,('Maria', 'Lopez', '987654321', 'maria@example.com', 'Avenida 456')
@@ -149,7 +149,7 @@
     ,('Michael', 'Johnson', '555-9876', 'michael@example.com', '789 Oak St');
 
 
-    INSERT INTO Cuentas (Cliente_ID, Numero, Tipo, Saldo, FechaApertura) 
+    INSERT INTO   Cuentas (Cliente_ID, Numero, Tipo, Saldo, FechaApertura) 
     VALUES
      (1, '1234', 'Corriente', 250.00, DEFAULT)
     ,(2, '9876', 'Ahorro', 2500.00, DEFAULT)
@@ -174,7 +174,7 @@
     ,(18, '1117', 'Corriente', -750.00, '2024-03-02');
 
 
-    INSERT INTO Transacciones (Cuentas_ID, Tipo, Monto, Fecha) 
+    INSERT INTO   Transacciones (Cuentas_ID, Tipo, Monto, Fecha) 
     VALUES
      (1, 'Deposito', 500.00, '2024-03-01')
     ,(1, 'Retiro', -250.00, '2024-03-03')
@@ -205,7 +205,7 @@
     ,(18, 'Transferencia (Sobregiro)', 1000.00, '2024-04-10');
 		   
 
-    INSERT INTO Prestamos (Cliente_ID, Monto, TasaInteres, Plazo, Estado) 
+    INSERT INTO   Prestamos (Cliente_ID, Monto, TasaInteres, Plazo, Estado) 
     VALUES
      (1, 850.00, 5.5, 180, DEFAULT)
     ,(1, 1000.00, 10.5, 360, 'Inactivo')
@@ -229,7 +229,7 @@
     ,(15, 1400.00, 6.5, 300, 'Activo');
 
 
-    INSERT INTO Pagos_Prestamos (Prestamos_ID, Monto, Fecha) 
+    INSERT INTO   Pagos_Prestamos (Prestamos_ID, Monto, Fecha) 
     VALUES
      (1, 1105.00, '2024-03-15')
     ,(2, 2165.00, DEFAULT)
@@ -240,7 +240,7 @@
     ,(13, 2066.25, '2024-03-21');
 
 
-    INSERT INTO Historial_Credito (Cliente_ID, Puntaje, Observaciones) 
+    INSERT INTO   Historial_Credito (Cliente_ID, Puntaje, Observaciones) 
     VALUES
      (1, 8, 'Excelente')
     ,(2, 6, 'Regular')
@@ -259,13 +259,13 @@
     ,(15, 3, 'Malo');
 
 
-    INSERT INTO Modelos_Riesgo (Nombre, Descripcion, Coeficientes) 
+    INSERT INTO   Modelos_Riesgo (Nombre, Descripcion, Coeficientes) 
     VALUES
      ('Modelo A', 'Descripcion del Modelo A', 'Coeficientes del Modelo A')
     ,('Modelo B', 'Descripcion del Modelo B', 'Coeficientes del Modelo B');
 
 
-    INSERT INTO Eventos_Riesgo (Descripcion, Fecha) 
+    INSERT INTO   Eventos_Riesgo (Descripcion, Fecha) 
     VALUES
      ('Actividad sospechosa de la cuenta', '2024-03-28')
     ,('Fraude con tarjetas de credito', '2024-02-14')
@@ -277,42 +277,42 @@
    -- Vistas
 
 
-    CREATE VIEW     VistaClientesSaldoNegativo 
+    CREATE VIEW        VistaClientesSaldoNegativo 
     AS
-    SELECT          c.Cliente_ID, c.Nombre, c.Apellido, cu.Saldo
-    FROM            Clientes c
-    JOIN            Cuentas cu ON c.Cliente_ID = cu.Cliente_ID
-    WHERE           cu.Saldo < 0;
+    SELECT             c.Cliente_ID, c.Nombre, c.Apellido, cu.Saldo
+    FROM               Clientes c
+    JOIN               Cuentas cu ON c.Cliente_ID = cu.Cliente_ID
+    WHERE              cu.Saldo < 0;
 
 
-    CREATE VIEW     VistaTransaccionesRecientes 
+    CREATE VIEW        VistaTransaccionesRecientes 
     AS
-    SELECT          Cuentas_ID, Tipo, Monto, Fecha
-    FROM            Transacciones
-    WHERE           Fecha >= DATE_SUB(CURDATE(), INTERVAL 30 DAY);
+    SELECT             Cuentas_ID, Tipo, Monto, Fecha
+    FROM               Transacciones
+    WHERE              Fecha >= DATE_SUB(CURDATE(), INTERVAL 30 DAY);
 
 
-    CREATE VIEW     VistaTransaccionesMontosAltos 
+    CREATE VIEW        VistaTransaccionesMontosAltos 
     AS
-    SELECT          Cuentas_ID, Tipo, Monto, Fecha
-    FROM            Transacciones
-    WHERE           Monto > 3000;
+    SELECT             Cuentas_ID, Tipo, Monto, Fecha
+    FROM               Transacciones
+    WHERE              Monto > 3000;
 
 
-    CREATE VIEW     VistaClientesHistorialCrediticioMalo 
+    CREATE VIEW        VistaClientesHistorialCrediticioMalo 
     AS
-    SELECT          c.Cliente_ID, c.Nombre, c.Apellido, hc.Puntaje
-    FROM            Clientes c
-    JOIN            Historial_Credito hc ON c.Cliente_ID = hc.Cliente_ID
-    WHERE           hc.Puntaje < 5;
+    SELECT             c.Cliente_ID, c.Nombre, c.Apellido, hc.Puntaje
+    FROM               Clientes c
+    JOIN               Historial_Credito hc ON c.Cliente_ID = hc.Cliente_ID
+    WHERE              hc.Puntaje < 5;
 
 
-    CREATE VIEW     VistaDetallePrestamosActivos
+    CREATE VIEW        VistaDetallePrestamosActivos
     AS
-    SELECT          p.Prestamos_ID, c.Nombre AS Cliente, p.Monto, p.TasaInteres, p.Plazo, p.Estado
-    FROM            Prestamos p
-    JOIN            Clientes c ON p.Cliente_ID = c.Cliente_ID
-    WHERE           p.Estado = 'Activo';
+    SELECT             p.Prestamos_ID, c.Nombre AS Cliente, p.Monto, p.TasaInteres, p.Plazo, p.Estado
+    FROM               Prestamos p
+    JOIN               Clientes c ON p.Cliente_ID = c.Cliente_ID
+    WHERE              p.Estado = 'Activo';
 
 
 
@@ -321,58 +321,58 @@
 
     DELIMITER //
 
-    CREATE FUNCTION   FN_CalcularMontoTotalPagos(prestamoID INT) RETURNS DECIMAL(10, 2)
+    CREATE FUNCTION    FN_CalcularMontoTotalPagos(prestamoID INT) RETURNS DECIMAL(10, 2)
     READS SQL DATA
     BEGIN
-    DECLARE           montoTotal DECIMAL(10, 2);
+    DECLARE            montoTotal DECIMAL(10, 2);
 
-    SELECT            COALESCE(SUM(Monto), 0) INTO montoTotal
-    FROM              Pagos_Prestamos
-    WHERE             Prestamos_ID = prestamoID;
+    SELECT             COALESCE(SUM(Monto), 0) INTO montoTotal
+    FROM               Pagos_Prestamos
+    WHERE              Prestamos_ID = prestamoID;
 
-    IF                montoTotal IS NULL THEN
-    SET               montoTotal = 0;
+    IF                 montoTotal IS NULL THEN
+    SET                montoTotal = 0;
     END IF;
 
-    RETURN            montoTotal;
+    RETURN             montoTotal;
     END //
-    COMMENT           'Esta funcion calcula el monto total de los pagos asociados a un prestamo específico'
+    COMMENT            'Esta funcion calcula el monto total de los pagos asociados a un prestamo específico'
     DELIMITER ;
 
 
     
     DELIMITER //
 
-    CREATE FUNCTION   FN_CalcularSaldoPromedioCliente(clienteID INT) RETURNS DECIMAL(10, 2)
+    CREATE FUNCTION    FN_CalcularSaldoPromedioCliente(clienteID INT) RETURNS DECIMAL(10, 2)
     READS SQL DATA
     BEGIN
-    DECLARE           saldoPromedio DECIMAL(10, 2);
+    DECLARE            saldoPromedio DECIMAL(10, 2);
 
-    SELECT            COALESCE(AVG(Saldo), 0) INTO saldoPromedio
-    FROM              Cuentas
-    WHERE             Cliente_ID = clienteID;
+    SELECT             COALESCE(AVG(Saldo), 0) INTO saldoPromedio
+    FROM               Cuentas
+    WHERE              Cliente_ID = clienteID;
 
-    RETURN            saldoPromedio;
+    RETURN             saldoPromedio;
     END //
-    COMMENT           'Esta funcion calcula el saldo promedio de todas las cuentas asociadas a un cliente especifico'
+    COMMENT            'Esta funcion calcula el saldo promedio de todas las cuentas asociadas a un cliente especifico'
     DELIMITER ;
 
 
 
     DELIMITER //
 
-    CREATE FUNCTION   FN_CalcularSaldoTotalPrestamos(clienteID INT) RETURNS DECIMAL(10, 2)
+    CREATE FUNCTION    FN_CalcularSaldoTotalPrestamos(clienteID INT) RETURNS DECIMAL(10, 2)
     READS SQL DATA
     BEGIN
-    DECLARE           saldoTotal DECIMAL(10, 2);
+    DECLARE            saldoTotal DECIMAL(10, 2);
 
-    SELECT            COALESCE(SUM(Monto), 0) INTO saldoTotal
-    FROM              Prestamos
-    WHERE             Cliente_ID = clienteID  AND Estado = 'Activo';
+    SELECT             COALESCE(SUM(Monto), 0) INTO saldoTotal
+    FROM               Prestamos
+    WHERE              Cliente_ID = clienteID  AND Estado = 'Activo';
 
-    RETURN            saldoTotal;
+    RETURN             saldoTotal;
     END //
-    COMMENT           'Esta funcion calcula el saldo total de todos los prestamos activos asociados a un cliente especifico'
+    COMMENT            'Esta funcion calcula el saldo total de todos los prestamos activos asociados a un cliente especifico'
     DELIMITER ;
 
 
@@ -430,28 +430,28 @@
 
     DELIMITER //
 
-    CREATE TRIGGER   TR_ActualizarSaldoCuenta
-    AFTER INSERT ON  Transacciones
+    CREATE TRIGGER     TR_ActualizarSaldoCuenta
+    AFTER INSERT ON    Transacciones
     FOR EACH ROW
     BEGIN
-    DECLARE          saldoActual DECIMAL(10, 2);
+    DECLARE            saldoActual DECIMAL(10, 2);
     
     -- Primero obtengo el saldo actual de la cuenta
-    SELECT           Saldo INTO saldoActual
-    FROM             Cuentas
-    WHERE            Cuentas_ID = NEW.Cuentas_ID;
+    SELECT             Saldo INTO saldoActual
+    FROM               Cuentas
+    WHERE              Cuentas_ID = NEW.Cuentas_ID;
     
     -- Luego verifico el tipo de transaccion
-    IF               NEW.Tipo = 'Retiro' THEN
+    IF                 NEW.Tipo = 'Retiro' THEN
     -- Resto el monto de la transaccion en caso de que se trate de un "Retiro"
-    UPDATE           Cuentas
-    SET              Saldo = saldoActual - NEW.Monto
-    WHERE            Cuentas_ID = NEW.Cuentas_ID;
+    UPDATE             Cuentas
+    SET                Saldo = saldoActual - NEW.Monto
+    WHERE              Cuentas_ID = NEW.Cuentas_ID;
     ELSE
     -- Sumo el monto de la transaccion al saldo de la cuenta en caso que sea otro tipo de transaccion
-    UPDATE           Cuentas
-    SET              Saldo = saldoActual + NEW.Monto
-    WHERE            Cuentas_ID = NEW.Cuentas_ID;
+    UPDATE             Cuentas
+    SET                Saldo = saldoActual + NEW.Monto
+    WHERE              Cuentas_ID = NEW.Cuentas_ID;
     END IF;
     END //
 
@@ -461,16 +461,16 @@
 
     DELIMITER //
 
-    CREATE TRIGGER   TR_ValidarDatosPrestamo
-    BEFORE INSERT ON Prestamos
+    CREATE TRIGGER     TR_ValidarDatosPrestamo
+    BEFORE INSERT ON   Prestamos
     FOR EACH ROW
     BEGIN
-    IF               NEW.Monto <= 0 THEN
-    SIGNAL SQLSTATE  '45000' SET MESSAGE_TEXT = 'El monto del prestamo debe ser mayor que cero';
+    IF                 NEW.Monto <= 0 THEN
+    SIGNAL SQLSTATE    '45000' SET MESSAGE_TEXT = 'El monto del prestamo debe ser mayor que cero';
     END IF;
 
-    IF               NEW.TasaInteres < 0 OR NEW.TasaInteres > 100 THEN
-    SIGNAL SQLSTATE  '45000' SET MESSAGE_TEXT = 'La tasa de interes debe estar entre 0 y 100';
+    IF                 NEW.TasaInteres < 0 OR NEW.TasaInteres > 100 THEN
+    SIGNAL SQLSTATE    '45000' SET MESSAGE_TEXT = 'La tasa de interes debe estar entre 0 y 100';
     END IF;
     END//
 
@@ -480,12 +480,12 @@
 
     DELIMITER //
 
-    CREATE TRIGGER   TR_EliminarCliente
-    BEFORE DELETE ON Clientes
+    CREATE TRIGGER     TR_EliminarCliente
+    BEFORE DELETE ON   Clientes
     FOR EACH ROW
     BEGIN
     -- Genero un error personalizado
-    SIGNAL SQLSTATE  '45000' SET MESSAGE_TEXT = 'No se permite eliminar clientes.';
+    SIGNAL SQLSTATE    '45000' SET MESSAGE_TEXT = 'No se permite eliminar clientes.';
     END //
 
     DELIMITER ;
@@ -494,28 +494,28 @@
 
     DELIMITER //
 
-    CREATE TRIGGER   TR_CrearCuentaClienteNuevo
-    AFTER INSERT ON  Clientes
+    CREATE TRIGGER     TR_CrearCuentaClienteNuevo
+    AFTER INSERT ON    Clientes
     FOR EACH ROW
     BEGIN
-    DECLARE          cuenta_existente INT;
-    DECLARE          nuevo_numero INT;
+    DECLARE            cuenta_existente INT;
+    DECLARE            nuevo_numero INT;
     
     -- Verifico si hay cuentas existentes para el cliente recien insertado
-    SELECT COUNT(*)  INTO cuenta_existente
-    FROM             Cuentas
-    WHERE            Cliente_ID = NEW.Cliente_ID;
+    SELECT COUNT(*)    INTO cuenta_existente
+    FROM               Cuentas
+    WHERE              Cliente_ID = NEW.Cliente_ID;
     
     -- Si no hay cuentas existentes para el cliente, insertamos una nueva cuenta 
-    IF               cuenta_existente = 0 THEN
+    IF                 cuenta_existente = 0 THEN
     -- Genero un numero de cuenta de 4 digitos, que sea unico
     REPEAT
-    SET              nuevo_numero = FLOOR(RAND() * 9000) + 1000;
-    UNTIL NOT EXISTS (SELECT 1 FROM Cuentas WHERE Numero = nuevo_numero) END REPEAT;
+    SET                nuevo_numero = FLOOR(RAND() * 9000) + 1000;
+    UNTIL NOT EXISTS   (SELECT 1 FROM Cuentas WHERE Numero = nuevo_numero) END REPEAT;
         
     -- Inserto la nueva cuenta con el numero de cuenta generado
-    INSERT INTO      Cuentas (Cliente_ID, Numero, Tipo, Saldo, FechaApertura)
-    VALUES           (NEW.Cliente_ID, nuevo_numero, 'Ahorro', 0, NOW());
+    INSERT INTO        Cuentas (Cliente_ID, Numero, Tipo, Saldo, FechaApertura)
+    VALUES             (NEW.Cliente_ID, nuevo_numero, 'Ahorro', 0, NOW());
     END IF;
     END //
 
