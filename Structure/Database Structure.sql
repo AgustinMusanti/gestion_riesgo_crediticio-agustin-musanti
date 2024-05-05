@@ -2,7 +2,7 @@
 
     CREATE DATABASE     Gestion_Riesgo_Crediticio;
 
-    USE Gestion_Riesgo_Crediticio;
+    USE                 Gestion_Riesgo_Crediticio;
 
     CREATE TABLE        Clientes 
     (
