@@ -2,6 +2,15 @@
 
 # Entrega final - Curso SQL Coderhouse
 
+
+@Alumno: Agustin Musanti
+
+@Comision: 53180
+
+@Profesor: Anderson Michel Torres
+
+@Tutora: Carla Palermo
+
 En este proyecto se desarrolló una base de datos para la gestión del riesgo crediticio, que incluye tablas para clientes, cuentas, préstamos, transacciones, historial de crédito, modelos de riesgo y eventos de riesgo. Además de las tablas principales, se crearon vistas, funciones, stored procedures y triggers para mejorar la funcionalidad y la automatización del sistema.
 
 Desarrollado por el alumno Agustin Musanti.
