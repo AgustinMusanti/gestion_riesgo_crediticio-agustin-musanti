@@ -6,11 +6,13 @@
     WHERE           cu.Saldo < 0;
 
 
+
     CREATE VIEW     VistaTransaccionesRecientes 
     AS
     SELECT          Cuentas_ID, Tipo, Monto, Fecha
     FROM            Transacciones
     WHERE           Fecha >= DATE_SUB(CURDATE(), INTERVAL 30 DAY);
+
 
 
     CREATE VIEW     VistaTransaccionesMontosAltos 
@@ -20,12 +22,14 @@
     WHERE           Monto > 3000;
 
 
+
     CREATE VIEW     VistaClientesHistorialCrediticioMalo 
     AS
     SELECT          c.Cliente_ID, c.Nombre, c.Apellido, hc.Puntaje
     FROM            Clientes c
     JOIN            Historial_Credito hc ON c.Cliente_ID = hc.Cliente_ID
     WHERE           hc.Puntaje < 5;
+
 
 
     CREATE VIEW     VistaDetallePrestamosActivos
