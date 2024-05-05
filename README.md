@@ -29,8 +29,6 @@ Para la entrega final del curso en cuestión se desarrolló una base de datos pa
 - [Documentación](Documentación%20-%20Gestión%20del%20riesgo%20crediticio%20con%20SQL%20-%20Agustin%20Musanti.pdf)
 
 
-## Visión general
-
 Este README proporciona una visión general del proyecto y sus componentes principales. 
 Para obtener más detalles sobre la implementación y el funcionamiento de cada elemento, consulte el código fuente, la documentación y/o el glosario en el repositorio.
 
