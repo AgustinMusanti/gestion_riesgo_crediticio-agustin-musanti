@@ -19,14 +19,14 @@ Para la entrega final del curso en cuestión se desarrolló una base de datos pa
 
 ## Contenido
 
-- [Estructura completa de la base de datos](Estructura%20completa%20de%20la%20base%20de%20datos%20-%20Agustin%20Musanti.sql)
-- [Inserción de datos](Inserción%20de%20datos.sql)
+- [Estructura completa de la base de datos](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Structure/Database%20Structure.sql)
+- [Inserción de datos](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Structure/Population.sql)
 - [Vistas](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Objects/Views.sql)
 - [Funciones](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Objects/Functions.sql)
 - [Stored Procedures](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Objects/Stored%20Procedures.sql)
 - [Triggers](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Objects/Triggers.sql)
-- [Glosario](Glosario.pdf)
-- [Documentación](Documentación%20-%20Gestión%20del%20riesgo%20crediticio%20con%20SQL%20-%20Agustin%20Musanti.pdf)
+- [Glosario](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Documentation/Glossary.pdf)
+- [Documentación](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Documentation/Documentation.sql))
 
 
 
