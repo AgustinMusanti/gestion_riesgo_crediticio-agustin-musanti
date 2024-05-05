@@ -14,7 +14,7 @@
 
 ## Introducción
 
-Este proyecto tiene como objetivo desarrollar una base de datos en MySQL diseñada para ayudar a las instituciones financieras a evaluar y gestionar el riesgo asociado con sus clientes y préstamos. 
+Este proyecto tiene como objetivo desarrollar una base de datos en MySQL diseñada para ayudar a las instituciones financieras a evaluar y gestionar el riesgo asociado con sus clientes en base a las transacciones que efectuan y préstamos que son otorgados a los mismos. 
 La base de datos proporcionará una estructura sólida para almacenar información relevante sobre clientes, transacciones, préstamos y otros aspectos clave relacionados con la evaluación del riesgo crediticio.
 
 
