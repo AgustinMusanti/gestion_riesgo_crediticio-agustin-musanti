@@ -22,7 +22,7 @@ Para la entrega final del curso en cuestión se desarrolló una base de datos pa
 - [Estructura completa de la base de datos](Estructura%20completa%20de%20la%20base%20de%20datos%20-%20Agustin%20Musanti.sql)
 - [Inserción de datos](Inserción%20de%20datos.sql)
 - [Vistas](Vistas.sql)
-- [Funciones](Funciones.sql)
+- [Funciones](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Objects/Funciones.sql)
 - [Stored Procedures](Stored%20Procedures.sql)
 - [Triggers](Triggers.sql)
 - [Glosario](Glosario.pdf)
