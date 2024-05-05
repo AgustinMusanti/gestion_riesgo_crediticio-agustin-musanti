@@ -1,4 +1,4 @@
-DELIMITER //
+    DELIMITER //
 
     CREATE FUNCTION FN_CalcularMontoTotalPagos(prestamoID INT) RETURNS DECIMAL(10, 2)
     READS SQL DATA
