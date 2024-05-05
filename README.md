@@ -14,7 +14,8 @@
 
 ## Introducción
 
-Para la entrega final del curso en cuestión se desarrolló una base de datos para la gestión del riesgo crediticio, la cual incluye tablas para clientes, cuentas, préstamos, transacciones, historial de crédito, modelos de riesgo y eventos de riesgo. Además de las tablas principales, se crearon vistas, funciones, stored procedures y triggers para mejorar la funcionalidad y la automatización del sistema.
+Este proyecto tiene como objetivo desarrollar una base de datos en MySQL diseñada para ayudar a las instituciones financieras a evaluar y gestionar el riesgo asociado con sus clientes y préstamos. 
+La base de datos proporcionará una estructura sólida para almacenar información relevante sobre clientes, transacciones, préstamos y otros aspectos clave relacionados con la evaluación del riesgo crediticio.
 
 
 ## Contenido
