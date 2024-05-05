@@ -1,8 +1,9 @@
-# Proyecto de Gestión del Riesgo Crediticio
+# Entrega final - Curso SQL Coderhouse
 
-En este proyecto fue desarrollada una base de datos para la gestión del riesgo crediticio, que incluye tablas para clientes, cuentas, préstamos, transacciones, historial de crédito, modelos de riesgo y eventos de riesgo. Además de las tablas principales, se crearon vistas, funciones, stored procedures y triggers para mejorar la funcionalidad y la automatización del sistema.
+En este proyecto se desarrolló una base de datos para la gestión del riesgo crediticio, que incluye tablas para clientes, cuentas, préstamos, transacciones, historial de crédito, modelos de riesgo y eventos de riesgo. Además de las tablas principales, se crearon vistas, funciones, stored procedures y triggers para mejorar la funcionalidad y la automatización del sistema.
 
-Este proyecto fue desarrollado para la entrega final del curso de SQL de Coderhouse.
+Desarrollado por el alumno Agustin Musanti.
+
 
 ## Contenido
 
@@ -15,9 +16,15 @@ Este proyecto fue desarrollado para la entrega final del curso de SQL de Coderho
 - [Glosario](Glosario.pdf)
 - [Documentación](Documentación%20-%20Gestión%20del%20riesgo%20crediticio%20con%20SQL%20-%20Agustin%20Musanti.pdf)
 
+
+## Visión general
+
+A continuación se dará una visión general del proyecto. Para obtener más información del mismo por favor consultar la documentación, glosario y/o los scripts por separado.
+
 ## Estructura de la Base de Datos
 
-La base de datos está diseñada para gestionar la información relacionada con clientes, cuentas bancarias, préstamos, transacciones financieras, historial crediticio, modelos y eventos de riesgo. A continuación se detallan las principales tablas:
+La base de datos está diseñada para gestionar la información relacionada con clientes, cuentas bancarias, préstamos, transacciones financieras, historial crediticio, modelos y eventos de riesgo. 
+A continuación se detallan las principales tablas:
 
 - **Clientes**: Contiene información personal de los clientes.
 - **Cuentas**: Registra datos de las cuentas asociadas a los clientes.
@@ -29,7 +36,8 @@ La base de datos está diseñada para gestionar la información relacionada con 
 
 ## Vistas
 
-Se crearon vistas para proporcionar acceso simplificado a la información de la base de datos. Algunas vistas útiles incluyen:
+Se crearon vistas para proporcionar acceso simplificado a la información de la base de datos. 
+Algunas vistas útiles incluyen:
 
 - **VistaDetallePrestamosActivos**: Muestra un resumen de los detalles de los prestamos que se encuentran activos.
 - **VistaClientesSaldoNegativo**: Muestra a los clientes con saldos negativos.
@@ -39,7 +47,8 @@ Se crearon vistas para proporcionar acceso simplificado a la información de la 
 
 ## Funciones
 
-Se implementaron funciones para realizar cálculos y operaciones específicas en los datos de la base de datos. Algunas funciones importantes son:
+Se implementaron funciones para realizar cálculos y operaciones específicas en los datos de la base de datos. 
+Algunas funciones importantes son:
 
 - **FN_CalcularSaldoTotalPrestamos**: Calcula el saldo total de todos los prestamos activos que posee un cliente especifico.
 - **FN_CalcularMontoTotalPagos**: Calcula el monto total de los pagos asociados a un préstamo.
@@ -47,14 +56,16 @@ Se implementaron funciones para realizar cálculos y operaciones específicas en
 
 ## Stored Procedures
 
-Se desarrollaron stored procedures para automatizar tareas recurrentes o complejas. Algunos ejemplos de stored procedures son:
+Se desarrollaron stored procedures para automatizar tareas recurrentes o complejas. 
+Algunos ejemplos de stored procedures son:
 
 - **SP_RegistrarPagoPrestamo**: Registra un pago para un préstamo específico.
 - **SP_ActualizarEstadoPrestamo**: Actualiza el estado de un préstamo según su saldo pendiente.
 
 ## Triggers
 
-Se utilizaron triggers para realizar acciones automáticamente cuando se modifican datos en la base de datos. Por ejemplo:
+Se utilizaron triggers para realizar acciones automáticamente cuando se modifican datos en la base de datos. 
+Por ejemplo:
 
 - **TR_ActualizarSaldoCuenta**: Actualiza el saldo total de una cuenta después de cada transacción.
 - **TR_ValidarDatosPrestamo**: Valida que los valores insertados cumplan con las condiciones propuestas en la tabla.
