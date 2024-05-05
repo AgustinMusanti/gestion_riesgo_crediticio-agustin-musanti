@@ -1,4 +1,4 @@
-<img src="[https://www.google.com/url?sa=i&url=https%3A%2F%2Fblogs.upc.edu.pe%2Fvida-universitaria%2F2023%2F01%2F25%2Fcoderhouse%2F&psig=AOvVaw2x5tQx37tlyNBMDgtOQ_l4&ust=1714964971283000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjyi8bE9YUDFQAAAAAdAAAAABAE](https://blogs.upc.edu.pe/vida-universitaria/wp-content/uploads/sites/21/2023/01/cabecera-coderhouse.png)" style="width: 100% ; aspect-ratio:16/9">
+<img src="https://blogs.upc.edu.pe/vida-universitaria/wp-content/uploads/sites/21/2023/01/cabecera-coderhouse.png" style="width: 100% ; aspect-ratio:16/9">
 
 # Entrega final - Curso SQL Coderhouse
 
