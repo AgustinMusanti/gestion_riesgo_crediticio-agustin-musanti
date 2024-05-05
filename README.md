@@ -26,7 +26,7 @@ Para la entrega final del curso en cuestión se desarrolló una base de datos pa
 - [Stored Procedures](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Objects/Stored%20Procedures.sql)
 - [Triggers](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Objects/Triggers.sql)
 - [Glosario](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Documentation/Glossary.pdf)
-- [Documentación](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Documentation/Documentation.pdf))
+- [Documentación](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Documentation/Documentation.pdf)
 
 
 
