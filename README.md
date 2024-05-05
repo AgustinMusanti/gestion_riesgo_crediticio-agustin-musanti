@@ -9,7 +9,7 @@
 
 @Profesor: Anderson Michel Ocaña Torres
 
-@Tutora:   Carla Palermo
+@Tutores:   Carla Palermo - Santiago Angel Gonzalez
 
 
 ## Introducción
