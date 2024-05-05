@@ -1,4 +1,4 @@
-    INSERT INTO Clientes (Nombre, Apellido, Telefono, Correo, Direccion) 
+    INSERT INTO    Clientes (Nombre, Apellido, Telefono, Correo, Direccion) 
     VALUES 
      ('Juan', 'Garcia', '123456789', 'juan@example.com', 'Calle 123')
     ,('Maria', 'Lopez', '987654321', 'maria@example.com', 'Avenida 456')
@@ -20,7 +20,7 @@
     ,('Michael', 'Johnson', '555-9876', 'michael@example.com', '789 Oak St');
 
 
-    INSERT INTO Cuentas (Cliente_ID, Numero, Tipo, Saldo, FechaApertura) 
+    INSERT INTO    Cuentas (Cliente_ID, Numero, Tipo, Saldo, FechaApertura) 
     VALUES
      (1, '1234', 'Corriente', 250.00, DEFAULT)
     ,(2, '9876', 'Ahorro', 2500.00, DEFAULT)
@@ -45,7 +45,7 @@
     ,(18, '1117', 'Corriente', -750.00, '2024-03-02');
 
 
-    INSERT INTO Transacciones (Cuentas_ID, Tipo, Monto, Fecha) 
+    INSERT INTO    Transacciones (Cuentas_ID, Tipo, Monto, Fecha) 
     VALUES
      (1, 'Deposito', 500.00, '2024-03-01')
     ,(1, 'Retiro', -250.00, '2024-03-03')
@@ -76,7 +76,7 @@
     ,(18, 'Transferencia (Sobregiro)', 1000.00, '2024-04-10');
 		   
 
-    INSERT INTO Prestamos (Cliente_ID, Monto, TasaInteres, Plazo, Estado) 
+    INSERT INTO    Prestamos (Cliente_ID, Monto, TasaInteres, Plazo, Estado) 
     VALUES
      (1, 850.00, 5.5, 180, DEFAULT)
     ,(1, 1000.00, 10.5, 360, 'Inactivo')
@@ -100,7 +100,7 @@
     ,(15, 1400.00, 6.5, 300, 'Activo');
 
 
-    INSERT INTO Pagos_Prestamos (Prestamos_ID, Monto, Fecha) 
+    INSERT INTO    Pagos_Prestamos (Prestamos_ID, Monto, Fecha) 
     VALUES
      (1, 1105.00, '2024-03-15')
     ,(2, 2165.00, DEFAULT)
@@ -111,7 +111,7 @@
     ,(13, 2066.25, '2024-03-21');
 
 
-    INSERT INTO Historial_Credito (Cliente_ID, Puntaje, Observaciones) 
+    INSERT INTO    Historial_Credito (Cliente_ID, Puntaje, Observaciones) 
     VALUES
      (1, 8, 'Excelente')
     ,(2, 6, 'Regular')
@@ -130,13 +130,13 @@
     ,(15, 3, 'Malo');
 
 
-    INSERT INTO Modelos_Riesgo (Nombre, Descripcion, Coeficientes) 
+    INSERT INTO    Modelos_Riesgo (Nombre, Descripcion, Coeficientes) 
     VALUES
      ('Modelo A', 'Descripcion del Modelo A', 'Coeficientes del Modelo A')
     ,('Modelo B', 'Descripcion del Modelo B', 'Coeficientes del Modelo B');
 
 
-    INSERT INTO Eventos_Riesgo (Descripcion, Fecha) 
+    INSERT INTO    Eventos_Riesgo (Descripcion, Fecha) 
     VALUES
      ('Actividad sospechosa de la cuenta', '2024-03-28')
     ,('Fraude con tarjetas de credito', '2024-02-14')
