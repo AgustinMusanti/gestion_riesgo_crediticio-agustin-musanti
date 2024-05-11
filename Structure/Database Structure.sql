@@ -321,7 +321,9 @@
 
     DELIMITER //
 
-    CREATE FUNCTION    FN_CalcularMontoTotalPagos(prestamoID INT) RETURNS DECIMAL(10, 2)
+    CREATE FUNCTION    FN_CalcularMontoTotalPagos
+    (prestamoID INT)  
+    RETURNS            DECIMAL(10, 2)
     READS SQL DATA
     BEGIN
     DECLARE            montoTotal DECIMAL(10, 2);
@@ -343,7 +345,9 @@
     
     DELIMITER //
 
-    CREATE FUNCTION    FN_CalcularSaldoPromedioCliente(clienteID INT) RETURNS DECIMAL(10, 2)
+    CREATE FUNCTION    FN_CalcularSaldoPromedioCliente
+    (clienteID INT) 
+    RETURNS            DECIMAL(10, 2)
     READS SQL DATA
     BEGIN
     DECLARE            saldoPromedio DECIMAL(10, 2);
@@ -361,7 +365,9 @@
 
     DELIMITER //
 
-    CREATE FUNCTION    FN_CalcularSaldoTotalPrestamos(clienteID INT) RETURNS DECIMAL(10, 2)
+    CREATE FUNCTION    FN_CalcularSaldoTotalPrestamos
+    (clienteID INT) 
+    RETURNS            DECIMAL(10, 2)
     READS SQL DATA
     BEGIN
     DECLARE            saldoTotal DECIMAL(10, 2);
@@ -381,7 +387,10 @@
 
     DELIMITER //
 
-    CREATE PROCEDURE   SP_ActualizarEstadoPrestamo(IN prestamoID INT)
+    CREATE PROCEDURE   SP_ActualizarEstadoPrestamo
+    (
+    IN prestamoID INT
+    )
     BEGIN
     DECLARE            saldoPendiente DECIMAL(10, 2);
     DECLARE            estadoNuevo    VARCHAR(50);
@@ -408,7 +417,8 @@
 
     DELIMITER //
 
-    CREATE PROCEDURE   SP_RegistrarPagoPrestamo(
+    CREATE PROCEDURE   SP_RegistrarPagoPrestamo
+    (
     IN                 prestamoID INT,
     IN                 monto      DECIMAL(10, 2),
     IN                 fecha      DATE
