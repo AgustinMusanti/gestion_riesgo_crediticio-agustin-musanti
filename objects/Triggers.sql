@@ -1,3 +1,6 @@
+    USE                 Gestion_Riesgo_Crediticio;
+
+
     DELIMITER //
 
     CREATE TRIGGER     TR_ActualizarSaldoCuenta

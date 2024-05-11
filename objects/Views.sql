@@ -1,3 +1,6 @@
+    USE                 Gestion_Riesgo_Crediticio;
+
+
     CREATE VIEW     VistaClientesSaldoNegativo 
     AS
     SELECT          c.Cliente_ID, c.Nombre, c.Apellido, cu.Saldo

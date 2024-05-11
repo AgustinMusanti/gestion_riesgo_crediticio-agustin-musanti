@@ -1,3 +1,6 @@
+    USE                 Gestion_Riesgo_Crediticio;
+
+
     DELIMITER //
 
     CREATE PROCEDURE   SP_ActualizarEstadoPrestamo
@@ -22,8 +25,7 @@
     END IF;
 
     UPDATE             Prestamos SET Estado = estadoNuevo WHERE Prestamos_ID = prestamoID;
-    END //
-    COMMENT            'Este procedimiento almacenado actualiza el estado de un prestamo basado en su saldo pendiente'
+    END//
     DELIMITER ;
 
 
@@ -36,6 +38,7 @@
     IN                 monto      DECIMAL(10, 2),
     IN                 fecha      DATE
     )
+    COMMENT            'Este procedimiento almacenado registra un pago para un prestamo especifico.'
     BEGIN
     -- Inserto el nuevo pago de prestamo en la tabla Pagos_Prestamos
     INSERT INTO        Pagos_Prestamos (Prestamos_ID, Monto, Fecha)
@@ -45,5 +48,4 @@
     CALL               SP_ActualizarEstadoPrestamo
     (prestamoID);
     END //
-    COMMENT            'Este procedimiento almacenado registra un pago para un prestamo especifico.'
     DELIMITER ;

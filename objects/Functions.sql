@@ -1,3 +1,6 @@
+    USE                 Gestion_Riesgo_Crediticio;
+
+
     DELIMITER //
 
     CREATE FUNCTION   FN_CalcularMontoTotalPagos
@@ -18,8 +21,8 @@
     END IF;
 
     RETURN            montoTotal;
-    END //
-    COMMENT           'Esta funcion calcula el monto total de los pagos asociados a un prestamo específico'
+    END//
+    -- COMMENT           'Esta funcion calcula el monto total de los pagos asociados a un prestamo específico'
     DELIMITER ;
 
 
@@ -40,8 +43,7 @@
     WHERE             Cliente_ID = clienteID;
 
     RETURN            saldoPromedio;
-    END //
-    COMMENT           'Esta funcion calcula el saldo promedio de todas las cuentas asociadas a un cliente especifico'
+    END//
     DELIMITER ;
 
 

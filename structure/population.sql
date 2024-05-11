@@ -1,3 +1,6 @@
+    USE                 Gestion_Riesgo_Crediticio;
+
+
     INSERT INTO    Clientes (Nombre, Apellido, Telefono, Correo, Direccion) 
     VALUES 
      ('Juan', 'Garcia', '123456789', 'juan@example.com', 'Calle 123')

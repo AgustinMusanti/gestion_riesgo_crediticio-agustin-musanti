@@ -88,3 +88,17 @@ Por ejemplo:
 
 Este README proporciona una visión general del proyecto y sus componentes principales. 
 Para obtener más detalles sobre la implementación y el funcionamiento de cada elemento, consulte el código fuente y/o la documentación en el repositorio.
+
+## Como levantar el proyecto en CodeSpaces GitHub
+* env: Archivo con contraseñas y data secretas
+* Makefile: Abstracción de creacción del proyecto
+* docker-compose.yml: Permite generar las bases de datos en forma de contenedores
+
+#### Pasos para arrancar el proyecto
+
+* En la terminal de linux escribir :
+    - `make` _si te da un error de que no conexion al socket, volver al correr el comando `make`_
+    - `make clean-db` limpiar la base de datos
+    - `make test-db` para mirar los datos de cada tabla
+    - `make backup-db` para realizar un backup de mi base de datos
+    - `make access-db` para acceder a la base de datos
