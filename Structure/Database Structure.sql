@@ -322,7 +322,9 @@
     DELIMITER //
 
     CREATE FUNCTION    FN_CalcularMontoTotalPagos
-    (prestamoID INT)  
+    (
+    prestamoID INT
+    )  
     RETURNS            DECIMAL(10, 2)
     READS SQL DATA
     BEGIN
@@ -346,7 +348,9 @@
     DELIMITER //
 
     CREATE FUNCTION    FN_CalcularSaldoPromedioCliente
-    (clienteID INT) 
+    (
+    clienteID INT
+    ) 
     RETURNS            DECIMAL(10, 2)
     READS SQL DATA
     BEGIN
@@ -366,7 +370,9 @@
     DELIMITER //
 
     CREATE FUNCTION    FN_CalcularSaldoTotalPrestamos
-    (clienteID INT) 
+    (
+    clienteID INT
+    ) 
     RETURNS            DECIMAL(10, 2)
     READS SQL DATA
     BEGIN
