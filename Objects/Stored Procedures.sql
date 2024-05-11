@@ -1,6 +1,9 @@
     DELIMITER //
 
-    CREATE PROCEDURE   SP_ActualizarEstadoPrestamo(IN prestamoID INT)
+    CREATE PROCEDURE   SP_ActualizarEstadoPrestamo
+    (
+    IN                 prestamoID INT
+    )
     BEGIN
     DECLARE            saldoPendiente DECIMAL(10, 2);
     DECLARE            estadoNuevo    VARCHAR(50);
@@ -27,7 +30,8 @@
 
     DELIMITER //
 
-    CREATE PROCEDURE   SP_RegistrarPagoPrestamo(
+    CREATE PROCEDURE   SP_RegistrarPagoPrestamo
+    (
     IN                 prestamoID INT,
     IN                 monto      DECIMAL(10, 2),
     IN                 fecha      DATE
@@ -38,7 +42,8 @@
     VALUES             (prestamoID, monto, fecha);
 
     -- Actualizo el estado del prestamo en caso de que corresponda
-    CALL               SP_ActualizarEstadoPrestamo(prestamoID);
+    CALL               SP_ActualizarEstadoPrestamo
+    (prestamoID);
     END //
     COMMENT            'Este procedimiento almacenado registra un pago para un prestamo especifico.'
     DELIMITER ;
