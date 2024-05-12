@@ -1,4 +1,4 @@
-    USE                 Gestion_Riesgo_Crediticio;
+    USE                Gestion_Riesgo_Crediticio;
 
 
     DELIMITER //
@@ -26,7 +26,7 @@
     SET                Saldo = saldoActual + NEW.Monto
     WHERE              Cuentas_ID = NEW.Cuentas_ID;
     END IF;
-    END //
+    END//
 
     DELIMITER ;
 
@@ -59,7 +59,7 @@
     BEGIN
     -- Genero un error personalizado
     SIGNAL SQLSTATE    '45000' SET MESSAGE_TEXT = 'No se permite eliminar clientes.';
-    END //
+    END//
 
     DELIMITER ;
 
@@ -90,6 +90,6 @@
     INSERT INTO        Cuentas (Cliente_ID, Numero, Tipo, Saldo, FechaApertura)
     VALUES             (NEW.Cliente_ID, nuevo_numero, 'Ahorro', 0, NOW());
     END IF;
-    END //
+    END//
 
     DELIMITER ;
