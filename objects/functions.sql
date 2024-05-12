@@ -1,4 +1,4 @@
-    USE                 Gestion_Riesgo_Crediticio;
+    USE               Gestion_Riesgo_Crediticio;
 
 
     DELIMITER //
@@ -16,7 +16,7 @@
     FROM              Pagos_Prestamos
     WHERE             Prestamos_ID = prestamoID;
 
-    IF                montoTotal IS NULL THEN
+    IF                montoTotal              IS NULL THEN
     SET               montoTotal = 0;
     END IF;
 
@@ -61,9 +61,9 @@
 
     SELECT            COALESCE(SUM(Monto), 0) INTO saldoTotal
     FROM              Prestamos
-    WHERE             Cliente_ID = clienteID AND Estado = 'Activo';
+    WHERE             Cliente_ID = clienteID  AND Estado = 'Activo';
 
     RETURN            saldoTotal;
-    END //
+    END//
     COMMENT           'Esta funcion calcula el saldo total de todos los prestamos activos asociados a un cliente especifico'
     DELIMITER ;
