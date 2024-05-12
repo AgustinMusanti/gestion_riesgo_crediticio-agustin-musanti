@@ -1,4 +1,4 @@
-    USE                 Gestion_Riesgo_Crediticio;
+    USE             Gestion_Riesgo_Crediticio;
 
 
     CREATE VIEW     VistaClientesSaldoNegativo 
