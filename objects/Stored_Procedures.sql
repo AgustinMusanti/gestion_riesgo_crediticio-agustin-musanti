@@ -1,4 +1,4 @@
-    USE                 Gestion_Riesgo_Crediticio;
+    USE                Gestion_Riesgo_Crediticio;
 
 
     DELIMITER //
@@ -7,6 +7,7 @@
     (
     IN                 prestamoID INT
     )
+    COMMENT            'Este procedimiento almacenado actualiza el estado del prestamo cuando se efectua un pago.'
     BEGIN
     DECLARE            saldoPendiente DECIMAL(10, 2);
     DECLARE            estadoNuevo    VARCHAR(50);
@@ -47,5 +48,5 @@
     -- Actualizo el estado del prestamo en caso de que corresponda
     CALL               SP_ActualizarEstadoPrestamo
     (prestamoID);
-    END //
+    END//
     DELIMITER ;
