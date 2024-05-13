@@ -36,6 +36,7 @@
     ) 
     RETURNS           DECIMAL(10, 2)
     READS SQL DATA
+    COMMENT           'Esta funcion calcula el saldo promedio de todas las cuentas asociadas a un cliente especifico'
     BEGIN
     DECLARE           saldoPromedio DECIMAL(10, 2);
 
