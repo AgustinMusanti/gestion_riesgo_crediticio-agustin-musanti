@@ -26,7 +26,7 @@
     END IF;
 
     UPDATE             Prestamos SET Estado = estadoNuevo WHERE Prestamos_ID = prestamoID;
-    END//
+    END //
     DELIMITER ;
 
 
@@ -48,5 +48,5 @@
     -- Actualizo el estado del prestamo en caso de que corresponda
     CALL               SP_ActualizarEstadoPrestamo
     (prestamoID);
-    END//
+    END //
     DELIMITER ;
