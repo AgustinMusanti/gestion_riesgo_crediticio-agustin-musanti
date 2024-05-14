@@ -16,39 +16,39 @@ USE Gestion_Riesgo_Crediticio;
 
 -- Creacion de roles
 
-CREATE ROLE Role_Select_Tablas;
-CREATE ROLE Role_Crud_Crediticio;
+CREATE ROLE Role_select_tablas;
+CREATE ROLE Role_crud_crediticio;
 
 
--- Asignacion de priviligeios al rol Role_Select_Tablas
+-- Asignacion de priviligeios al rol Role_select_tablas
 
-GRANT SELECT ON Clientes TO Role_Select_Tablas;
-GRANT SELECT ON Cuentas TO Role_Select_Tablas;
-GRANT SELECT ON Transacciones TO Role_Select_Tablas;
-GRANT SELECT ON Prestamos TO Role_Select_Tablas;
-GRANT SELECT ON Pagos_Prestamos TO Role_Select_Tablas;
-GRANT SELECT ON Historial_Credito TO Role_Select_Tablas;
+GRANT SELECT ON Clientes TO Role_select_tablas;
+GRANT SELECT ON Cuentas TO Role_select_tablas;
+GRANT SELECT ON Transacciones TO Role_select_tablas;
+GRANT SELECT ON Prestamos TO Role_select_tablas;
+GRANT SELECT ON Pagos_Prestamos TO Role_select_tablas;
+GRANT SELECT ON Historial_Credito TO Role_select_tablas;
 
 
--- Asignacion de privilegios al rol Role_Crud_Crediticio
+-- Asignacion de privilegios al rol Role_crud_crediticio
 
-GRANT ALL PRIVILEGES ON Clientes TO Role_Crud_Crediticio;
-GRANT ALL PRIVILEGES ON Cuentas TO Role_Crud_Crediticio;
-GRANT ALL PRIVILEGES ON Transacciones TO Role_Crud_Crediticio;
-GRANT ALL PRIVILEGES ON Prestamos TO Role_Crud_Crediticio;
-GRANT ALL PRIVILEGES ON Pagos_Prest TO Role_Crud_Crediticio;
-GRANT ALL PRIVILEGES ON Historial_Credito TO Role_Crud_Crediticio;
+GRANT ALL PRIVILEGES ON Clientes TO Role_crud_crediticio;
+GRANT ALL PRIVILEGES ON Cuentas TO Role_crud_crediticio;
+GRANT ALL PRIVILEGES ON Transacciones TO Role_crud_crediticio;
+GRANT ALL PRIVILEGES ON Prestamos TO Role_crud_crediticio;
+GRANT ALL PRIVILEGES ON Pagos_Prest TO Role_crud_crediticio;
+GRANT ALL PRIVILEGES ON Historial_Credito TO Role_crud_crediticio;
 
 
 -- Creacion de usuarios y asignacion de los roles correspondientes
 
 CREATE USER 'juan_select'@'%' IDENTIFIED BY 'juan444'
 COMMENT 'Usuario con permisos de vista';
-GRANT Role_Select_Tablas TO 'juan_select'@'%';
+GRANT Role_select_tablas TO 'juan_select'@'%';
 
 CREATE USER 'thiago_Crud'@'%' IDENTIFIED BY 'thiago999'
 COMMENT 'Usuario con rol CRUD';
-GRANT Role_Crud_Crediticio TO 'thiago_crud'@'%';
+GRANT Role_crud_crediticio TO 'thiago_crud'@'%';
 
 
 FLUSH PRIVILEGES;
