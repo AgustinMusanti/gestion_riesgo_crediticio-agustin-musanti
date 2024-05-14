@@ -9,7 +9,6 @@ PASSWORD_LOCK_TIME 1;
 
 GRANT ALL PRIVILEGES ON Gestion_Riesgo_Crediticio.* TO 'admin_gestion'@'%' WITH GRANT OPTION;
 
-GRANT CREATE USER ON Gestion_Riesgo_Crediticio TO 'admin_gestion'@'%';
 
 FLUSH PRIVILEGES;
 
@@ -47,7 +46,7 @@ CREATE USER 'juan_select'@'%' IDENTIFIED BY 'juan444'
 COMMENT 'Usuario con permisos de vista';
 GRANT Role_Select_Tablas TO 'juan_select'@'%';
 
-CREATE USER 'Thiago_Crud'@'%' IDENTIFIED BY 'thiago999'
+CREATE USER 'thiago_Crud'@'%' IDENTIFIED BY 'thiago999'
 COMMENT 'Usuario con rol CRUD';
 GRANT Role_Crud_Crediticio TO 'thiago_crud'@'%';
 
