@@ -36,7 +36,7 @@ GRANT ALL PRIVILEGES ON Clientes TO Role_crud_crediticio;
 GRANT ALL PRIVILEGES ON Cuentas TO Role_crud_crediticio;
 GRANT ALL PRIVILEGES ON Transacciones TO Role_crud_crediticio;
 GRANT ALL PRIVILEGES ON Prestamos TO Role_crud_crediticio;
-GRANT ALL PRIVILEGES ON Pagos_Prest TO Role_crud_crediticio;
+GRANT ALL PRIVILEGES ON Pagos_Prestamos TO Role_crud_crediticio;
 GRANT ALL PRIVILEGES ON Historial_Credito TO Role_crud_crediticio;
 
 
@@ -46,7 +46,7 @@ CREATE USER 'juan_select'@'%' IDENTIFIED BY 'juan444'
 COMMENT 'Usuario con permisos de vista';
 GRANT Role_select_tablas TO 'juan_select'@'%';
 
-CREATE USER 'thiago_Crud'@'%' IDENTIFIED BY 'thiago999'
+CREATE USER 'thiago_crud'@'%' IDENTIFIED BY 'thiago999'
 COMMENT 'Usuario con rol CRUD';
 GRANT Role_crud_crediticio TO 'thiago_crud'@'%';
 
