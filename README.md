@@ -35,6 +35,29 @@ La base de datos proporcionará una estructura sólida para almacenar informaci�
 Este README proporciona una visión general del proyecto y sus componentes principales. 
 Para obtener más detalles sobre la implementación y el funcionamiento de cada elemento, consulte el código fuente, la documentación y/o el glosario en el repositorio.
 
+## Modelo de Negocio
+
+### Gestión de Clientes
+La base de datos debe permitir registrar y gestionar la información de los clientes, incluyendo datos personales como nombre, dirección, contacto y detalles financieros. Esto es crucial para evaluar el riesgo crediticio y tomar decisiones informadas sobre la concesión de préstamos y otros productos financieros.
+
+### Gestión de Cuentas
+Es fundamental llevar un registro detallado de las cuentas de los clientes, que incluya el tipo de cuenta (ahorros, corriente, etc.), el saldo actual y la fecha de apertura. La base de datos debe facilitar la creación automática de cuentas de ahorro para nuevos clientes y la actualización de saldos en función de las transacciones realizadas.
+
+### Gestión de Préstamos
+La base de datos debe gestionar información detallada sobre los préstamos otorgados, incluyendo el monto del préstamo, la tasa de interés, el plazo, el estado del préstamo (activo o inactivo) y la fecha (en caso de que el préstamo haya sido pagado). Esto permitirá evaluar el rendimiento de los préstamos y gestionar el riesgo de impagos.
+
+### Registro de Transacciones
+Es esencial tener un registro detallado de todas las transacciones realizadas por los clientes, incluyendo depósitos, retiros y pagos de préstamos. La base de datos debe actualizar automáticamente el saldo de las cuentas en función de estas transacciones y validar la integridad de los datos ingresados.
+
+### Evaluación del Riesgo Crediticio
+La base de datos debe almacenar y gestionar el puntaje crediticio de los clientes y monitorear los clientes con historial crediticio considerado malo para brindar el seguimiento adecuado.
+
+### Monitorización de Cuentas con Saldo Negativo
+La base de datos debe permitir la identificación rápida de cuentas con saldo negativo, ayudando a los departamentos de riesgo a tomar medidas preventivas o correctivas.
+
+### Generación de Informes
+La base de datos debe soportar la generación de informes detallados sobre la situación financiera de los clientes, el estado de los préstamos y el riesgo crediticio general. Estos informes son cruciales para la toma de decisiones estratégicas y operativas.
+
 
 ## Estructura de la Base de Datos
 
