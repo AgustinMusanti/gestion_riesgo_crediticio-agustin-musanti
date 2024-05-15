@@ -146,3 +146,4 @@
     ,('Incumplimiento de pagos de prestamos', '2024-04-02')
     ,('Cambios en el comportamiento de pago', '2024-03-30')
     ,('Cambios en el historial crediticio', '2024-04-14');
+
