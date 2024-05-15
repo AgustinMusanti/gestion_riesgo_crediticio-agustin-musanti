@@ -20,14 +20,15 @@ La base de datos proporcionará una estructura sólida para almacenar informaci�
 
 ## Contenido
 
-- [Estructura completa de la base de datos](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Structure/Database%20Structure.sql)
-- [Inserción de datos](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Structure/Population.sql)
-- [Vistas](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Objects/Views.sql)
-- [Funciones](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Objects/Functions.sql)
-- [Stored Procedures](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Objects/Stored%20Procedures.sql)
-- [Triggers](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Objects/Triggers.sql)
-- [Glosario](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Documentation/Glossary.pdf)
-- [Documentación](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/Documentation/Documentation.pdf)
+- [Estructura de la base de datos](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/structure/database%20structure.sql)
+- [Inserción de datos](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/structure/population.sql)
+- [Vistas](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/objects/views.sql)
+- [Funciones](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/objects/functions.sql)
+- [Stored Procedures](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/objects/stored%20procedures.sql)
+- [Triggers](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/objects/triggers.sql)
+- [Backup](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/backup/backup.md)
+- [Glosario](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/documentation/glossary.pdf)
+- [Documentación](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/documentation/documentation.pdf)
 
 
 
