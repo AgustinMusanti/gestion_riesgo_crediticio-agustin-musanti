@@ -73,8 +73,8 @@
     ,(15, 'Transferencia', 2000.00, '2024-03-15')
     ,(16, 'Deposito', 1000.00, '2024-04-26')
     ,(16, 'Transferencia (Sobregiro)', 1500.00, DEFAULT)
-    ,(17, 'Deposito', 2100.00, '2024-04-30')
-    ,(17, 'Transferencia (Sobregiro)', 3100.00, '2024-04-23')
+    ,(17, 'Deposito', 2100.00, '2024-04-26')
+    ,(17, 'Transferencia (Sobregiro)', 3100.00, '2024-04-27')
     ,(18, 'Deposito', 250.00, '2024-04-03')
     ,(18, 'Transferencia (Sobregiro)', 1000.00, '2024-04-10');
 		   
