@@ -14,8 +14,10 @@
 
 ## Introducción
 
-Este proyecto tiene como objetivo desarrollar una base de datos en MySQL diseñada para ayudar a las instituciones financieras a evaluar y gestionar el riesgo asociado con sus clientes en base a las transacciones que efectuan y a los préstamos que son otorgados a los mismos. 
-La base de datos proporcionará una estructura sólida para almacenar información relevante sobre clientes, transacciones, préstamos y otros aspectos clave relacionados con la evaluación del riesgo crediticio.
+Este proyecto fue desarrollado en el marco del curso de SQL impartido por Coderhouse. Durante el curso, aprendimos a implementar los distintos componentes del lenguaje SQL, incluyendo **DCL** (_Data Control Language_), **DML** (_Data Manipulation Language_), **DDL** (_Data Definition Language_) y **TCL** (_Transaction Control Language_).
+
+En este README, se proporcionará una visión general del proyecto y de todos sus componentes. Se detallarán las funciones, triggers, vistas, procedimientos almacenados y demás implementaciones para ayudar a comprender la estructura de la base de datos y el por qué de su utilidad.
+Este proyecto no solo muestra la aplicación práctica de SQL, sino también cómo una base de datos bien diseñada puede servir como una herramienta poderosa para la toma de decisiones estratégicas y operativas..
 
 
 ## Contenido
@@ -30,10 +32,10 @@ La base de datos proporcionará una estructura sólida para almacenar informaci�
 - [Glosario](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/documentation/glossary.pdf)
 - [Documentación](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/documentation/documentation.pdf)
 
+## Temática del proyecto
 
-
-Este README proporciona una visión general del proyecto y sus componentes principales. 
-Para obtener más detalles sobre la implementación y el funcionamiento de cada elemento, consulte el código fuente, la documentación y/o el glosario en el repositorio.
+Este proyecto se centra en la **Gestión del Riesgo Crediticio en instituciones financieras**. A través de la implementación de una base de datos en MySQL, el proyecto busca ofrecer una solución integral para almacenar, procesar y analizar la información financiera de los clientes.
+En esencia, este proyecto proporciona una base de datos robusta y eficiente para la gestión del riesgo crediticio, permitiendo a las instituciones financieras optimizar sus procesos de evaluación y seguimiento, y reducir la exposición a riesgos financieros.
 
 ## Modelo de Negocio
 
