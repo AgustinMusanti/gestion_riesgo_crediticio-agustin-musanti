@@ -97,13 +97,84 @@ Esta tabla almacena detalles sobre las cuentas que los clientes poseen con la in
 |   FechaApertura   |   Fecha de Apertura   |             DATE            |          -          |
 
 
-- **Clientes**: Contiene información personal de los clientes.
-- **Cuentas**: Registra datos de las cuentas asociadas a los clientes.
-- **Prestamos**: Almacena información sobre los préstamos otorgados a los clientes.
-- **Transacciones**: Registra todas las transacciones financieras realizadas por los clientes.
-- **Historial_Credito**: Guarda el historial crediticio de los clientes.
-- **Modelos_Riesgo**: Contiene información sobre los modelos de riesgo utilizados.
-- **Eventos_Riesgo**: Registra eventos de riesgo relevantes.
+## Tabla Transacciones
+
+Esta tabla registra todas las transacciones que efectúan los clientes, incluyendo la fecha, el monto, tipo de transacción (depósito, retiro, transferencia o transferencia (sobregiro)) y cualquier otro tipo de información relevante.
+
+| **_Abreviatura_** |  **_Nombre Completo_**  |     **_Tipo de Datos_**     | **_Tipo de Clave_** |
+|:-----------------:|:-----------------------:|:---------------------------:|:-------------------:|
+|  Transacciones_ID | ID de las transacciones | INT NOT NULL AUTO_INCREMENT |    Clave Primaria   |
+|     Cuentas_ID    |    ID de las cuentas    |             INT             |    Clave Fóranea    |
+|        Tipo       |   Tipo de Transacción   |         VARCHAR(50)         |          -          |
+|       Monto       |   Monto de Transacción  |        DECIMAL(10,2)        |          -          |
+|       Fecha       |   Fecha de Transacción  |             DATE            |          -          |
+
+
+## Tabla Prestamos
+
+En esta tabla se almacena toda la información de los préstamos otorgados a los clientes, incluyendo el monto del préstamo, la tasa de interés, el plazo, el estado (activo, vencido, inactivo, etc) y cualquier garantía asociada a los mismos.
+
+| **_Abreviatura_** | **_Nombre Completo_** |     **_Tipo de Datos_**     | **_Tipo de Clave_** |
+|:-----------------:|:---------------------:|:---------------------------:|:-------------------:|
+|    Prestamos_ID   |  ID de los préstamos  | INT NOT NULL AUTO_INCREMENT |    Clave Primaria   |
+|     Cliente_ID    |     ID del Cliente    |             INT             |    Clave Foránea    |
+|       Monto       |   Monto del Préstamo  |        DECIMAL(10,2)        |          -          |
+|    TasaInteres    |    Tasa de Interés    |         DECIMAL(5,2)        |          -          |
+|       Plazo       |   Plazo del Préstamo  |             INT             |          -          |
+|       Estado      |  Estado del Préstamo  |         VARCHAR(50)         |          -          |
+
+
+## Tabla Pagos_Prestamos
+
+Esta tabla registra todos los pagos realizados por los clientes en relación con sus préstamos, incluyendo la fecha del pago, el monto, entre otros datos relevantes.
+
+| **_Abreviatura_** |   **_Nombre Completo_**  |     **_Tipo de Datos_**     | **_Tipo de Clave_** |
+|:-----------------:|:------------------------:|:---------------------------:|:-------------------:|
+|   Pagos_Prest_ID  | ID de pagos de préstamos | INT NOT NULL AUTO_INCREMENT |    Clave Primaria   |
+|    Prestamos_ID   |    ID de los préstamos   |             INT             |    Clave Foránea    |
+|       Monto       |      Monto del Pago      |        DECIMAL(10,2)        |          -          |
+|       Fecha       |      Fecha del Pago      |             DATE            |          -          |
+
+## Tabla Historial_Credito
+
+Esta tabla contiene información sobre el historial crediticio de los clientes como los puntajes de crédito y las observaciones correspondientes.
+
+| **_Abreviatura_** |    **_Nombre Completo_**    |     **_Tipo de Datos_**     | **_Tipo de Clave_** |
+|:-----------------:|:---------------------------:|:---------------------------:|:-------------------:|
+|  Hist_Credito_ID  | ID del historial crediticio | INT NOT NULL AUTO_INCREMENT |    Clave Primaria   |
+|     Cliente_ID    |        ID del Cliente       |             INT             |    Clave Foránea    |
+|      Puntaje      |      Puntaje de Crédito     |             INT             |          -          |
+|   Observaciones   |        Observaciones        |             TEXT            |          -          |
+
+
+## Tabla Modelos_Riesgo
+
+Esta tabla almacena los modelos de riesgo utilizados para evaluar la solvencia crediticia de los
+clientes, incluyendo los coeficientes de los modelos, los parámetros utilizados, entre otros.
+Esta tabla es independiente del resto ya que su fin es almacenar información.
+
+| **_Abreviatura_** |  **_Nombre Completo_**  |     **_Tipo de Datos_**     | **_Tipo de Clave_** |
+|:-----------------:|:-----------------------:|:---------------------------:|:-------------------:|
+|   Mod_Riesgo_ID   | ID de modelos de riesgo | INT NOT NULL AUTO_INCREMENT |    Clave Primaria   |
+|       Nombre      |    Nombre del Modelo    |         VARCHAR(100)        |          -          |
+|    Descripción    |  Descripción del Modelo |             TEXT            |          -          |
+|    Coeficientes   | Coeficientes del Modelo |             TEXT            |          -          |
+
+
+## Tabla Eventos_Riesgo
+
+Esta tabla registra cualquier evento de riesgo relevante como pagos atrasados, actividad sospechosa en la cuenta, cambios en el puntaje del crédito, entre otros.
+Esta tabla es independiente del resto ya que su finalidad es almacenar información.
+
+| **_Abreviatura_** |  **_Nombre Completo_**  |     **_Tipo de Datos_**     | **_Tipo de Clave_** |
+|:-----------------:|:-----------------------:|:---------------------------:|:-------------------:|
+|   Even_Riesgo_ID  | ID de eventos de riesgo | INT NOT NULL AUTO_INCREMENT |    Clave Primaria   |
+|    Descripción    |  Descripción del Evento |             TEXT            |          -          |
+|       Fecha       |     Fecha del Evento    |             DATE            |          -          |
+
+
+
+
 
 ## Vistas
 
