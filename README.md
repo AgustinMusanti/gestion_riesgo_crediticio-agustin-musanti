@@ -19,7 +19,7 @@ Este proyecto fue desarrollado en el marco del curso de SQL impartido por Coderh
 
 En este README, se proporcionará una visión general del proyecto y de todos sus componentes. Se detallarán las funciones, triggers, vistas, procedimientos almacenados y demás implementaciones para ayudar a comprender la estructura de la base de datos y el por qué de su implementación y utilidad.
 
-Este proyecto no solo muestra la aplicación práctica de SQL, sino también cómo una base de datos bien diseñada puede servir como una herramienta poderosa para la toma de decisiones estratégicas y operativas..
+Este proyecto no solo muestra la aplicación práctica de SQL, sino también cómo una base de datos bien diseñada puede servir como una herramienta poderosa para la toma de decisiones estratégicas y operativas.
 
 
 ## Contenido
