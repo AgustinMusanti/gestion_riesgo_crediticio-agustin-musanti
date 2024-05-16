@@ -82,7 +82,19 @@ Esta tabla contiene información personal de los clientes como sus nombres, la d
 |     Telefono    |       Teléfono      |         VARCHAR(20)         |         -         |
 |      Correo     |  Correo Electrónico |         VARCHAR(100)        |         -         |
 
-Esta tabla contiene información personal de los clientes como sus nombres, la dirección de sus domicilios, correo electrónico, número de teléfono, entre otros.
+
+### Tabla Cuentas
+
+Esta tabla almacena detalles sobre las cuentas que los clientes poseen con la institución financiera como el número de cuenta, tipo de cuenta (corriente o de ahorro), saldo, fecha de apertura, entre otros.
+
+| **_Abreviatura_** | **_Nombre Completo_** |     **_Tipo de Datos_**     | **_Tipo de Clave_** |
+|:-----------------:|:---------------------:|:---------------------------:|:-------------------:|
+|     Cuentas_ID    |   ID de las cuentas   | INT NOT NULL AUTO_INCREMENT |    Clave Primaria   |
+|     Cliente_ID    |     ID del Cliente    |             INT             |    Clave Foránea    |
+|       Numero      |    Número de Cuenta   |         VARCHAR(20)         |          -          |
+|        Tipo       |     Tipo de Cuenta    |         VARCHAR(50)         |          -          |
+|       Saldo       |         Saldo         |        DECIMAL(10,2)        |          -          |
+|   FechaApertura   |   Fecha de Apertura   |             DATE            |          -          |
 
 
 - **Clientes**: Contiene información personal de los clientes.
