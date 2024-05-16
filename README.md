@@ -73,7 +73,7 @@ La base de datos debe soportar la generación de informes detallados sobre la si
 
 Esta tabla contiene información personal de los clientes como sus nombres, la dirección de sus domicilios, correo electrónico, número de teléfono, entre otros.
 
-| **Abreviatura** | **Nombre Completo** |      **Tipo de Datos**      | **Tipo de Clave** |
+| **_Abreviatura_** | **_Nombre Completo_** |      **_Tipo de Datos_**      | **_Tipo de Clave_** |
 |:---------------:|:-------------------:|:---------------------------:|:-----------------:|
 |    Cliente_ID   |    ID del cliente   | INT NOT NULL AUTO_INCREMENT |   Clave Primaria  |
 |      Nombre     |        Nombre       |         VARCHAR(100)        |         -         |
