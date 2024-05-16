@@ -61,6 +61,10 @@ La base de datos debe permitir la identificación rápida de cuentas con saldo n
 La base de datos debe soportar la generación de informes detallados sobre la situación financiera de los clientes, el estado de los préstamos y el riesgo crediticio general. Estos informes son cruciales para la toma de decisiones estratégicas y operativas.
 
 
+## Diagrama Entidad-Relación (DER)
+
+
+
 ## Estructura de la Base de Datos
 
 La base de datos está diseñada para gestionar la información relacionada con clientes, cuentas bancarias, préstamos, transacciones financieras, historial crediticio, modelos y eventos de riesgo. 
