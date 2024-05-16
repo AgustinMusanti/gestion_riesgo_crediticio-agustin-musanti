@@ -152,6 +152,7 @@ Esta tabla contiene información sobre el historial crediticio de los clientes c
 
 Esta tabla almacena los modelos de riesgo utilizados para evaluar la solvencia crediticia de los
 clientes, incluyendo los coeficientes de los modelos, los parámetros utilizados, entre otros.
+
 Esta tabla es independiente del resto ya que su fin es almacenar información.
 
 | **_Abreviatura_** |  **_Nombre Completo_**  |     **_Tipo de Datos_**     | **_Tipo de Clave_** |
@@ -165,6 +166,7 @@ Esta tabla es independiente del resto ya que su fin es almacenar información.
 ## Tabla Eventos_Riesgo
 
 Esta tabla registra cualquier evento de riesgo relevante como pagos atrasados, actividad sospechosa en la cuenta, cambios en el puntaje del crédito, entre otros.
+
 Esta tabla es independiente del resto ya que su finalidad es almacenar información.
 
 | **_Abreviatura_** |  **_Nombre Completo_**  |     **_Tipo de Datos_**     | **_Tipo de Clave_** |
