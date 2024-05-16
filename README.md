@@ -3,13 +3,13 @@
 # Entrega final - Curso SQL Coderhouse
 
 
-**@Alumno:**   _Agustin Musanti_
+**@Alumno:**   Agustin Musanti
 
-**@Comision:** _53180_
+**@Comision:** 53180
 
-**@Profesor:** _Anderson Michel Ocaña Torres_
+**@Profesor:** Anderson Michel Ocaña Torres
 
-**@Tutores:**   _Carla Palermo - Santiago Angel Gonzalez_
+**@Tutores:**   Carla Palermo - Santiago Angel Gonzalez
 
 
 
