@@ -19,6 +19,7 @@ USE   Gestion_Riesgo_Crediticio;
 
 CREATE ROLE                Role_select_tablas;
 CREATE ROLE                Role_crud_crediticio;
+CREATE ROLE                Role_creacion_usuarios;
 
 
 -- Asignacion de priviligeios al rol Role_select_tablas
@@ -43,13 +44,15 @@ GRANT ALL PRIVILEGES ON    Historial_Credito  TO   Role_crud_crediticio;
 
 -- Creacion de usuarios y asignacion de los roles correspondientes
 
-CREATE USER 'juan_select'@'%' IDENTIFIED BY  'juan444'
+CREATE USER 'juan_select'@'%'   IDENTIFIED   BY  'juan444'
 COMMENT     'Usuario con permisos de vista';
-GRANT        Role_select_tablas          TO  'juan_select'@'%';
+GRANT        Role_select_tablas              TO  'juan_select'@'%';
 
-CREATE USER 'thiago_crud'@'%' IDENTIFIED BY  'thiago999'
+CREATE USER 'thiago_crud'@'%'   IDENTIFIED   BY  'thiago999'
 COMMENT     'Usuario con rol CRUD';
-GRANT        Role_crud_crediticio        TO  'thiago_crud'@'%';
+GRANT        Role_crud_crediticio            TO  'thiago_crud'@'%';
 
-
+CREATE USER 'agus_usuarios'@'%' IDENTIFIED   BY  'bocajrs'
+COMMENT     'Usuario con rol de creacion de usuarios';
+GRANT        Role_creacion_usuarios           TO  'agus_usuarios'@'%';
 FLUSH PRIVILEGES;
