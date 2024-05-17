@@ -185,7 +185,7 @@ Esta tabla es independiente del resto ya que su finalidad es almacenar informaci
 
 ## Objetos de la base de datos
 
-## Documentanción de vistas
+## Documentanción de Vistas
 
 ### VistaClienteSaldoNegativo
 
@@ -270,7 +270,7 @@ SELECT * FROM VistaDetallePrestamosActivos;
 ```
 
 
-## Documentación de funciones
+## Documentación de Funciones
 
 ### FN_CalcularMontoTotalPagos
 
@@ -338,34 +338,53 @@ AS     SaldoTotalPrestamos;
 ```
 
 
+## Documentación de Procedimientos Almacenados
+
+### SP_ActualizarEstadoPrestamo
+
+**Descripción:** Este procedimiento almacenado se encarga de actualizar el estado de un préstamo en la tabla **_Prestamos_** basado en su saldo pendiente.
+
+**Parámetros y retorno:**
+
+- El procedimiento toma como parámetro de entrada el ID del préstamo (prestamoID).
+- Calcula el saldo pendiente del préstamo restando la suma total de los pagos asociados al mismo.
+- Luego determina el nuevo estado del préstamo en función del saldo pendiente. Si el saldo pendiente es menor o igual a 
+  cero, el estado se establece como **"Inactivo"**; de lo contrario, se establece como **"Activo"**.
+- Finalmente, actualiza el estado del préstamo en la tabla Prestamos con el nuevo estado calculado.
+
+**Utilidad:** Este procedimiento almacenado es útil para automatizar la actualización del estado de los préstamos en función de sus pagos y saldos pendientes, lo que proporciona una gestión más eficiente y precisa de los préstamos en el sistema. Por esta razón, este procedimiento va de la mano con el que se desarrollará luego.
+
+**Ejemplo de uso:**
+
+```sql
+CALL SP_ActualizarEstadoPrestamo(1);
+```
 
 
+### SP_RegistrarPagoPrestamo
+
+**Descripción:** Este procedimiento almacenado se encarga de registrar un pago para un préstamo específico y luego llama al procedimiento **SP_ActualizarEstadoPrestamo** (que se ha detallado anteriormente) para actualizar el estado del préstamo, en el caso de que corresponda.
 
 
+**Parámetros y retorno:**
+
+- Los parámetros de entrada son el ID del préstamo (prestamoID), el monto del pago (monto) y la fecha del pago (fecha).
+- Inserta el nuevo pago del préstamo en la tabla **_Pagos_Prestamos_** con el ID del préstamo, el monto y la fecha proporcionados.
+- Después de insertar el pago, llama al procedimiento almacenado **SP_ActualizarEstadoPrestamo** para actualizar el estado del préstamo en función de los pagos realizados.
+
+**Utilidad:** Este procedimiento almacenado es útil para facilitar el registro de pagos para préstamos específicos y automatizar la actualización del estado del préstamo después de cada pago registrado. Esto garantiza una gestión eficiente y precisa de los pagos y estados de los préstamos en el sistema.
+
+**Ejemplo de uso:**
+
+```sql
+CALL SP_RegistrarPagoPrestamo(6, 1646.25, CURDATE());
+```
 
 
+## Documentación de Triggers
 
+### 
 
-
-
-
-## Stored Procedures
-
-Se desarrollaron stored procedures para automatizar tareas recurrentes o complejas. 
-Algunos ejemplos de stored procedures son:
-
-- **SP_RegistrarPagoPrestamo**: Registra un pago para un préstamo específico.
-- **SP_ActualizarEstadoPrestamo**: Actualiza el estado de un préstamo según su saldo pendiente.
-
-## Triggers
-
-Se utilizaron triggers para realizar acciones automáticamente cuando se modifican datos en la base de datos. 
-Por ejemplo:
-
-- **TR_ActualizarSaldoCuenta**: Actualiza el saldo total de una cuenta después de cada transacción.
-- **TR_ValidarDatosPrestamo**: Valida que los valores insertados cumplan con las condiciones propuestas en la tabla.
-- **TR_EliminarCliente**: Prohibie la eliminación de clientes de la base de datos.
-- **TR_CrearCuentaClienteNuevo**: Cada vez que se registra un nuevo cliente, se registra una cuenta de "Ahorro" a su nombre.
 
 Este README proporciona una visión general del proyecto y sus componentes principales. 
 Para obtener más detalles sobre la implementación y el funcionamiento de cada elemento, consulte el código fuente y/o la documentación en el repositorio.
