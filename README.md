@@ -383,11 +383,52 @@ CALL SP_RegistrarPagoPrestamo(6, 1646.25, CURDATE());
 
 ## Documentación de Triggers
 
-### 
+### TR_ActualizarSaldoCuenta
+
+**Descripción:** Este trigger se activa después de que se inserta una nueva fila en la tabla **_Transacciones_**. Su propósito principal es actualizar el saldo de la cuenta (de la tabla **_Cuentas_**) asociada a la transacción según el tipo de la misma. 
+
+**Detalles:** Si la transacción es un retiro, el monto se resta del saldo actual de la cuenta. En cambio, si es otro tipo de transacción, el monto se suma al saldo de la cuenta.
+
+**Utilidad:** Su implementación es importante para mantener la integridad de los datos en la tabla **_Cuentas_** y garantizar que el saldo se ajuste correctamente en función de las transacciones realizadas.
 
 
-Este README proporciona una visión general del proyecto y sus componentes principales. 
-Para obtener más detalles sobre la implementación y el funcionamiento de cada elemento, consulte el código fuente y/o la documentación en el repositorio.
+### TR_ValidarDatosPrestamo
+
+**Descripción:** Este trigger se activa antes de insertar una nueva fila en la tabla **_Prestamos_**. Su objetivo es validar los datos del préstamo antes de que se realice la inserción en la base de datos.
+
+**Detalles:** 
+
+- Primero, verifica que el monto del préstamo sea mayor que cero. Si no es asi, se lanza una excepción con un mensaje indicando que el monto del préstamo debe ser mayor que cero.
+- Luego, comprueba que la tasa de interés esté en el rango válido de 0 a 100. Si esto tampoco es asi, se lanza otra excepción con un mensaje que indica que la tasa de interés debe estar entre 0 y 100.
+
+**Utilidad:** Este trigger es fundamental para garantizar la integridad de los datos, evitando asi la inserción de datos incorrectos o inválidos.
+
+
+### TR_EliminarCliente
+
+**Descripción:** Este trigger se activa antes de que se elimine una fila de la tabla **_Clientes_**. Su objetivo es prevenir la eliminación de clientes mediante la generación de un error personalizado.
+
+**Detalles:** Cuando se intenta eliminar un cliente, el trigger se activa y genera un error personalizado con el mensaje **"No se permite eliminar clientes"**. Este error detiene la ejecución de la operación de eliminación y garantiza que los clientes no sean eliminados de la base de datos.
+
+**Utilidad:** Este trigger es útil para mantener la integridad de los datos y evitar la eliminación accidental o no autorizada de clientes en la base de datos.
+
+
+### TR_CrearCuentaClienteNuevo
+
+**Descripción:** Este trigger se activa después de que se inserta una fila en la tabla **_Clientes_**. Su objetivo es crear automáticamente una nueva cuenta de ahorro en la tabla **_Cuentas_** para el cliente recién insertado.
+
+**Detalles:** 
+- Cuando se inserta un nuevo cliente, el trigger se activa y verifica si ya existen cuentas asociadas a ese cliente en la
+tabla **_Cuentas_**.
+- Si no hay cuentas existentes para el cliente, el trigger genera un número de cuenta de 4 dígitos único y lo inserta en la tabla **_Cuentas_**, junto con el tipo de cuenta (Ahorro), un saldo inicial de 0 (cero) y la fecha de apertura (la fecha
+actual).
+- El trigger garantiza que el número de cuenta generado sea único mediante la generación repetida de un nuevo número hasta que encuentre uno que no esté presente en la tabla de **_Cuentas_**.
+
+**Utilidad:**  El trigger en cuestión es útil para automatizar el proceso de creación de cuentas de ahorro para nuevos clientes y garantizar que cada nuevo cliente tenga su cuenta de ahorro asociada en la base de datos de la institución financiera.
+
+
+
+
 
 ## Como levantar el proyecto en CodeSpaces GitHub
 * env: Archivo con contraseñas y data secretas
