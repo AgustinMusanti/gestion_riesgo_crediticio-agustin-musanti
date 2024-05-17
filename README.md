@@ -185,7 +185,7 @@ Esta tabla es independiente del resto ya que su finalidad es almacenar informaci
 
 ## Objetos de la base de datos
 
-### Documentanción de vistas
+## Documentanción de vistas
 
 ### VistaClienteSaldoNegativo
 
@@ -270,7 +270,69 @@ SELECT * FROM VistaDetallePrestamosActivos;
 ```
 
 
-### 
+## Documentación de funciones
+
+### FN_CalcularMontoTotalPagos
+
+**Descripción:** Esta función calcula el monto total de los pagos asociados a un préstamo específico.
+
+**Parámetros y retorno:** 
+
+- Toma un parámetro de entrada, que es el ID del préstamo (prestamoID).
+- Dentro de la función, declara una variable **montoTotal** para almacenar el monto total de los pagos.
+- Realiza una consulta para sumar todos los montos de los pagos asociados al ID del préstamo proporcionado.
+- Utiliza la función **COALESCE** para asegurarse de que, en caso de que no haya pagos asociados, el resultado sea cero.
+- Devuelve el monto total de los pagos.
+
+**Utilidad:** Esta función es útil para obtener de manera rápida y precisa el monto total de los pagos asociados a un préstamo específico, lo que puede ser utilizado en diversas partes del sistema para realizar cálculos y análisis relacionados con los préstamos.
+
+**Ejemplo de uso:**
+
+```sql
+SELECT FN_CalcularMontoTotalPagos(1) AS MontoTotalPago;
+```
+
+
+### FN_CalcularSaldoPromedioCliente
+
+**Descripción:** Esta función calcula el saldo promedio de todas las cuentas asociadas a un cliente específico.
+
+**Parámetros y retorno:**
+
+- Toma un parámetro de entrada, que es el ID del cliente (clienteID).
+- Dentro de la función, declara una variable **saldoPromedio** para almacenar el saldo promedio.
+- Realiza una consulta para obtener el saldo promedio de todas las cuentas asociadas al ID del cliente proporcionado.
+- Utiliza la función **COALESCE** para asegurarse de que, en caso de que no haya cuentas asociadas, el resultado sea cero.
+- Devuelve el saldo promedio de todas las cuentas asociadas al cliente.
+
+**Utilidad:** Esta función es útil para obtener una medida del estado financiero promedio de un cliente, lo que puede ser utilizado en análisis y reportes relacionados con la gestión de clientes y cuentas.
+
+**Ejemplo de uso:**
+
+```sql
+SELECT FN_CalcularSaldoPromedioCliente(1) AS SaldoPromedioCliente;
+```
+
+
+### FN_CalcularSaldoTotalPrestamos
+
+**Descripción:** Esta función calcula el saldo total de todos los préstamos activos asociados a un cliente específico.
+
+**Parámetros y retorno:**
+
+- Toma un parámetro de entrada que es el ID del cliente (clienteID).
+- Dentro de la función, declara una variable **saldoTotal** para almacenar el saldo total.
+- Realiza una consulta para obtener la suma de los montos de todos los préstamos activos asociados al ID del cliente proporcionado.
+- Utiliza la función **COALESCE** para asegurarse de que, en caso de que no haya préstamos activos asociados, el resultado sea cero.
+- Devuelve el saldo total de todos los préstamos activos asociados al cliente.
+
+**Utilidad:** Esta función es útil para calcular la carga financiera total de un cliente en términos de préstamos activos.
+
+**Ejemplo de uso:**
+
+```sql
+SELECT FN_CalcularSaldoTotalPrestamos(1) AS SaldoTotalPrestamos;
+```
 
 
 
@@ -281,14 +343,8 @@ SELECT * FROM VistaDetallePrestamosActivos;
 
 
 
-## Funciones
 
-Se implementaron funciones para realizar cálculos y operaciones específicas en los datos de la base de datos. 
-Algunas funciones importantes son:
 
-- **FN_CalcularSaldoTotalPrestamos**: Calcula el saldo total de todos los prestamos activos que posee un cliente especifico.
-- **FN_CalcularMontoTotalPagos**: Calcula el monto total de los pagos asociados a un préstamo.
-- **FN_CalcularSaldoPromedioCliente**: Calcula el saldo promedio de todas las cuentas de un cliente.
 
 ## Stored Procedures
 
