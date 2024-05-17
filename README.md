@@ -437,7 +437,7 @@ Se genera tres roles:
 2. `role_crud_creditico`: Este rol tiene permisos para generar CRUD en distintas tablas de la base de datos.
 3. `role_creacion_usuarios`: Este rol tiene permisos para crear y eliminar usuarios.
 
-Por último, se creo un usuario para cada rol y fueron asignados los roles correspondientes.
+Por último, se crearon tres usuarios y se les asignaron los roles correspondientes.
 
 
 
