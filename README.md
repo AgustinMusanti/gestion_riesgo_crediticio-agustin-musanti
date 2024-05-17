@@ -185,7 +185,7 @@ Esta tabla es independiente del resto ya que su finalidad es almacenar informaci
 
 ## Objetos de la base de datos
 
-## Documentanción de Vistas
+### Documentanción de Vistas
 
 ### VistaClienteSaldoNegativo
 
