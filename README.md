@@ -427,6 +427,17 @@ actual).
 **Utilidad:**  El trigger en cuestión es útil para automatizar el proceso de creación de cuentas de ahorro para nuevos clientes y garantizar que cada nuevo cliente tenga su cuenta de ahorro asociada en la base de datos de la institución financiera.
 
 
+## Roles y permisos
+
+`./objects/roles_users.sql`
+
+Se genera tres roles:
+
+1. `role_select_tablas`: Este rol tiene permisos solo para SELECT en las distintas tablas de la base de datos.
+2. `role_crud_creditico`: Este rol tiene permisos para generar CRUD en distintas tablas de la base de datos.
+3. `role_creacion_usuarios`: Este rol tiene permisos para crear y eliminar usuarios.
+
+Por último, se creo un usuario para cada rol y fueron asignados los roles correspondientes.
 
 
 
