@@ -37,6 +37,7 @@ Este proyecto no solo muestra la aplicación práctica de SQL, sino también có
 ## Temática del proyecto
 
 Este proyecto se centra en la **Gestión del Riesgo Crediticio en instituciones financieras**. A través de la implementación de una base de datos en MySQL, el proyecto busca ofrecer una solución integral para almacenar, procesar y analizar la información financiera de los clientes.
+
 En esencia, este proyecto proporciona una base de datos robusta y eficiente para la gestión del riesgo crediticio, permitiendo a las instituciones financieras optimizar sus procesos de evaluación y seguimiento, y reducir la exposición a riesgos financieros.
 
 ## Modelo de Negocio
@@ -174,6 +175,36 @@ Esta tabla es independiente del resto ya que su finalidad es almacenar informaci
 |   Even_Riesgo_ID  | ID de eventos de riesgo | INT NOT NULL AUTO_INCREMENT |    Clave Primaria   |
 |    Descripción    |  Descripción del Evento |             TEXT            |          -          |
 |       Fecha       |     Fecha del Evento    |             DATE            |          -          |
+
+
+
+## Estructura e ingesta de datos
+
+- Se realiza en su totalidad por medio del archivo **population.sql**
+
+
+## Objetos de la base de datos
+
+### Documentanción de vistas
+
+### VistaClienteSaldoNegativo
+
+**Descripción y tablas involucradas:** Esta vista muestra los clientes que tienen un saldo negativo en alguna de sus cuentas. 
+- Realiza una unión entre las tablas **_Clientes_** y **_Cuentas_** utilizando el campo *Cliente_ID* como clave de unión.
+- Selecciona las columnas *Cliente_ID*, *Nombre*, *Apellido* y *Saldo* de las tablas **_Clientes_** y **_Cuentas_**.
+- Filtra las filas donde el saldo en la tabla Cuentas es menor que cero, lo que indica que se trata de un saldo negativo.
+
+**Utilidad:** Esta vista es útil para identificar rápidamente a los clientes que están experimentando dificultades financieras debido a saldos negativos en sus cuentas. Puede ser utilizada por los departamentos de riesgo crediticio o de atención al cliente para tomar medidas correctivas o para ofrecer asistencia financiera adicional.
+
+### Ejemplo de consulta
+
+```sql
+SELECT * FROM VistaClientesSaldoNegativo;
+```
+
+### VistaTransaccionesRecientes
+
+
 
 
 
