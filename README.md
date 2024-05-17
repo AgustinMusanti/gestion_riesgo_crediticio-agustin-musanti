@@ -190,36 +190,96 @@ Esta tabla es independiente del resto ya que su finalidad es almacenar informaci
 ### VistaClienteSaldoNegativo
 
 **Descripción y tablas involucradas:** Esta vista muestra los clientes que tienen un saldo negativo en alguna de sus cuentas. 
+
 - Realiza una unión entre las tablas **_Clientes_** y **_Cuentas_** utilizando el campo *Cliente_ID* como clave de unión.
-- Selecciona las columnas *Cliente_ID*, *Nombre*, *Apellido* y *Saldo* de las tablas **_Clientes_** y **_Cuentas_**.
+- Selecciona las columnas **Cliente_ID**, **Nombre**, **Apellido** y **Saldo** de las tablas **_Clientes_** y **_Cuentas_**.
 - Filtra las filas donde el saldo en la tabla Cuentas es menor que cero, lo que indica que se trata de un saldo negativo.
 
 **Utilidad:** Esta vista es útil para identificar rápidamente a los clientes que están experimentando dificultades financieras debido a saldos negativos en sus cuentas. Puede ser utilizada por los departamentos de riesgo crediticio o de atención al cliente para tomar medidas correctivas o para ofrecer asistencia financiera adicional.
 
-### Ejemplo de consulta
+**Ejemplo de consulta**
 
 ```sql
 SELECT * FROM VistaClientesSaldoNegativo;
 ```
 
+
 ### VistaTransaccionesRecientes
 
+**Descripción y tablas involucradas:** Esta vista muestra las transacciones financieras realizadas en los últimos 30 días.
+
+- Selecciona las columnas **Cuentas_ID**, **Tipo**, **Monto** y **Fecha** de la tabla **_Transacciones_**.
+-  Filtra las filas donde la fecha de la transacción es igual o posterior a la fecha actual menos 30 días, utilizando la función **DATE_SUB** en conjunto con **CURDATE()**
+
+**Utilidad:** Esta vista proporciona una forma conveniente de ver las transacciones financieras recientes, lo que puede ser útil para el seguimiento de la actividad financiera.
+
+**Ejemplo de consulta**
+
+```sql
+SELECT * FROM VistaTransaccionesRecientes;
+```
+
+
+### VistaTransaccionesMontosAltos
+
+**Descripción y tablas involucradas:** Esta vista muestra las transacciones financieras con montos superiores a **$3.000**
+
+- Selecciona las columnas **Cuentas_ID**, **Tipo**, **Monto** y **Fecha** de la tabla **_Transacciones_**.
+- Filtra las filas donde el monto de la transacción sea mayor que **$3.000**.
+
+**Utilidad:** Esta vista puede ser útil para identificar transacciones inusuales o de gran valor, lo que podría requerir una mayor atención o verificación por parte de los analistas financieros.
+
+**Ejemplo de consulta**
+
+```sql
+SELECT * FROM VistaTransaccionesMontosAltos;
+```
+
+
+### VistaClientesHistorialCrediticioMalo
+
+**Descripción y tablas involucradas:** Esta vista muestra los clientes cuyo historial crediticio es considerado malo, es decir, con un puntaje de crédito menor a **5 (cinco)**.
+
+- Selecciona las columnas **Cliente_ID**, **Nombre**, **Apellido** y **Puntaje** de la tabla **_Clientes_** y la tabla **_Historial_Credito_**.
+- Une las tablas Clientes e Historial_Credito usando el Cliente_ID.
+- Filtra las filas donde el puntaje de crédito en el historial sea menor a **5**.
+
+**Utilidad:** Esta vista puede ser útil para identificar a los clientes que tienen un historial crediticio negativo, lo que podría influir en las decisiones de otorgamiento de nuevos créditos o préstamos.
+
+**Ejemplo de consulta**
+
+```sql
+SELECT * FROM VistaClientesHistorialCrediticioMalo;
+```
+
+
+### VistaDetallePrestamosActivos
+
+**Descripción y tablas involucradas:** Esta vista muestra los detalles de los préstamos que están actualmente activos.
+
+- Realiza una unión entre las tablas **_Prestamos_** y **_Clientes_** utilizando el campo **Cliente_ID** como clave de unión.
+- Selecciona las columnas **Prestamos_ID**, **Nombre** (del cliente), **Monto**, **TasaInteres**, **Plazo** y **Estado**.
+- Filtra las filas donde el estado del préstamo en la tabla **_Prestamos_** figura como "Activo".
+
+**Utilidad:** Esta vista es útil para obtener una lista de los préstamos activos y puede ser utilizada por los departamentos financieros para monitorear y administrar los préstamos en curso. 
+
+**Ejemplo de consulta**
+
+```sql
+SELECT * FROM VistaDetallePrestamosActivos;
+```
+
+
+### 
 
 
 
 
 
 
-## Vistas
 
-Se crearon vistas para proporcionar acceso simplificado a la información de la base de datos. 
-Algunas vistas útiles incluyen:
 
-- **VistaDetallePrestamosActivos**: Muestra un resumen de los detalles de los prestamos que se encuentran activos.
-- **VistaClientesSaldoNegativo**: Muestra a los clientes con saldos negativos.
-- **VistaTransaccionesRecientes**: Muestra las transacciones realizadas en los últimos 30 días.
-- **VistaTransaccionesMontosAltos**: Muestra las transacciones con montos superiores a $3.000.
-- **VistaClientesHistorialCrediticioMalo**: Muestra a los clientes con un historial crediticio considerado malo.
+
 
 ## Funciones
 
