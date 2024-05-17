@@ -440,6 +440,17 @@ Se genera tres roles:
 Por último, se crearon tres usuarios y se les asignaron los roles correspondientes.
 
 
+## Back up de la base de datos
+
+Se puede generar un comando en el archivo `make backup` que permite ejecutar un backup de la base de datos de manera manual.
+
+## Herramientas y tecnologias usadas
+
+* Makefile        (para generar una interfaz sencilla de procesos)
+* Docker          (para generar un container)
+* MySQL           (Motor de bases de datos `version: latest`)
+* MySQL Workbench (Interfaz grafica)
+* Mockaroo        (para otorgar datos ficticios)
 
 ## Como levantar el proyecto en CodeSpaces GitHub
 * env: Archivo con contraseñas y data secretas
