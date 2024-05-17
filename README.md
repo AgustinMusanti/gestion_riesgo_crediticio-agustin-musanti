@@ -289,7 +289,8 @@ SELECT * FROM VistaDetallePrestamosActivos;
 **Ejemplo de uso:**
 
 ```sql
-SELECT FN_CalcularMontoTotalPagos(1) AS MontoTotalPago;
+SELECT FN_CalcularMontoTotalPagos(1)
+AS     MontoTotalPago;
 ```
 
 
@@ -310,7 +311,8 @@ SELECT FN_CalcularMontoTotalPagos(1) AS MontoTotalPago;
 **Ejemplo de uso:**
 
 ```sql
-SELECT FN_CalcularSaldoPromedioCliente(1) AS SaldoPromedioCliente;
+SELECT FN_CalcularSaldoPromedioCliente(1)
+AS     SaldoPromedioCliente;
 ```
 
 
@@ -331,7 +333,8 @@ SELECT FN_CalcularSaldoPromedioCliente(1) AS SaldoPromedioCliente;
 **Ejemplo de uso:**
 
 ```sql
-SELECT FN_CalcularSaldoTotalPrestamos(1) AS SaldoTotalPrestamos;
+SELECT FN_CalcularSaldoTotalPrestamos(1)
+AS     SaldoTotalPrestamos;
 ```
 
 
