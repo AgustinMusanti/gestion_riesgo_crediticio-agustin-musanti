@@ -191,7 +191,7 @@ Esta tabla es independiente del resto ya que su finalidad es almacenar informaci
 
 **Descripción y tablas involucradas:** Esta vista muestra los clientes que tienen un saldo negativo en alguna de sus cuentas. 
 
-- Realiza una unión entre las tablas **_Clientes_** y **_Cuentas_** utilizando el campo *Cliente_ID* como clave de unión.
+- Realiza una unión entre las tablas **_Clientes_** y **_Cuentas_** utilizando el campo **Cliente_ID** como clave de unión.
 - Selecciona las columnas **Cliente_ID**, **Nombre**, **Apellido** y **Saldo** de las tablas **_Clientes_** y **_Cuentas_**.
 - Filtra las filas donde el saldo en la tabla Cuentas es menor que cero, lo que indica que se trata de un saldo negativo.
 
@@ -241,7 +241,7 @@ SELECT * FROM VistaTransaccionesMontosAltos;
 **Descripción y tablas involucradas:** Esta vista muestra los clientes cuyo historial crediticio es considerado malo, es decir, con un puntaje de crédito menor a **5 (cinco)**.
 
 - Selecciona las columnas **Cliente_ID**, **Nombre**, **Apellido** y **Puntaje** de la tabla **_Clientes_** y la tabla **_Historial_Credito_**.
-- Une las tablas Clientes e Historial_Credito usando el Cliente_ID.
+- Une las tablas **_Clientes_** e **_Historial_Credito_** usando el **Cliente_ID**.
 - Filtra las filas donde el puntaje de crédito en el historial sea menor a **5**.
 
 **Utilidad:** Esta vista puede ser útil para identificar a los clientes que tienen un historial crediticio negativo, lo que podría influir en las decisiones de otorgamiento de nuevos créditos o préstamos.
