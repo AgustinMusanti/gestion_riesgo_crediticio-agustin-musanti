@@ -197,7 +197,7 @@ Esta tabla es independiente del resto ya que su finalidad es almacenar informaci
 
 **Utilidad:** Esta vista es útil para identificar rápidamente a los clientes que están experimentando dificultades financieras debido a saldos negativos en sus cuentas. Puede ser utilizada por los departamentos de riesgo crediticio o de atención al cliente para tomar medidas correctivas o para ofrecer asistencia financiera adicional.
 
-**Ejemplo de consulta**
+**Ejemplo de consulta:**
 
 ```sql
 SELECT * FROM VistaClientesSaldoNegativo;
@@ -213,7 +213,7 @@ SELECT * FROM VistaClientesSaldoNegativo;
 
 **Utilidad:** Esta vista proporciona una forma conveniente de ver las transacciones financieras recientes, lo que puede ser útil para el seguimiento de la actividad financiera.
 
-**Ejemplo de consulta**
+**Ejemplo de consulta:**
 
 ```sql
 SELECT * FROM VistaTransaccionesRecientes;
@@ -229,7 +229,7 @@ SELECT * FROM VistaTransaccionesRecientes;
 
 **Utilidad:** Esta vista puede ser útil para identificar transacciones inusuales o de gran valor, lo que podría requerir una mayor atención o verificación por parte de los analistas financieros.
 
-**Ejemplo de consulta**
+**Ejemplo de consulta:**
 
 ```sql
 SELECT * FROM VistaTransaccionesMontosAltos;
@@ -246,7 +246,7 @@ SELECT * FROM VistaTransaccionesMontosAltos;
 
 **Utilidad:** Esta vista puede ser útil para identificar a los clientes que tienen un historial crediticio negativo, lo que podría influir en las decisiones de otorgamiento de nuevos créditos o préstamos.
 
-**Ejemplo de consulta**
+**Ejemplo de consulta:**
 
 ```sql
 SELECT * FROM VistaClientesHistorialCrediticioMalo;
@@ -263,7 +263,7 @@ SELECT * FROM VistaClientesHistorialCrediticioMalo;
 
 **Utilidad:** Esta vista es útil para obtener una lista de los préstamos activos y puede ser utilizada por los departamentos financieros para monitorear y administrar los préstamos en curso. 
 
-**Ejemplo de consulta**
+**Ejemplo de consulta:**
 
 ```sql
 SELECT * FROM VistaDetallePrestamosActivos;
