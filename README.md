@@ -183,8 +183,6 @@ Esta tabla es independiente del resto ya que su finalidad es almacenar informaci
 - Se realiza en su totalidad por medio del archivo **population.sql**
 
 
-# Objetos de la base de datos
-
 ## Documentanción de Vistas
 
 ### VistaClienteSaldoNegativo
