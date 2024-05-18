@@ -208,7 +208,8 @@ Esta vista es útil para identificar rápidamente a los clientes que están expe
 **Ejemplo de consulta:**
 
 ```sql
-SELECT * FROM VistaClientesSaldoNegativo;
+SELECT * FROM VistaClientesSaldoNegativo
+ORDER BY Saldo DESC;
 ```
 
 
@@ -228,7 +229,8 @@ Esta vista proporciona una forma conveniente de ver las transacciones financiera
 **Ejemplo de consulta:**
 
 ```sql
-SELECT * FROM VistaTransaccionesRecientes;
+SELECT * FROM VistaTransaccionesRecientes
+ORDER BY Fecha ASC;
 ```
 
 
@@ -248,7 +250,8 @@ Esta vista puede ser útil para identificar transacciones inusuales o de gran va
 **Ejemplo de consulta:**
 
 ```sql
-SELECT * FROM VistaTransaccionesMontosAltos;
+SELECT * FROM VistaTransaccionesMontosAltos
+ORDER BY Monto DESC;
 ```
 
 
@@ -269,7 +272,8 @@ Esta vista puede ser útil para identificar a los clientes que tienen un histori
 **Ejemplo de consulta:**
 
 ```sql
-SELECT * FROM VistaClientesHistorialCrediticioMalo;
+SELECT * FROM VistaClientesHistorialCrediticioMalo
+ORDER BY Puntaje DESC;
 ```
 
 
@@ -290,7 +294,8 @@ Esta vista es útil para obtener una lista de los préstamos activos y puede ser
 **Ejemplo de consulta:**
 
 ```sql
-SELECT * FROM VistaDetallePrestamosActivos;
+SELECT * FROM VistaDetallePrestamosActivos
+ORDER BY Cliente ASC;
 ```
 
 
