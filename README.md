@@ -15,7 +15,7 @@
 
 ## Introducción
 
-Este proyecto fue desarrollado en el marco del curso de SQL impartido por Coderhouse. Durante el curso, aprendimos a implementar los distintos componentes del lenguaje SQL, incluyendo **DCL** (_Data Control Language_), **DML** (_Data Manipulation Language_), **DDL** (_Data Definition Language_) y **TCL** (_Transaction Control Language_).
+Este proyecto fue desarrollado en el marco del curso de **SQL** impartido por Coderhouse. Durante el curso, aprendimos a implementar los distintos componentes del lenguaje **SQL**, incluyendo **DCL** (_Data Control Language_), **DML** (_Data Manipulation Language_), **DDL** (_Data Definition Language_) y **TCL** (_Transaction Control Language_).
 
 En este README se detallarán las tablas, funciones, triggers, vistas, procedimientos almacenados y demás componentes para ayudar a comprender la estructura de la base de datos, el por qué de su implementación y cuál es su utilidad.
 
@@ -32,7 +32,7 @@ Este proyecto no solo muestra la aplicación práctica de SQL, sino también có
 - [Triggers](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/objects/triggers.sql)
 - [Backup](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/backup/backup.md)
 - [Glosario](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/documentation/glossary.pdf)
-- [Documentación](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/documentation/documentation.pdf)
+
 
 ## Temática del proyecto
 
@@ -46,7 +46,7 @@ En esencia, este proyecto proporciona una base de datos robusta y eficiente para
 La base de datos debe permitir registrar y gestionar la información de los clientes, incluyendo datos personales como nombre, dirección, contacto y detalles financieros. Esto es crucial para evaluar el riesgo crediticio y tomar decisiones informadas sobre la concesión de préstamos y otros productos financieros.
 
 ### Gestión de Cuentas
-Es fundamental llevar un registro detallado de las cuentas de los clientes, que incluya el tipo de cuenta (ahorros, corriente, etc.), el saldo actual y la fecha de apertura. La base de datos debe facilitar la creación automática de cuentas de ahorro para nuevos clientes y la actualización de saldos en función de las transacciones realizadas.
+Es fundamental llevar un registro detallado de las cuentas de los clientes, que incluya el tipo de cuenta (ahorro, corriente, etc.), el saldo actual y la fecha de apertura. La base de datos debe facilitar la creación automática de cuentas de ahorro para nuevos clientes y la actualización de saldos en función de las transacciones realizadas.
 
 ### Gestión de Préstamos
 La base de datos debe gestionar información detallada sobre los préstamos otorgados, incluyendo el monto del préstamo, la tasa de interés, el plazo, el estado del préstamo (activo o inactivo) y la fecha (en caso de que el préstamo haya sido pagado). Esto permitirá evaluar el rendimiento de los préstamos y gestionar el riesgo de impagos.
@@ -450,7 +450,19 @@ Se puede generar un comando en el archivo `make backup` que permite ejecutar un 
 * Docker          (para generar un container)
 * MySQL           (Motor de bases de datos `version: latest`)
 * MySQL Workbench (Interfaz grafica)
-* Mockaroo        (para otorgar datos ficticios)
+* Mockaroo        (para generar datos ficticios)
+* Canva           (Para diseñar las imágenes de portada presentes en el repositorio)
+* Draw.io         (Para crear el diagrama entidad-relación)
+
+## Glosario 
+
+Se ha incluido un glosario para ayudar a comprender los términos y conceptos específicos del proyecto.
+
+### Funcionalidad del Glosario
+
+- **Definiciones Claras:** Proporciona definiciones de términos técnicos.
+- **Rápida Accesibilidad:** Estructurado alfabéticamente para búsqueda fácil.
+
 
 ## Como levantar el proyecto en CodeSpaces GitHub
 * env: Archivo con contraseñas y data secretas
