@@ -189,13 +189,17 @@ Esta tabla es independiente del resto ya que su finalidad es almacenar informaci
 
 ### VistaClienteSaldoNegativo
 
-**Descripción y tablas involucradas:** Esta vista muestra los clientes que tienen un saldo negativo en alguna de sus cuentas. 
+**Descripción y tablas involucradas:** 
+
+Esta vista muestra los clientes que tienen un saldo negativo en alguna de sus cuentas. 
 
 - Realiza una unión entre las tablas **_Clientes_** y **_Cuentas_** utilizando el campo **Cliente_ID** como clave de unión.
 - Selecciona las columnas **Cliente_ID**, **Nombre**, **Apellido** y **Saldo** de las tablas **_Clientes_** y **_Cuentas_**.
 - Filtra las filas donde el saldo en la tabla Cuentas es menor que cero, lo que indica que se trata de un saldo negativo.
 
-**Utilidad:** Esta vista es útil para identificar rápidamente a los clientes que están experimentando dificultades financieras debido a saldos negativos en sus cuentas. Puede ser utilizada por los departamentos de riesgo crediticio o de atención al cliente para tomar medidas correctivas o para ofrecer asistencia financiera adicional.
+**Utilidad:** 
+
+Esta vista es útil para identificar rápidamente a los clientes que están experimentando dificultades financieras debido a saldos negativos en sus cuentas. Puede ser utilizada por los departamentos de riesgo crediticio o de atención al cliente para tomar medidas correctivas o para ofrecer asistencia financiera adicional.
 
 **Ejemplo de consulta:**
 
