@@ -13,10 +13,21 @@
 
 ## Índice
 
-1. [Introducción](#Introducción)
-2. [Temática del proyecto](#temática-del-proyecto)
-3. [Modelo de Negocio](#modelo-de-negocio)
-
+1.  [Introducción](#Introducción)
+2.  [Temática del proyecto](#temática-del-proyecto)
+3.  [Modelo de Negocio](#modelo-de-negocio)
+4.  [Diagrama Entidad-Relación (DER)](#diagrama-entidad-relación-(der))
+5.  [Listado de tablas y descripción](#listado-de-tablas-y-descripción)
+6.  [Estructura e ingesta de datos](#Estructura-e-ingesta-de-datos)
+7.  [Documentación de Vistas](#documentación-de-vistas)
+8.  [Documentación de Funciones](#documentación-de-funciones)
+9.  [Documentación de Procedimientos Almacenados](#documentación-de-procedimientos-almacenados)
+10. [Documentación de Triggers](#documentación-de-triggers)
+11. [Roles y permisos](#roles-y-permisos)
+12. [Back up de la base de datos](#back-up-de-la-base-de-datos)
+13. [Glosario](#glosario)
+14. [Herramientas y tecnologias usadas](#herramientas-y-tecnologias-usadas)
+15. [Como levantar el proyecto en CodeSpaces GitHub](#como-levantar-el-proyecto-en-codespaces-github)
 
 ## Introducción
 
@@ -26,17 +37,6 @@ En este README se detallarán las tablas, funciones, triggers, vistas, procedimi
 
 Este proyecto no solo muestra la aplicación práctica de SQL, sino también cómo una base de datos bien diseñada puede servir como una herramienta poderosa para la toma de decisiones estratégicas y operativas.
 
-
-## Contenido
-
-- [Estructura de la base de datos](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/structure/database_structure.sql)
-- [Inserción de datos](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/structure/population.sql)
-- [Vistas](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/objects/views.sql)
-- [Funciones](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/objects/functions.sql)
-- [Stored Procedures](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/objects/stored_procedures.sql)
-- [Triggers](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/objects/triggers.sql)
-- [Backup](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/backup/backup.md)
-- [Glosario](https://github.com/agustinmusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/documentation/glossary.pdf)
 
 
 ## Temática del proyecto
