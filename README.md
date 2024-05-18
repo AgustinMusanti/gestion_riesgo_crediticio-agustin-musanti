@@ -210,12 +210,16 @@ SELECT * FROM VistaClientesSaldoNegativo;
 
 ### VistaTransaccionesRecientes
 
-**Descripción y tablas involucradas:** Esta vista muestra las transacciones financieras realizadas en los últimos 30 días.
+**Descripción y tablas involucradas:** 
+
+Esta vista muestra las transacciones financieras realizadas en los últimos 30 días.
 
 - Selecciona las columnas **Cuentas_ID**, **Tipo**, **Monto** y **Fecha** de la tabla **_Transacciones_**.
--  Filtra las filas donde la fecha de la transacción es igual o posterior a la fecha actual menos 30 días, utilizando la función **DATE_SUB** en conjunto con **CURDATE()**
+- Filtra las filas donde la fecha de la transacción es igual o posterior a la fecha actual menos 30 días, utilizando la función **DATE_SUB** en conjunto con **CURDATE()**
 
-**Utilidad:** Esta vista proporciona una forma conveniente de ver las transacciones financieras recientes, lo que puede ser útil para el seguimiento de la actividad financiera.
+**Utilidad:** 
+
+Esta vista proporciona una forma conveniente de ver las transacciones financieras recientes, lo que puede ser útil para el seguimiento de la actividad financiera.
 
 **Ejemplo de consulta:**
 
@@ -226,12 +230,16 @@ SELECT * FROM VistaTransaccionesRecientes;
 
 ### VistaTransaccionesMontosAltos
 
-**Descripción y tablas involucradas:** Esta vista muestra las transacciones financieras con montos superiores a **$3.000**
+**Descripción y tablas involucradas:** 
+
+Esta vista muestra las transacciones financieras con montos superiores a **$3.000**
 
 - Selecciona las columnas **Cuentas_ID**, **Tipo**, **Monto** y **Fecha** de la tabla **_Transacciones_**.
 - Filtra las filas donde el monto de la transacción sea mayor que **$3.000**.
 
-**Utilidad:** Esta vista puede ser útil para identificar transacciones inusuales o de gran valor, lo que podría requerir una mayor atención o verificación por parte de los analistas financieros.
+**Utilidad:** 
+
+Esta vista puede ser útil para identificar transacciones inusuales o de gran valor, lo que podría requerir una mayor atención o verificación por parte de los analistas financieros.
 
 **Ejemplo de consulta:**
 
@@ -242,13 +250,17 @@ SELECT * FROM VistaTransaccionesMontosAltos;
 
 ### VistaClientesHistorialCrediticioMalo
 
-**Descripción y tablas involucradas:** Esta vista muestra los clientes cuyo historial crediticio es considerado malo, es decir, con un puntaje de crédito menor a **5 (cinco)**.
+**Descripción y tablas involucradas:** 
+
+Esta vista muestra los clientes cuyo historial crediticio es considerado malo, es decir, con un puntaje de crédito menor a **5 (cinco)**.
 
 - Selecciona las columnas **Cliente_ID**, **Nombre**, **Apellido** y **Puntaje** de la tabla **_Clientes_** y la tabla **_Historial_Credito_**.
 - Une las tablas **_Clientes_** e **_Historial_Credito_** usando el **Cliente_ID**.
 - Filtra las filas donde el puntaje de crédito en el historial sea menor a **5**.
 
-**Utilidad:** Esta vista puede ser útil para identificar a los clientes que tienen un historial crediticio negativo, lo que podría influir en las decisiones de otorgamiento de nuevos créditos o préstamos.
+**Utilidad:** 
+
+Esta vista puede ser útil para identificar a los clientes que tienen un historial crediticio negativo, lo que podría influir en las decisiones de otorgamiento de nuevos créditos o préstamos.
 
 **Ejemplo de consulta:**
 
@@ -259,13 +271,17 @@ SELECT * FROM VistaClientesHistorialCrediticioMalo;
 
 ### VistaDetallePrestamosActivos
 
-**Descripción y tablas involucradas:** Esta vista muestra los detalles de los préstamos que están actualmente activos.
+**Descripción y tablas involucradas:** 
+
+Esta vista muestra los detalles de los préstamos que están actualmente activos.
 
 - Realiza una unión entre las tablas **_Prestamos_** y **_Clientes_** utilizando el campo **Cliente_ID** como clave de unión.
 - Selecciona las columnas **Prestamos_ID**, **Nombre** (del cliente), **Monto**, **TasaInteres**, **Plazo** y **Estado**.
 - Filtra las filas donde el estado del préstamo en la tabla **_Prestamos_** figura como "Activo".
 
-**Utilidad:** Esta vista es útil para obtener una lista de los préstamos activos y puede ser utilizada por los departamentos financieros para monitorear y administrar los préstamos en curso. 
+**Utilidad:** 
+
+Esta vista es útil para obtener una lista de los préstamos activos y puede ser utilizada por los departamentos financieros para monitorear y administrar los préstamos en curso. 
 
 **Ejemplo de consulta:**
 
@@ -278,7 +294,9 @@ SELECT * FROM VistaDetallePrestamosActivos;
 
 ### FN_CalcularMontoTotalPagos
 
-**Descripción:** Esta función calcula el monto total de los pagos asociados a un préstamo específico.
+**Descripción:** 
+
+Esta función calcula el monto total de los pagos asociados a un préstamo específico.
 
 **Parámetros y retorno:** 
 
@@ -288,7 +306,9 @@ SELECT * FROM VistaDetallePrestamosActivos;
 - Utiliza la función **COALESCE** para asegurarse de que, en caso de que no haya pagos asociados, el resultado sea cero.
 - Devuelve el monto total de los pagos.
 
-**Utilidad:** Esta función es útil para obtener de manera rápida y precisa el monto total de los pagos asociados a un préstamo específico, lo que puede ser utilizado en diversas partes del sistema para realizar cálculos y análisis relacionados con los préstamos.
+**Utilidad:** 
+
+Esta función es útil para obtener de manera rápida y precisa el monto total de los pagos asociados a un préstamo específico, lo que puede ser utilizado en diversas partes del sistema para realizar cálculos y análisis relacionados con los préstamos.
 
 **Ejemplo de uso:**
 
@@ -300,7 +320,9 @@ AS     MontoTotalPago;
 
 ### FN_CalcularSaldoPromedioCliente
 
-**Descripción:** Esta función calcula el saldo promedio de todas las cuentas asociadas a un cliente específico.
+**Descripción:** 
+
+Esta función calcula el saldo promedio de todas las cuentas asociadas a un cliente específico.
 
 **Parámetros y retorno:**
 
@@ -310,7 +332,9 @@ AS     MontoTotalPago;
 - Utiliza la función **COALESCE** para asegurarse de que, en caso de que no haya cuentas asociadas, el resultado sea cero.
 - Devuelve el saldo promedio de todas las cuentas asociadas al cliente.
 
-**Utilidad:** Esta función es útil para obtener una medida del estado financiero promedio de un cliente, lo que puede ser utilizado en análisis y reportes relacionados con la gestión de clientes y cuentas.
+**Utilidad:** 
+
+Esta función es útil para obtener una medida del estado financiero promedio de un cliente, lo que puede ser utilizado en análisis y reportes relacionados con la gestión de clientes y cuentas.
 
 **Ejemplo de uso:**
 
@@ -322,7 +346,9 @@ AS     SaldoPromedioCliente;
 
 ### FN_CalcularSaldoTotalPrestamos
 
-**Descripción:** Esta función calcula el saldo total de todos los préstamos activos asociados a un cliente específico.
+**Descripción:** 
+
+Esta función calcula el saldo total de todos los préstamos activos asociados a un cliente específico.
 
 **Parámetros y retorno:**
 
@@ -332,7 +358,9 @@ AS     SaldoPromedioCliente;
 - Utiliza la función **COALESCE** para asegurarse de que, en caso de que no haya préstamos activos asociados, el resultado sea cero.
 - Devuelve el saldo total de todos los préstamos activos asociados al cliente.
 
-**Utilidad:** Esta función es útil para calcular la carga financiera total de un cliente en términos de préstamos activos.
+**Utilidad:** 
+
+Esta función es útil para calcular la carga financiera total de un cliente en términos de préstamos activos.
 
 **Ejemplo de uso:**
 
@@ -346,7 +374,9 @@ AS     SaldoTotalPrestamos;
 
 ### SP_ActualizarEstadoPrestamo
 
-**Descripción:** Este procedimiento almacenado se encarga de actualizar el estado de un préstamo en la tabla **_Prestamos_** basado en su saldo pendiente.
+**Descripción:** 
+
+Este procedimiento almacenado se encarga de actualizar el estado de un préstamo en la tabla **_Prestamos_** basado en su saldo pendiente.
 
 **Parámetros y retorno:**
 
@@ -356,7 +386,9 @@ AS     SaldoTotalPrestamos;
   cero, el estado se establece como **"Inactivo"**; de lo contrario, se establece como **"Activo"**.
 - Finalmente, actualiza el estado del préstamo en la tabla Prestamos con el nuevo estado calculado.
 
-**Utilidad:** Este procedimiento almacenado es útil para automatizar la actualización del estado de los préstamos en función de sus pagos y saldos pendientes, lo que proporciona una gestión más eficiente y precisa de los préstamos en el sistema. Por esta razón, este procedimiento va de la mano con el que se desarrollará luego.
+**Utilidad:** 
+
+Este procedimiento almacenado es útil para automatizar la actualización del estado de los préstamos en función de sus pagos y saldos pendientes, lo que proporciona una gestión más eficiente y precisa de los préstamos en el sistema. Por esta razón, este procedimiento va de la mano con el que se desarrollará luego.
 
 **Ejemplo de uso:**
 
@@ -367,7 +399,9 @@ CALL SP_ActualizarEstadoPrestamo(1);
 
 ### SP_RegistrarPagoPrestamo
 
-**Descripción:** Este procedimiento almacenado se encarga de registrar un pago para un préstamo específico y luego llama al procedimiento **SP_ActualizarEstadoPrestamo** (que se ha detallado anteriormente) para actualizar el estado del préstamo, en el caso de que corresponda.
+**Descripción:** 
+
+Este procedimiento almacenado se encarga de registrar un pago para un préstamo específico y luego llama al procedimiento **SP_ActualizarEstadoPrestamo** (que se ha detallado anteriormente) para actualizar el estado del préstamo, en el caso de que corresponda.
 
 
 **Parámetros y retorno:**
@@ -376,7 +410,9 @@ CALL SP_ActualizarEstadoPrestamo(1);
 - Inserta el nuevo pago del préstamo en la tabla **_Pagos_Prestamos_** con el ID del préstamo, el monto y la fecha proporcionados.
 - Después de insertar el pago, llama al procedimiento almacenado **SP_ActualizarEstadoPrestamo** para actualizar el estado del préstamo en función de los pagos realizados.
 
-**Utilidad:** Este procedimiento almacenado es útil para facilitar el registro de pagos para préstamos específicos y automatizar la actualización del estado del préstamo después de cada pago registrado. Esto garantiza una gestión eficiente y precisa de los pagos y estados de los préstamos en el sistema.
+**Utilidad:** 
+
+Este procedimiento almacenado es útil para facilitar el registro de pagos para préstamos específicos y automatizar la actualización del estado del préstamo después de cada pago registrado. Esto garantiza una gestión eficiente y precisa de los pagos y estados de los préstamos en el sistema.
 
 **Ejemplo de uso:**
 
@@ -389,46 +425,67 @@ CALL SP_RegistrarPagoPrestamo(6, 1646.25, CURDATE());
 
 ### TR_ActualizarSaldoCuenta
 
-**Descripción:** Este trigger se activa después de que se inserta una nueva fila en la tabla **_Transacciones_**. Su propósito principal es actualizar el saldo de la cuenta (de la tabla **_Cuentas_**) asociada a la transacción según el tipo de la misma. 
+**Descripción:** 
 
-**Detalles:** Si la transacción es un retiro, el monto se resta del saldo actual de la cuenta. En cambio, si es otro tipo de transacción, el monto se suma al saldo de la cuenta.
+Este trigger se activa después de que se inserta una nueva fila en la tabla **_Transacciones_**. Su propósito principal es actualizar el saldo de la cuenta (de la tabla **_Cuentas_**) asociada a la transacción según el tipo de la misma. 
 
-**Utilidad:** Su implementación es importante para mantener la integridad de los datos en la tabla **_Cuentas_** y garantizar que el saldo se ajuste correctamente en función de las transacciones realizadas.
+**Detalles:** 
+
+Si la transacción es un retiro, el monto se resta del saldo actual de la cuenta. En cambio, si es otro tipo de transacción, el monto se suma al saldo de la cuenta.
+
+**Utilidad:** 
+
+Su implementación es importante para mantener la integridad de los datos en la tabla **_Cuentas_** y garantizar que el saldo se ajuste correctamente en función de las transacciones realizadas.
 
 
 ### TR_ValidarDatosPrestamo
 
-**Descripción:** Este trigger se activa antes de insertar una nueva fila en la tabla **_Prestamos_**. Su objetivo es validar los datos del préstamo antes de que se realice la inserción en la base de datos.
+**Descripción:** 
+
+Este trigger se activa antes de insertar una nueva fila en la tabla **_Prestamos_**. Su objetivo es validar los datos del préstamo antes de que se realice la inserción en la base de datos.
 
 **Detalles:** 
 
 - Primero, verifica que el monto del préstamo sea mayor que cero. Si no es asi, se lanza una excepción con un mensaje indicando que el monto del préstamo debe ser mayor que cero.
 - Luego, comprueba que la tasa de interés esté en el rango válido de 0 a 100. Si esto tampoco es asi, se lanza otra excepción con un mensaje que indica que la tasa de interés debe estar entre 0 y 100.
 
-**Utilidad:** Este trigger es fundamental para garantizar la integridad de los datos, evitando asi la inserción de datos incorrectos o inválidos.
+**Utilidad:** 
+
+Este trigger es fundamental para garantizar la integridad de los datos, evitando asi la inserción de datos incorrectos o inválidos.
 
 
 ### TR_EliminarCliente
 
-**Descripción:** Este trigger se activa antes de que se elimine una fila de la tabla **_Clientes_**. Su objetivo es prevenir la eliminación de clientes mediante la generación de un error personalizado.
+**Descripción:** 
 
-**Detalles:** Cuando se intenta eliminar un cliente, el trigger se activa y genera un error personalizado con el mensaje **"No se permite eliminar clientes"**. Este error detiene la ejecución de la operación de eliminación y garantiza que los clientes no sean eliminados de la base de datos.
+Este trigger se activa antes de que se elimine una fila de la tabla **_Clientes_**. Su objetivo es prevenir la eliminación de clientes mediante la generación de un error personalizado.
 
-**Utilidad:** Este trigger es útil para mantener la integridad de los datos y evitar la eliminación accidental o no autorizada de clientes en la base de datos.
+**Detalles:** 
+
+Cuando se intenta eliminar un cliente, el trigger se activa y genera un error personalizado con el mensaje **"No se permite eliminar clientes"**. Este error detiene la ejecución de la operación de eliminación y garantiza que los clientes no sean eliminados de la base de datos.
+
+**Utilidad:** 
+
+Este trigger es útil para mantener la integridad de los datos y evitar la eliminación accidental o no autorizada de clientes en la base de datos.
 
 
 ### TR_CrearCuentaClienteNuevo
 
-**Descripción:** Este trigger se activa después de que se inserta una fila en la tabla **_Clientes_**. Su objetivo es crear automáticamente una nueva cuenta de ahorro en la tabla **_Cuentas_** para el cliente recién insertado.
+**Descripción:** 
+
+Este trigger se activa después de que se inserta una fila en la tabla **_Clientes_**. Su objetivo es crear automáticamente una nueva cuenta de ahorro en la tabla **_Cuentas_** para el cliente recién insertado.
 
 **Detalles:** 
+
 - Cuando se inserta un nuevo cliente, el trigger se activa y verifica si ya existen cuentas asociadas a ese cliente en la
 tabla **_Cuentas_**.
 - Si no hay cuentas existentes para el cliente, el trigger genera un número de cuenta de 4 dígitos único y lo inserta en la tabla **_Cuentas_**, junto con el tipo de cuenta (Ahorro), un saldo inicial de 0 (cero) y la fecha de apertura (la fecha
 actual).
 - El trigger garantiza que el número de cuenta generado sea único mediante la generación repetida de un nuevo número hasta que encuentre uno que no esté presente en la tabla de **_Cuentas_**.
 
-**Utilidad:**  El trigger en cuestión es útil para automatizar el proceso de creación de cuentas de ahorro para nuevos clientes y garantizar que cada nuevo cliente tenga su cuenta de ahorro asociada en la base de datos de la institución financiera.
+**Utilidad:**  
+
+El trigger en cuestión es útil para automatizar el proceso de creación de cuentas de ahorro para nuevos clientes y garantizar que cada nuevo cliente tenga su cuenta de ahorro asociada en la base de datos de la institución financiera.
 
 
 ## Roles y permisos
@@ -448,6 +505,16 @@ Por último, se crearon tres usuarios y se les asignaron los roles correspondien
 
 Se puede generar un comando en el archivo `make backup` que permite ejecutar un backup de la base de datos de manera manual.
 
+## Glosario 
+
+Se ha incluido un glosario para ayudar a comprender los términos y conceptos específicos del proyecto.
+
+### Funcionalidad del Glosario
+
+- **Definiciones Claras:** Proporciona definiciones de términos técnicos.
+- **Rápida Accesibilidad:** Estructurado alfabéticamente para búsqueda fácil.
+
+
 ## Herramientas y tecnologias usadas
 
 * Makefile        (para generar una interfaz sencilla de procesos)
@@ -457,15 +524,6 @@ Se puede generar un comando en el archivo `make backup` que permite ejecutar un 
 * Mockaroo        (para generar datos ficticios)
 * Canva           (Para diseñar las imágenes de portada presentes en el repositorio)
 * Draw.io         (Para crear el diagrama entidad-relación)
-
-## Glosario 
-
-Se ha incluido un glosario para ayudar a comprender los términos y conceptos específicos del proyecto.
-
-### Funcionalidad del Glosario
-
-- **Definiciones Claras:** Proporciona definiciones de términos técnicos.
-- **Rápida Accesibilidad:** Estructurado alfabéticamente para búsqueda fácil.
 
 
 ## Como levantar el proyecto en CodeSpaces GitHub
