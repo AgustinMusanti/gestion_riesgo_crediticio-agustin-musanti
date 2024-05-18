@@ -209,7 +209,7 @@ Esta vista es útil para identificar rápidamente a los clientes que están expe
 
 ```sql
 SELECT * FROM VistaClientesSaldoNegativo
-ORDER BY Saldo DESC;
+ORDER BY Saldo ASC;
 ```
 
 
