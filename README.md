@@ -159,7 +159,7 @@ Esta tabla contiene información sobre el historial crediticio de los clientes c
 Esta tabla almacena los modelos de riesgo utilizados para evaluar la solvencia crediticia de los
 clientes, incluyendo los coeficientes de los modelos, los parámetros utilizados, entre otros.
 
-Esta tabla es independiente del resto ya que su fin es almacenar información.
+Esta tabla es independiente del resto ya que su fin es almacenar información. La misma se  trabajaría en conjunto con un equipo de **cientificos de datos** para que puedan llevar a cabo los correspondientes modelos predictivos.
 
 | **_Abreviatura_** |  **_Nombre Completo_**  |     **_Tipo de Datos_**     | **_Tipo de Clave_** |
 |:-----------------:|:-----------------------:|:---------------------------:|:-------------------:|
