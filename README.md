@@ -16,7 +16,7 @@
 1.  [Introducción](#Introducción)
 2.  [Temática del proyecto](#temática-del-proyecto)
 3.  [Modelo de Negocio](#modelo-de-negocio)
-4.  [Diagrama Entidad-Relación (DER)](#diagrama-entidad-relación-(der))
+4.  [Diagrama Entidad-Relación (DER)](#diagrama-entidad-relación-der)
 5.  [Listado de tablas y descripción](#listado-de-tablas-y-descripción)
 6.  [Estructura e ingesta de datos](#Estructura-e-ingesta-de-datos)
 7.  [Documentación de Vistas](#documentación-de-vistas)
