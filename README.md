@@ -185,7 +185,7 @@ Esta tabla es independiente del resto ya que su finalidad es almacenar informaci
 
 ## Estructura e ingesta de datos
 
-- Se realiza en su totalidad por medio del archivo **population.sql**
+- Se realiza en su totalidad por medio del archivo [population.sql](https://github.com/AgustinMusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/structure/population.sql).
 
 
 ## Documentación de Vistas
@@ -493,9 +493,7 @@ El trigger en cuestión es útil para automatizar el proceso de creación de cue
 
 ## Roles y permisos
 
-`./objects/roles_users.sql`
-
-Se genera tres roles:
+Se generan tres roles en el archivo [roles_users.sql](https://github.com/AgustinMusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/objects/roles_users.sql):
 
 1. `role_select_tablas`: Este rol tiene permisos solo para SELECT en las distintas tablas de la base de datos.
 2. `role_crud_creditico`: Este rol tiene permisos para generar CRUD en distintas tablas de la base de datos.
@@ -506,16 +504,16 @@ Por último, se crearon tres usuarios y se les asignaron los roles correspondien
 
 ## Back up de la base de datos
 
-Se puede generar un comando en el archivo `make backup` que permite ejecutar un backup de la base de datos de manera manual.
+Se puede generar un comando en el archivo `make backup` que permite ejecutar un [backup](https://github.com/AgustinMusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/backup/backup.md) de la base de datos de manera manual.
 
 ## Glosario 
 
-Se ha incluido un glosario para ayudar a comprender los términos y conceptos específicos del proyecto.
+Se ha incluido un [glosario](https://github.com/AgustinMusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/glossary/glossary.md) para ayudar a comprender los términos y conceptos específicos del proyecto.
 
 ### Funcionalidad del Glosario
 
 - **Definiciones Claras:** Proporciona definiciones de términos técnicos.
-- **Rápida Accesibilidad:** Estructurado alfabéticamente para búsqueda fácil.
+- **Rápida Accesibilidad:** Estructurado con un índice y de manera alfabética para facilitar la búsqueda.
 
 
 ## Herramientas y tecnologias usadas
