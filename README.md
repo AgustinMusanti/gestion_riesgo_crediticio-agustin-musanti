@@ -510,7 +510,9 @@ Por último, se crearon tres usuarios y se les asignaron los roles correspondien
 
 ## Back up de la base de datos
 
-Se puede generar un comando en el archivo `make backup` que permite ejecutar un [backup](https://github.com/AgustinMusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/backup/backup.md) de la base de datos de manera manual.
+Se ha añadido un script del [backup](https://github.com/AgustinMusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/backup/gestion_riesgo_crediticio.sql) de la base de datos desarrollada en este proyecto.
+
+Adicionalmente, Se puede generar el comando `make backup-db` en **CodeSpaces** el cual permite ejecutar un backup de la base de datos de manera manual.
 
 ## Glosario 
 
@@ -524,8 +526,8 @@ Se ha incluido un [glosario](https://github.com/AgustinMusanti/gestion_riesgo_cr
 
 ## Herramientas y tecnologias usadas
 
-* Makefile        (para generar una interfaz sencilla de procesos)
-* Docker          (para generar un container)
+* **Makefile**        (para generar una interfaz sencilla de procesos)
+* Docker         (para generar un container)
 * MySQL           (Motor de bases de datos `version: latest`)
 * MySQL Workbench (Interfaz grafica)
 * Mockaroo        (para generar datos ficticios)
@@ -534,9 +536,9 @@ Se ha incluido un [glosario](https://github.com/AgustinMusanti/gestion_riesgo_cr
 
 
 ## Como levantar el proyecto en CodeSpaces GitHub
-* env: Archivo con contraseñas y data secretas
-* Makefile: Abstracción de creacción del proyecto
-* docker-compose.yml: Permite generar las bases de datos en forma de contenedores
+* **env:** Archivo con contraseñas y data secretas
+* **Makefile:** Abstracción de creacción del proyecto
+* **docker-compose.yml:** Permite generar las bases de datos en forma de contenedores
 
 #### Pasos para arrancar el proyecto
 
