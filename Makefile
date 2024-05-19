@@ -50,6 +50,10 @@ test-db:
 		echo "----------------------------------------------"; \
 	done
 
+backup-db:
+	@echo "Back up database by structure and data"
+	# Dump MySQL database to a file
+	docker exec -it $(SERVICE_NAME) mysqldump -u root -p$(PASSWORD) $(DATABASE) > ./backups/$(BACKUP_DIR_FILES)/$(DATABASE)-$(CURDATE).sql
 
 access-db:
 	@echo "Access to db-client"
