@@ -512,7 +512,7 @@ Por último, se crearon tres usuarios y se les asignaron los roles correspondien
 
 Se ha añadido un script del [backup](https://github.com/AgustinMusanti/gestion_riesgo_crediticio-agustin-musanti/blob/main/backup/gestion_riesgo_crediticio.sql) de la base de datos desarrollada en este proyecto.
 
-Adicionalmente, Se puede generar el comando `make backup-db` en **CodeSpaces** el cual permite ejecutar un backup de la base de datos de manera manual.
+Adicionalmente se puede generar el comando `make backup-db` en **CodeSpaces**, el cual permite ejecutar un backup de la base de datos de manera manual.
 
 ## Glosario 
 
