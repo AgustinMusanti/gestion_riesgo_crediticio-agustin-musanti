@@ -543,7 +543,7 @@ Se ha incluido un [glosario](https://github.com/AgustinMusanti/gestion_riesgo_cr
 #### Pasos para arrancar el proyecto
 
 * En la terminal de linux escribir :
-    - `make` _En caso de que genere un error de que no existe conexion al socket, volver al correr el comando `make`._
+    - `make` _En caso de que genere el error de que no existe conexion al socket, volver al correr el comando `make`._
     - `make clean-db` _Para limpiar la base de datos._
     - `make test-db` _Para mirar los datos de cada tabla._
     - `make backup-db` _Para realizar un backup de la base de datos._
