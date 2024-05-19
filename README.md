@@ -526,25 +526,25 @@ Se ha incluido un [glosario](https://github.com/AgustinMusanti/gestion_riesgo_cr
 
 ## Herramientas y tecnologias usadas
 
-* **Makefile**        (para generar una interfaz sencilla de procesos)
-* **Docker**          (para generar un container)
+* **Makefile**        (Para generar una interfaz sencilla de procesos)
+* **Docker**          (Para generar un container)
 * **MySQL**           (Motor de bases de datos `version: latest`)
 * **MySQL Workbench** (Interfaz grafica)
-* **Mockaroo**        (para generar datos ficticios)
+* **Mockaroo**        (Para generar datos ficticios)
 * **Canva**           (Para diseñar las imágenes de portada presentes en el repositorio)
 * **Draw.io**         (Para crear el diagrama entidad-relación)
 
 
 ## Como levantar el proyecto en CodeSpaces GitHub
-* **env:** Archivo con contraseñas y data secretas
-* **Makefile:** Abstracción de creacción del proyecto
-* **docker-compose.yml:** Permite generar las bases de datos en forma de contenedores
+* **env:** Archivo con contraseñas y data secretas.
+* **Makefile:** Abstracción de creacción del proyecto.
+* **docker-compose.yml:** Permite generar la bases de datos en forma de contenedores.
 
 #### Pasos para arrancar el proyecto
 
 * En la terminal de linux escribir :
-    - `make` _si te da un error de que no existe conexion al socket, volver al correr el comando `make`_
-    - `make clean-db` limpiar la base de datos
-    - `make test-db` para mirar los datos de cada tabla
-    - `make backup-db` para realizar un backup de mi base de datos
-    - `make access-db` para acceder a la base de datos
+    - `make` _En caso de que genere un error de que no existe conexion al socket, volver al correr el comando `make`._
+    - `make clean-db` _Para limpiar la base de datos._
+    - `make test-db` _Para mirar los datos de cada tabla._
+    - `make backup-db` _Para realizar un backup de la base de datos._
+    - `make access-db` _Para acceder a la base de datos._
