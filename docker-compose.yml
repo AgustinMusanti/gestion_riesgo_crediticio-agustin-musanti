@@ -11,3 +11,4 @@ services:
       - ./structure:/structure
     ports:
       - "3306:3306"
+      
