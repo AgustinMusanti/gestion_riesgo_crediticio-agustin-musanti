@@ -6,3 +6,4 @@ until docker compose logs mysql | grep "/usr/sbin/mysqld: ready for connections.
 done
 
 sleep 10
+
