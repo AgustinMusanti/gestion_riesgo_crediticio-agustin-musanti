@@ -8,6 +8,7 @@ HOST=127.0.0.1
 PORT=3306
 PASSWORD=${ROOT_PASSWORD}
 DATABASE=${DATABASE_NAME}
+CURDATE := $(shell date +%Y%m%d)
 
 DOCKER_COMPOSE_FILE=./docker-compose.yml
 
