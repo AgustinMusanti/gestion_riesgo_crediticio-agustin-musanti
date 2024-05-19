@@ -527,12 +527,12 @@ Se ha incluido un [glosario](https://github.com/AgustinMusanti/gestion_riesgo_cr
 ## Herramientas y tecnologias usadas
 
 * **Makefile**        (para generar una interfaz sencilla de procesos)
-* Docker         (para generar un container)
-* MySQL           (Motor de bases de datos `version: latest`)
-* MySQL Workbench (Interfaz grafica)
-* Mockaroo        (para generar datos ficticios)
-* Canva           (Para diseñar las imágenes de portada presentes en el repositorio)
-* Draw.io         (Para crear el diagrama entidad-relación)
+* **Docker**          (para generar un container)
+* **MySQL**           (Motor de bases de datos `version: latest`)
+* **MySQL Workbench** (Interfaz grafica)
+* **Mockaroo**        (para generar datos ficticios)
+* **Canva**           (Para diseñar las imágenes de portada presentes en el repositorio)
+* **Draw.io**         (Para crear el diagrama entidad-relación)
 
 
 ## Como levantar el proyecto en CodeSpaces GitHub
