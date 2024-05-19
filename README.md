@@ -455,8 +455,8 @@ Este trigger se activa antes de insertar una nueva fila en la tabla **_Prestamos
 
 **Detalles:** 
 
-- Primero, verifica que el monto del préstamo sea mayor que cero. Si no es asi, se lanza una excepción con un mensaje indicando que el monto del préstamo debe ser mayor que cero.
-- Luego, comprueba que la tasa de interés esté en el rango válido de 0 a 100. Si esto tampoco es asi, se lanza otra excepción con un mensaje que indica que la tasa de interés debe estar entre 0 y 100.
+- Primero, verifica que el monto del préstamo sea mayor que cero. Si no es asi, se lanza una excepción con un mensaje indicando que **el monto del préstamo debe ser mayor que cero**.
+- Luego, comprueba que la tasa de interés esté en el rango válido de 0 a 100. Si esto tampoco es asi, se lanza otra excepción con un mensaje que indica que **la tasa de interés debe estar entre 0 y 100**.
 
 **Utilidad:** 
 
