@@ -77,7 +77,7 @@ En este proyecto el estado puede ser:
 
 - Activo: Pendiente de pago.
 - Inactivo: Ya fue pagado.
-- Vencido: Supero el plazo de vencimento sin ser pagado.
+- Vencido: Se superó el plazo de vencimento sin ser pagado.
 
 
 ### Riesgo crediticio
