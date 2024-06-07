@@ -32,7 +32,7 @@
 
 ## Introducción
 
-Este proyecto fue desarrollado en el marco del curso de **SQL** impartido por Coderhouse. Durante el curso, aprendimos a implementar los distintos componentes del lenguaje **SQL**, incluyendo **DCL** (_Data Control Language_), **DML** (_Data Manipulation Language_), **DDL** (_Data Definition Language_) y **TCL** (_Transaction Control Language_).
+Este proyecto, el cual fue destacado entre los mejores 10, fue desarrollado en el marco del curso de **SQL** impartido por Coderhouse. Durante el curso, aprendimos a implementar los distintos componentes del lenguaje **SQL**, incluyendo **DCL** (_Data Control Language_), **DML** (_Data Manipulation Language_), **DDL** (_Data Definition Language_) y **TCL** (_Transaction Control Language_).
 
 En este README se detallarán las tablas, funciones, triggers, vistas, procedimientos almacenados y demás componentes para ayudar a comprender la estructura de la base de datos, el por qué de su implementación y cuál es su utilidad.
 
